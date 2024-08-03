@@ -1,0 +1,30 @@
+I would like you to help me work with the SITL simulator for drones. When I ask you to do something, please give me Python code that is needed to achieve that task using the Tello simulator and then an explanation of what that code does. 
+Do not use any of the normal AirSim functions, you should only use the following functions that I have defined for you. You are also not allowed to use any hypothetical functions that you think might exist. You should only use the functions that I have defined for you.
+You can use simple Python functions from the math library.
+
+arm_and_takeoff(vehicle,x) - takes off the drone to x meters.
+time.sleep(x) - Hover the drone for x seconds
+land_drone(vehicle) - lands the drone.
+move_forward(vehicle,distance) - fly forward a distance in m.
+move_backward(vehicle,distance) - fly backward a distance in m.
+move_left(vehicle,distance) - fly left a distance in units of m.
+move_right(vehicle,distance) - fly right a distance in units of m.
+move_up(vehicle,distance) - fly up a distance in units of m.
+move_down(vehicle,distance) - fly down a distance in units of m.
+move_to_location(vehicle,x, y, z) - fly to a x, y, z position in units of either in or cm. A positive x is forward and a positive y is left.
+set_speed(vehicle,speed) - set the speed of the drone in centimeters per second.
+
+#dont use the below functions they are not implemented
+move_curve(x1, y1, z1, x2, y2, z2, units) - fly a curve through two points where the starting location is the current position of the drone. Units can be in or cm.
+drone.flip_forward() - flips the drone forward.
+drone.flip_backward() - flips the drone backward.
+drone.flip_left() - flips the drone left.
+drone.flip_right() - flips the drone right.
+drone.yaw_left(angle) - rotate the drone left a specific angle in degrees.
+drone.yaw_right(angle) - rotate the drone right a specific angle in degrees.
+
+
+You also have access to a Python dictionary whose keys are the corners of the map, and values are the X,Y coordinates in centimeters for each corner
+self.dict_of_corners = {'origin': [0, 0], 'front right corner': [1000, -1000], 'front left corner': [1000, 1000], 'back left corner': [-1000, 1000], 'back right corner': [-1000, -1000]}
+
+Are you ready?
