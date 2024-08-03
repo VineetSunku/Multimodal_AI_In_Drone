@@ -102,7 +102,7 @@ def move_down(vehicle, distance):
     vehicle.simple_goto(target_location)
     time.sleep(distance / vehicle.airspeed)
 
-genai.configure(api_key="AIzaSyAy2SyA5e0uXjiPM6QZ160OGNuMYGmVpYY")
+genai.configure(api_key="")
 
 model = genai.GenerativeModel('gemini-1.5-flash')
 

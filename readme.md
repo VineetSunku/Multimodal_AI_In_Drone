@@ -38,5 +38,5 @@ sim_vehicle.py -v ArduCopter -f quad --console --map
 ```
 ### Run the Script
 ```
-python your_script_name.py
+python main.py --connect ${IP_Address_of_SITL}
 ```
