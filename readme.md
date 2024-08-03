@@ -1,4 +1,4 @@
-# Multimodal AI in drone
+ # Multimodal AI in drone
 
 ## Description
 Implementation of Multimodal AI in drone.
@@ -10,24 +10,33 @@ Implementation of Multimodal AI in drone.
 ## Setup
 
 ### Clone the Repository
->>git clone https://github.com/VineetSunku/Multimodal_AI_In_Drone.git
->>cd yourproject
+```
+git clone https://github.com/VineetSunku/Multimodal_AI_In_Drone.git
+cd Multimodal_AI_In_Drone
+```
+### For Unix or MacOS
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 
-# For Unix or MacOS
->>python3 -m venv venv
->>source venv/bin/activate
+### For Windows
+```
+python -m venv venv
+.\venv\Scripts\activate
+```
 
-# For Windows
->>python -m venv venv
->>.\venv\Scripts\activate
+### Install Dependencies
+```
+pip install -r requirements.txt
+```
+## Running the Project
 
-Install Dependencies
->>pip install -r requirements.txt
-
-# Running the Project
-
-# Start SITL in a separate terminal:
->>sim_vehicle.py -v ArduCopter -f quad --console --map
-
-# Run the Script
->> python your_script_name.py
+### Start SITL in a separate terminal:
+```
+sim_vehicle.py -v ArduCopter -f quad --console --map
+```
+### Run the Script
+```
+python your_script_name.py
+```
