@@ -12,12 +12,18 @@ argparse==1.4.0
     # via -r requirements.in
 asyncio==3.4.3
     # via -r requirements.in
+blinker==1.8.2
+    # via flask
 cachetools==5.4.0
     # via google-auth
 certifi==2024.7.4
     # via requests
 charset-normalizer==3.3.2
     # via requests
+click==8.1.7
+    # via flask
+flask==3.0.3
+    # via -r requirements.in
 google-ai-generativelanguage==0.6.6
     # via google-generativeai
 google-api-core[grpc]==2.19.1
@@ -56,7 +62,19 @@ httplib2==0.22.0
     #   google-auth-httplib2
 idna==3.7
     # via requests
+itsdangerous==2.2.0
+    # via flask
+jinja2==3.1.4
+    # via flask
+markupsafe==2.1.5
+    # via
+    #   jinja2
+    #   werkzeug
 mavsdk==2.8.1
+    # via -r requirements.in
+numpy==2.0.1
+    # via opencv-python
+opencv-python==4.10.0.84
     # via -r requirements.in
 proto-plus==1.24.0
     # via
@@ -98,3 +116,5 @@ uritemplate==4.1.1
     # via google-api-python-client
 urllib3==2.2.2
     # via requests
+werkzeug==3.0.3
+    # via flask

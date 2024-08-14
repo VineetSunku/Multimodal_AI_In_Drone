@@ -2,3 +2,6 @@ mavsdk
 asyncio
 google.generativeai
 argparse
+flask
+opencv-python
+pynput
