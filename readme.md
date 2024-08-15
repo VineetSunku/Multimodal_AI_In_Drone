@@ -31,12 +31,11 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 ## Running the Project
-
-### Start SITL in a separate terminal:
 ```
-sim_vehicle.py -v ArduCopter -f quad --console --map
+python web.py
 ```
-### Run the Script
+### Development:
+In another terminal
 ```
-python main.py --connect ${IP_Address_of_SITL}
+npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
 ```
