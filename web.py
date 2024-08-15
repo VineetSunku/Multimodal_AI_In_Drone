@@ -1,38 +1,90 @@
-from flask import Flask, render_template, request, jsonify
-import cv2
-from DroneFunctions.basicMoves import *
-from DroneLogger import log
+import asyncio
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from mavsdk import System
-
-######### ESTABLISHING CONNECTION #########
-
-# Initialize UAV
-uav = System()
-
-# Connects to the UAV
-async def connect_to_uav():
-    await uav.connect(system_address="udp://:14540")
-
-    log.debug("Establishing Connection...")
-    async for state in uav.core.connection_state():
-        if state.is_connected:
-            log.info("UAV target UUID: {%s}", state.uuid) #Prints the UUID of the UAV to which the system connected
-            break
-
-    log.debug("Establishing GPS lock on UAV..")
-    #Checks the gps Connection via telemetry health command
-    async for health in uav.telemetry.health():
-        if health.is_global_position_ok:
-            log.info("Established GPS lock...")#GPS health approved
-            break
+from mavsdk.manual_control import ManualControlResult
+import threading
+from DroneFunctions.basicMoves import *
+import csv
+import cv2
 
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)
 
-@app.route('/')
-def hello_world():
-    return render_template('index.html')
+######### UAV CONNECTIONS ######### 
+uav = System()
+loop = asyncio.get_event_loop()
 
+async def connect_to_uav():
+    await uav.connect(system_address="udp://:14540")
+    async for state in uav.core.connection_state():
+        if state.is_connected:
+            print(f"Connected to UAV")
+            break
+
+def run_in_loop(task):
+    asyncio.run_coroutine_threadsafe(task, loop)
+
+# Start the UAV connection in the main thread's event loop
+loop.run_until_complete(connect_to_uav())
+
+######### READ CHATS #########
+
+def read_csv(file_path):
+    with open(file_path, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        return [row for row in reader]
+
+######### APP ROUTES #########
+
+@app.route('/')
+def index():
+    data = read_csv('./logs/Chats.csv')
+    return render_template('index.html', data = data)
+
+@app.route('/takeoff', methods=['POST'])
+def takeoff():
+    #  Arm and Takeoff
+    run_in_loop(arm_and_takeoff(uav, 2.5))
+    return jsonify({"status": "Takeoff initiated"})
+
+@app.route('/land', methods=['POST'])
+def land():
+    run_in_loop(land_uav(uav))
+    return jsonify({"status": "Landing initiated"})
+
+@app.route('/keypress', methods=['POST'])
+def keyPressed():
+    data = request.get_json()
+    keyDir = data['value']
+    if keyDir == "ld":
+        run_in_loop(adjust_yaw(uav, "left"))
+    elif keyDir == "rd":
+        run_in_loop(adjust_yaw(uav, "right"))
+    elif keyDir == "ud":
+        run_in_loop(adjust_throttle(uav, "up"))
+    elif keyDir == "dod":
+        run_in_loop(adjust_throttle(uav, "down"))
+    elif keyDir == "wd":
+        run_in_loop(adjust_pitch(uav, "forward"))
+    elif keyDir == "sd":
+        run_in_loop(adjust_pitch(uav, "backward"))
+    elif keyDir == "ad":
+        run_in_loop(adjust_roll(uav, "left"))
+    elif keyDir == "dd":
+        run_in_loop(adjust_roll(uav, "right"))
+    else:
+        run_in_loop(stop_offboard(uav))
+    return jsonify({"status": "Yaw initiated"})
+    
+
+@app.route('/send_message', methods=['POST'])
+def sendMessage():
+    data = request.get_json()
+    with open('./logs/Chats.csv','a', newline='') as csvFile:
+        writer = csv.writer(csvFile)
+        writer.writerow([data['who'], data['message']])
+    return jsonify(data)
+        
 @app.route('/video')
 def video():
     return "1"
@@ -49,32 +101,6 @@ def getVideo():
         yield(b'--frame\r\n'
               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-@app.route('/keypressed', methods=['POST'])
-async def keypressed():
-    data = request.get_json()
-    keyDir = data['value']
-    if keyDir == "wd":
-        log.info("Here!")
-        await connect_to_uav()
-    elif keyDir == "ad":
-        print("a is pressed")
-        await arm_and_takeoff(uav, 2.50)
-    elif keyDir == "sd":
-        print("s is pressed")
-    elif keyDir == "ad":
-        print("a is pressed")
-    elif keyDir == "dd":
-        print("d is pressed")
-    elif keyDir == "wu":
-        print("w is up")
-    elif keyDir == "au":
-        print("a is up")
-    elif keyDir == "su":
-        print("s is up")
-    elif keyDir == "du":
-        print("d is up")
-    
-    return jsonify(data)     
-
 if __name__ == '__main__':
+    threading.Thread(target=loop.run_forever).start()
     app.run(debug=True)

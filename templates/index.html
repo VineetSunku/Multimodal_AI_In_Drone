@@ -77,8 +77,8 @@
                 </div>
             </div>
             <div id="Chat" class="hidden h-[90%] flex flex-col w-full">
-                <div id="ChatHistory" class="flex w-full h-[90%] px-4">
-                    <div id="Chatsss" class="flex flex-col overflow-y-scroll w-full gap-2 py-2">
+                <div id="ChatHistory" class="flex w-full overflow-y-scroll py-2 h-[90%] px-4">
+                    <div id="Chatsss" class="flex flex-col w-full gap-2 py-2">
                         <!-- Messages go here -->
                         {% for item in data %}
                         {% if item[0]=="AI" %}
@@ -94,10 +94,9 @@
                         {% endif %}
                         {% endfor %}
                     </div>
-                    <div id="ChatEnd"></div>
                 </div>
 
-                <div class="bg-white px-4 flex flex-row border-t-2 border-gray-100 items-start py-2">
+                <div class="bg-white px-4 flex flex-row border-t-2 border-gray-100 items-start mt-2 py-2">
                     <input type="text" id="textMessage" placeholder="Type your message..."
                         class="flex-1 border rounded-full px-4 py-2 focus:outline-none">
                     <button onclick="sendMessage()"
@@ -161,8 +160,10 @@
         // CONTROLLER //
         // IN AIR //
         window.onload = function () {
-            var divElement = document.getElementById('Chatsss');
-            divElement.scrollTop = divElement.scrollHeight;
+            setTimeout(function () {
+                var divElement = document.getElementById('ChatHistory');
+                divElement.scrollTop = divElement.scrollHeight;
+            }, 100);
             //document.getElementById("ChatHistory").scrollTop -= 100;
 
             // get the "Div" inside which you wish to scroll (i.e. the container element)
@@ -355,7 +356,7 @@
                     console.log(error);
                 }
             });
-            // window.location.reload();
+            window.location.reload();
         }
 
     </script>

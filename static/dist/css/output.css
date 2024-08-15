@@ -621,6 +621,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -735,24 +739,12 @@ video {
   align-self: flex-end;
 }
 
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
 .overflow-y-hidden {
   overflow-y: hidden;
 }
 
 .overflow-y-scroll {
   overflow-y: scroll;
-}
-
-.scroll-auto {
-  scroll-behavior: auto;
-}
-
-.scroll-smooth {
-  scroll-behavior: smooth;
 }
 
 .rounded-3xl {
