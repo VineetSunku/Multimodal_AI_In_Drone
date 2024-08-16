@@ -3,18 +3,19 @@ import google.generativeai as genai
 import re
 import os
 from DroneFunctions.advancedMoves import *
+import csv
 
 ######### PROVIDE CONTEXT #########
 
 # Specify the file path
-file_path = 'prompt.txt'
+file_path = './DroneAI/prompt.txt'
 
 # Open and read the file
 with open(file_path, 'r') as file:
     content = file.read()
 
 ######### GEN-AI CONFIGURATION #########
-genai.configure(os.environ['api_key'])
+genai.configure(api_key=os.environ['API_KEY'])
 safety_settings = [
     {
         "category": "HARM_CATEGORY_DANGEROUS",
@@ -68,28 +69,14 @@ def extract_python_code(content):
     else:
         return None
 
-class colors:  
-    RED = "\033[31m"
-    ENDC = "\033[m"
-    GREEN = "\033[32m"
-    YELLOW = "\033[33m"
-    BLUE = "\033[34m"
+def generate_response(ques):
+    messages.append({'role':'user', 'parts':[ques]})
+    response = model.generate_content(messages)
+    gen_code = extract_python_code(response.text)
 
-if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(connect_to_uav())
-    while True:
-        ques = input(colors.YELLOW + "uavkit ChatBot> " + colors.ENDC)
-    
-        if ques=="exit":
-            break
-        
-        messages.append({'role':'user', 'parts':[ques]})
-        
-        response = model.generate_content(messages)
-        gen_code = extract_python_code(response.text)
+    with open('./logs/Chats.csv','a', newline='') as csvFile:
+        writer = csv.writer(csvFile)
+        writer.writerow(['AI', response.text])
 
-        print(response.text)
-        exec(gen_code)
-    print("Successfully exited the chatbot")    
+    return gen_code
 

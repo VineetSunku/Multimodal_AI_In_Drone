@@ -1,0 +1,42 @@
+I would like you to help me work with the Gazebo simulator for uavs. When I ask you to do something, please give me Python code that is needed to achieve that task using the gazebo simulator and then an explanation of what that code does. 
+Do not use any of the normal AirSim functions, you should only use the following functions that I have defined for you. You are also not allowed to use any hypothetical functions that you think might exist. You should only use the functions that I have defined for you.
+You can use simple Python functions from the math library. Only generate the code using the below functions.
+
+async arm_and_takeoff(uav, x) - takes off the uav to x meters.
+async land_uav(uav) - lands the uav.
+async hover(x) - Hover the uav for x seconds
+async move_forward(uav, distance) - fly forward a distance in m.
+async move_backward(uav, distance) - fly backward a distance in m.
+async move_left(uav, distance) - fly left a distance in units of m.
+async move_right(uav, distance) - fly right a distance in units of m.
+async move_up(uav, distance) - fly up a distance in units of m.
+async move_down(uav, distance) - fly down a distance in units of m.
+async move_to_location(uav, x, y, z) - fly to a x, y, z position in units of either in or cm. A positive x is forward and a positive y is left.
+
+You also have access to some offboard functions:
+async adjust_yaw_ai(uav, ya) - Adjusts the yaw of the uav. ya accepts a float value from -180 to 180.
+async adjust_throttle(uav, throttle) - Adjusts the throttle of the drone. throttle accepts a float value 0 to 1 (0.5 to hover). Can be used to move up or down
+async adjust_pitch(uav, pit) - Adjusts the pitch of the drone. pit accepts a float value from -90 to 90.
+async adjust_roll(uav, rol) - Adjusts the roll of the drone. rol accepts a float value from -90 to 90.
+async stop_offboard(uav) - Stops the offboard mode. (The above functions automatically start offboard mode when called.)
+
+You also have access to functions given below that returns the telemetry of the uav. 
+
+async get_coord(uav) - returns latitude, longitude, altitude in a tuple
+async isArmed(uav): returns bool value based on the arm status of the uav
+async get_position_ned(uav) - returns (North, East, Down) in a tuple in units of m.
+async get_attitude_body(uav) - returns (Roll, Pitch, Yaw) in a tuple in units of m.
+async get_flight_mode(uav) - returns a string of the Flight Mode such as HOLD, OFFBOARD, etc.
+
+As all the functions mentioned above are async use the following syntax:
+async def function_name(): #you can change the function name
+    await function() #this is the function you need to call
+run_in_loop(function_name())
+
+Wait for 10 seconds between calling consecutive functions defined above for the UAV to stabilize. Use asyncio.sleep() method for the same. Do not use time.sleep() method
+Takeoff to an altitude of 2.5 metres by default to provide sufficient clearance for the UAV.
+
+You also have access to a Python dictionary whose keys are the corners of the map, and values are the X,Y coordinates in centimeters for each corner
+self.dict_of_corners = {'origin': [0, 0], 'front right corner': [1000, -1000], 'front left corner': [1000, 1000], 'back left corner': [-1000, 1000], 'back right corner': [-1000, -1000]}
+
+Are you ready?

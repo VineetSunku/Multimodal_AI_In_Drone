@@ -7,6 +7,7 @@
     <title>AI Drone</title>
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"></script>
 </head>
 
 <body class="overflow-y-hidden">
@@ -77,7 +78,7 @@
                 </div>
             </div>
             <div id="Chat" class="hidden h-[90%] flex flex-col w-full">
-                <div id="ChatHistory" class="flex w-full overflow-y-scroll py-2 h-[90%] px-4">
+                <div id="ChatHistory" class="flex w-full overflow-y-scroll py-2 px-4 h-[90%]">
                     <div id="Chatsss" class="flex flex-col w-full gap-2 py-2">
                         <!-- Messages go here -->
                         {% for item in data %}
@@ -93,10 +94,12 @@
                         </div>
                         {% endif %}
                         {% endfor %}
+
                     </div>
                 </div>
 
-                <div class="bg-white px-4 flex flex-row border-t-2 border-gray-100 items-start mt-2 py-2">
+                <!-- Search Bar -->
+                <div class="bg-white px-4 flex flex-row border-t-2 pt-2 border-gray-100 items-start w-[100%]">
                     <input type="text" id="textMessage" placeholder="Type your message..."
                         class="flex-1 border rounded-full px-4 py-2 focus:outline-none">
                     <button onclick="sendMessage()"
@@ -113,17 +116,51 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Search Bar End -->
 
             </div>
 
-
         </div>
+    </div>
+
+
+    </div>
     </div>
 
 
     <script>
         // GLOBAL CONSTANTS //
         var isCalled = false;
+        const socket = io();
+
+        // CHAT //
+        socket.on('person', function (data) {
+            const personContainer = document.getElementById('Chatsss');
+            const newDiv = document.createElement('div');
+            newDiv.className = 'self-end bg-blue-200 text-black p-2 rounded-lg max-w-xs';
+            newDiv.innerText = data.data;
+            personContainer.appendChild(newDiv);
+            const load = document.createElement('div');
+            load.className = 'animate-pulse bg-gray-300 text-black p-2 rounded-lg max-w-xs h-4';
+            load.id = 'load';
+            personContainer.appendChild(load);
+            setTimeout(function () {
+                var divElement = document.getElementById('ChatHistory');
+                divElement.scrollTop = divElement.scrollHeight;
+            }, 100);
+        });
+        socket.on('ai', function (data) {
+            const personContainer = document.getElementById('Chatsss');
+            const newDiv = document.createElement('div');
+            newDiv.className = 'bg-gray-300 text-black p-2 rounded-lg max-w-xs';
+            newDiv.innerText = data.data;
+            document.getElementById('load').remove();
+            personContainer.appendChild(newDiv);
+            setTimeout(function () {
+                var divElement = document.getElementById('ChatHistory');
+                divElement.scrollTop = divElement.scrollHeight;
+            }, 100);
+        });
 
         // TAB SELECTOR //
         function chatColour() {
@@ -160,22 +197,13 @@
         // CONTROLLER //
         // IN AIR //
         window.onload = function () {
+            // CHAT SCROLL DOWN //
             setTimeout(function () {
                 var divElement = document.getElementById('ChatHistory');
                 divElement.scrollTop = divElement.scrollHeight;
             }, 100);
-            //document.getElementById("ChatHistory").scrollTop -= 100;
 
-            // get the "Div" inside which you wish to scroll (i.e. the container element)
-            //const El = document.getElementById('ChatHistory');
-
-            // Lets say you wish to scroll by 100px, 
-            //El.scrollTo({ top: 100, behavior: 'smooth' });
-
-            // If you wish to scroll until the end of the container
-            // El.scrollTo({ top: El.scrollHeight, behavior: 'smooth' });
-
-
+            //
             if (localStorage.getItem("isTakenOff") == "true") {
                 document.getElementById("wasd").classList.remove("hidden");
                 document.getElementById("wasd").classList.add("flex");
@@ -241,6 +269,10 @@
                     element.classList.remove("bg-violet-500");
                     element.classList.add("bg-violet-300");
                     sendData("rd", "d");
+                }
+            } else {
+                if (ev.key == "Enter") {
+                    sendMessage();
                 }
             }
         }
@@ -356,7 +388,6 @@
                     console.log(error);
                 }
             });
-            window.location.reload();
         }
 
     </script>

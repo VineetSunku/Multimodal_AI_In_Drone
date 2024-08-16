@@ -6,8 +6,11 @@ import threading
 from DroneFunctions.basicMoves import *
 import csv
 import cv2
+from flask_socketio import SocketIO, emit
+from DroneAI.main import generate_response
 
 app = Flask(__name__)
+socketio = SocketIO(app)
 camera = cv2.VideoCapture(0)
 
 ######### UAV CONNECTIONS ######### 
@@ -39,7 +42,7 @@ def read_csv(file_path):
 @app.route('/')
 def index():
     data = read_csv('./logs/Chats.csv')
-    return render_template('index.html', data = data)
+    return render_template('index.html', data=data)
 
 @app.route('/takeoff', methods=['POST'])
 def takeoff():
@@ -61,21 +64,20 @@ def keyPressed():
     elif keyDir == "rd":
         run_in_loop(adjust_yaw(uav, "right"))
     elif keyDir == "ud":
-        run_in_loop(adjust_throttle(uav, "up"))
+        run_in_loop(adjust_throttle(uav, 0.8))
     elif keyDir == "dod":
-        run_in_loop(adjust_throttle(uav, "down"))
+        run_in_loop(adjust_throttle(uav, 0.4))
     elif keyDir == "wd":
-        run_in_loop(adjust_pitch(uav, "forward"))
+        run_in_loop(adjust_pitch(uav, 20))
     elif keyDir == "sd":
-        run_in_loop(adjust_pitch(uav, "backward"))
+        run_in_loop(adjust_pitch(uav, -20))
     elif keyDir == "ad":
-        run_in_loop(adjust_roll(uav, "left"))
+        run_in_loop(adjust_roll(uav, 20))
     elif keyDir == "dd":
-        run_in_loop(adjust_roll(uav, "right"))
+        run_in_loop(adjust_roll(uav, -20))
     else:
         run_in_loop(stop_offboard(uav))
     return jsonify({"status": "Yaw initiated"})
-    
 
 @app.route('/send_message', methods=['POST'])
 def sendMessage():
@@ -83,7 +85,11 @@ def sendMessage():
     with open('./logs/Chats.csv','a', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow([data['who'], data['message']])
-    return jsonify(data)
+    emit_update('person')
+    gen_code = generate_response(data['message'])
+    emit_update('ai')
+    exec(gen_code)
+    return jsonify({'response': gen_code})
         
 @app.route('/video')
 def video():
@@ -100,7 +106,11 @@ def getVideo():
             frame = buffer.tobytes()
         yield(b'--frame\r\n'
               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+        
+def emit_update(who):
+    data = read_csv('./logs/Chats.csv')
+    socketio.emit(who, {'data': data[-1][1]})
 
 if __name__ == '__main__':
     threading.Thread(target=loop.run_forever).start()
-    app.run(debug=True)
+    socketio.run(app)

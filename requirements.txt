@@ -22,6 +22,8 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via flask
+evdev==1.7.1
+    # via pynput
 flask==3.0.3
     # via -r requirements.in
 google-ai-generativelanguage==0.6.6
@@ -99,12 +101,20 @@ pydantic==2.8.2
     # via google-generativeai
 pydantic-core==2.20.1
     # via pydantic
+pynput==1.7.7
+    # via -r requirements.in
 pyparsing==3.1.2
     # via httplib2
+python-xlib==0.33
+    # via pynput
 requests==2.32.3
     # via google-api-core
 rsa==4.9
     # via google-auth
+six==1.16.0
+    # via
+    #   pynput
+    #   python-xlib
 tqdm==4.66.5
     # via google-generativeai
 typing-extensions==4.12.2
