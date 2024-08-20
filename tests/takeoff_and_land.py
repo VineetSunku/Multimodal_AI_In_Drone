@@ -34,7 +34,6 @@ async def run():
     print("Taking Off")
     await uav.action.takeoff()
 
-
     await asyncio.sleep(10)
 
     print("LANDING")

@@ -1,0 +1,398 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Drone</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"></script>
+</head>
+
+<body class="overflow-y-hidden">
+    <nav class="w-full h-8 bg-red-800 flex items-center px-8">
+        <h1 class="text-white">
+            AI Drone!
+        </h1>
+    </nav>
+    <div class="flex flex-row">
+        <div class="w-[50rem] h-[27rem] mx-2 mt-6 border-2 border-black">
+            <img src="{{ url_for('video') }}" width="100%" height="100%" />
+        </div>
+        <div class="w-1 h-screen bg-gray-500"></div>
+        <div class="w-full relative h-screen flex flex-col justify-start items-center">
+            <div class="w-full h-[6%] bg-gray-100 flex flex-row">
+                <div id="ControllerTab" onclick="controllerColour()"
+                    class="bg-white px-2 border-2 flex justify-center items-center border-b-white">
+                    Controller</div>
+                <div id="ChatTab" onclick="chatColour()"
+                    class="px-2 flex justify-center items-center hover:cursor-pointer">Chat</div>
+            </div>
+            <div id="Controller" class="flex w-full h-full justify-center items-center">
+                <div id="wasd" class="hidden gap-x-4 justify-center items-center">
+                    <div class="flex flex-col px-4 h-64 gap-y-4 border-2 items-center justify-center border-black">
+                        <div id="w" class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center">
+                            <span class="text-white">W</span>
+                        </div>
+                        <div class="flex flex-row gap-x-4">
+                            <div id="a" class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center">
+                                <span class="text-white">A</span>
+                            </div>
+                            <div id="s" class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center">
+                                <span class="text-white">S</span>
+                            </div>
+                            <div id="d" class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center">
+                                <span class="text-white">D</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col px-4 h-64 gap-y-4 border-2 items-center justify-center border-black">
+                        <div id="up" class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center">
+                            <span class="text-white rotate-90">
+                                < </span>
+                        </div>
+                        <div class="flex flex-row gap-x-4">
+                            <div id="left" class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center">
+                                <span class="text-white">
+                                    < </span>
+                            </div>
+                            <div id="down" class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center">
+                                <span class="text-white rotate-90">></span>
+                            </div>
+                            <div id="right"
+                                class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center">
+                                <span class="text-white">></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="land" onclick="land()"
+                        class="absolute text-white w-20 h-20 rounded-3xl bg-violet-500 hover:cursor-pointer flex items-center justify-center bottom-12 right-4">
+                        Land!
+                    </div>
+                </div>
+                <div id="takeoff"
+                    class="flex justify-center items-center w-12 h-8 text-white bg-violet-500 p-12 rounded-lg hover:cursor-pointer"
+                    onclick="takeoff()">
+                    Takeoff!
+                </div>
+            </div>
+            <div id="Chat" class="hidden h-[90%] flex flex-col w-full">
+                <div id="ChatHistory" class="flex w-full overflow-y-scroll py-2 px-4 h-[90%]">
+                    <div id="Chatsss" class="flex flex-col w-full gap-2 py-2">
+                        <!-- Messages go here -->
+                        {% for item in data %}
+                        {% if item[0]=="AI" %}
+                        <!-- Example Received Message -->
+                        <div class="bg-gray-300 text-black p-2 rounded-lg max-w-xs">
+                            {{ item[1] }}
+                        </div>
+                        {% else %}
+                        <!-- Example Message -->
+                        <div class="self-end bg-blue-200 text-black p-2 rounded-lg max-w-xs">
+                            {{ item[1] }}
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="bg-white px-4 flex flex-row border-t-2 pt-2 border-gray-100 items-start w-[100%]">
+                    <input type="text" id="textMessage" placeholder="Type your message..."
+                        class="flex-1 border rounded-full px-4 py-2 focus:outline-none">
+                    <button onclick="sendMessage()"
+                        class="bg-blue-500 text-white rounded-full p-2 ml-2 hover:bg-blue-600 focus:outline-none">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="#ffffff">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z"
+                                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Search Bar End -->
+
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+
+    <script>
+        // GLOBAL CONSTANTS //
+        var isCalled = false;
+        const socket = io();
+
+        // CHAT //
+        socket.on('person', function (data) {
+            const personContainer = document.getElementById('Chatsss');
+            const newDiv = document.createElement('div');
+            newDiv.className = 'self-end bg-blue-200 text-black p-2 rounded-lg max-w-xs';
+            newDiv.innerText = data.data;
+            personContainer.appendChild(newDiv);
+            const load = document.createElement('div');
+            load.className = 'animate-pulse bg-gray-300 text-black p-2 rounded-lg max-w-xs h-4';
+            load.id = 'load';
+            personContainer.appendChild(load);
+            setTimeout(function () {
+                var divElement = document.getElementById('ChatHistory');
+                divElement.scrollTop = divElement.scrollHeight;
+            }, 100);
+        });
+        socket.on('ai', function (data) {
+            const personContainer = document.getElementById('Chatsss');
+            const newDiv = document.createElement('div');
+            newDiv.className = 'bg-gray-300 text-black p-2 rounded-lg max-w-xs';
+            newDiv.innerText = data.data;
+            document.getElementById('load').remove();
+            personContainer.appendChild(newDiv);
+            setTimeout(function () {
+                var divElement = document.getElementById('ChatHistory');
+                divElement.scrollTop = divElement.scrollHeight;
+            }, 100);
+        });
+
+        // TAB SELECTOR //
+        function chatColour() {
+            var element = document.getElementById("ChatTab");
+            element.classList.remove("hover:cursor-pointer");
+            element.classList.add("bg-white", "border-b-white", "border-2");
+            var element1 = document.getElementById("ControllerTab");
+            element1.classList.add("hover:cursor-pointer");
+            element1.classList.remove("bg-white", "border-b-white", "border-2");
+            var element2 = document.getElementById("Controller");
+            element2.classList.add("hidden");
+            element2.classList.remove("flex");
+            var element3 = document.getElementById("Chat");
+            element3.classList.add("flex");
+            element3.classList.remove("hidden");
+            localStorage.setItem("isChat", true);
+        }
+        function controllerColour() {
+            var element = document.getElementById("ControllerTab");
+            element.classList.remove("hover:cursor-pointer");
+            element.classList.add("bg-white", "border-b-white", "border-2");
+            var element1 = document.getElementById("ChatTab");
+            element1.classList.add("hover:cursor-pointer");
+            element1.classList.remove("bg-white", "border-b-white", "border-2");
+            var element2 = document.getElementById("Controller");
+            element2.classList.add("flex");
+            element2.classList.remove("hidden");
+            var element3 = document.getElementById("Chat");
+            element3.classList.add("hidden");
+            element3.classList.remove("flex");
+            localStorage.setItem("isChat", false);
+        }
+
+        // CONTROLLER //
+        // IN AIR //
+        window.onload = function () {
+            // CHAT SCROLL DOWN //
+            setTimeout(function () {
+                var divElement = document.getElementById('ChatHistory');
+                divElement.scrollTop = divElement.scrollHeight;
+            }, 100);
+
+            //
+            if (localStorage.getItem("isTakenOff") == "true") {
+                document.getElementById("wasd").classList.remove("hidden");
+                document.getElementById("wasd").classList.add("flex");
+                document.getElementById("takeoff").classList.remove("flex");
+                document.getElementById("takeoff").classList.add("hidden");
+                console.log('Showing Controls!');
+            }
+            if (localStorage.getItem("isChat") == "true") {
+                var element = document.getElementById("ChatTab");
+                element.classList.remove("hover:cursor-pointer");
+                element.classList.add("bg-white", "border-b-white", "border-2");
+                var element1 = document.getElementById("ControllerTab");
+                element1.classList.add("hover:cursor-pointer");
+                element1.classList.remove("bg-white", "border-b-white", "border-2");
+                var element2 = document.getElementById("Controller");
+                element2.classList.add("hidden");
+                element2.classList.remove("flex");
+                var element3 = document.getElementById("Chat");
+                element3.classList.add("flex");
+                element3.classList.remove("hidden");
+            }
+        }
+
+        document.body.addEventListener("keydown", (ev) => {
+            if (localStorage.getItem("isChat") == "false") {
+                if (ev.key == "w") {
+                    var element = document.getElementById("w");
+                    element.classList.remove("bg-violet-500");
+                    element.classList.add("bg-violet-300");
+                    sendData("wd", "d");
+                } else if (ev.key == "a") {
+                    var element = document.getElementById("a");
+                    element.classList.remove("bg-violet-500");
+                    element.classList.add("bg-violet-300");
+                    sendData("ad", "d");
+                } else if (ev.key == "s") {
+                    var element = document.getElementById("s");
+                    element.classList.remove("bg-violet-500");
+                    element.classList.add("bg-violet-300");
+                    sendData("sd", "d");
+                } else if (ev.key == "d") {
+                    var element = document.getElementById("d");
+                    element.classList.remove("bg-violet-500");
+                    element.classList.add("bg-violet-300");
+                    sendData("dd", "d");
+                } else if (ev.key == "ArrowUp") {
+                    var element = document.getElementById("up");
+                    element.classList.remove("bg-violet-500");
+                    element.classList.add("bg-violet-300");
+                    sendData("ud", "d");
+                } else if (ev.key == "ArrowLeft") {
+                    var element = document.getElementById("left");
+                    element.classList.remove("bg-violet-500");
+                    element.classList.add("bg-violet-300");
+                    sendData("ld", "d");
+                } else if (ev.key == "ArrowDown") {
+                    var element = document.getElementById("down");
+                    element.classList.remove("bg-violet-500");
+                    element.classList.add("bg-violet-300");
+                    sendData("dod", "d");
+                } else if (ev.key == "ArrowRight") {
+                    var element = document.getElementById("right");
+                    element.classList.remove("bg-violet-500");
+                    element.classList.add("bg-violet-300");
+                    sendData("rd", "d");
+                }
+            } else {
+                if (ev.key == "Enter") {
+                    sendMessage();
+                }
+            }
+        }
+        );
+        document.body.addEventListener("keyup", (ev1) => {
+            if (localStorage.getItem("isChat") == "false") {
+                if (ev1.key == "w") {
+                    var element = document.getElementById("w");
+                    element.classList.remove("bg-violet-300");
+                    element.classList.add("bg-violet-500");
+                    sendData("wu", "u");
+                } else if (ev1.key == "a") {
+                    var element = document.getElementById("a");
+                    element.classList.remove("bg-violet-300");
+                    element.classList.add("bg-violet-500");
+                    sendData("au", "u");
+                } else if (ev1.key == "s") {
+                    var element = document.getElementById("s");
+                    element.classList.remove("bg-violet-300");
+                    element.classList.add("bg-violet-500");
+                    sendData("su", "u");
+                } else if (ev1.key == "d") {
+                    var element = document.getElementById("d");
+                    element.classList.remove("bg-violet-300");
+                    element.classList.add("bg-violet-500");
+                    sendData("du", "u");
+                } else if (ev1.key == "ArrowUp") {
+                    var element = document.getElementById("up");
+                    element.classList.remove("bg-violet-300");
+                    element.classList.add("bg-violet-500");
+                    sendData("uu", "u");
+                } else if (ev1.key == "ArrowLeft") {
+                    var element = document.getElementById("left");
+                    element.classList.remove("bg-violet-300");
+                    element.classList.add("bg-violet-500");
+                    sendData("lu", "u");
+                } else if (ev1.key == "ArrowDown") {
+                    var element = document.getElementById("down");
+                    element.classList.remove("bg-violet-300");
+                    element.classList.add("bg-violet-500");
+                    sendData("dou", "u");
+                } else if (ev1.key == "ArrowRight") {
+                    var element = document.getElementById("right");
+                    element.classList.remove("bg-violet-300");
+                    element.classList.add("bg-violet-500");
+                    sendData("ru", "u");
+                }
+            }
+        }
+        );
+        function sendData(keyDir, dir) {
+            if ((isCalled && dir == "u") || (!isCalled && dir == "d")) {
+                isCalled = !isCalled;
+                $.ajax({
+                    url: '/keypress',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ 'value': keyDir }),
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            }
+        }
+        function land() {
+            localStorage.setItem("isTakenOff", false)
+            var element = document.getElementById("wasd");
+            element.classList.remove("flex");
+            element.classList.add("hidden");
+            element = document.getElementById("takeoff");
+            element.classList.remove("hidden");
+            element.classList.add("flex");
+            $.ajax({
+                url: '/land',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ 'value': 'Landing' }),
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+        // IN GROUND //
+        function takeoff() {
+            localStorage.setItem("isTakenOff", true)
+            var element = document.getElementById("wasd");
+            element.classList.remove("hidden");
+            element.classList.add("flex");
+            element = document.getElementById("takeoff");
+            element.classList.remove("flex");
+            element.classList.add("hidden");
+            $.ajax({
+                url: '/takeoff',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ 'value': 'Taking Off' }),
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        // CHAT //
+        function sendMessage() {
+            var message = document.getElementById("textMessage").value;
+            document.getElementById("textMessage").value = '';
+            $.ajax({
+                url: '/send_message',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ 'who': 'person', 'message': message }),
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+    </script>
+</body>
+
+
+
+</html>
