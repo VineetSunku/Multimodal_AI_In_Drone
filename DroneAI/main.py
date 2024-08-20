@@ -2,7 +2,7 @@ import asyncio
 import google.generativeai as genai
 import re
 import os
-from DroneFunctions.advancedMoves import *
+from DroneFunctions.basicMoves import *
 import csv
 
 ######### PROVIDE CONTEXT #########

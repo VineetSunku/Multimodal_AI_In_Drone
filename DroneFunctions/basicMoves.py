@@ -8,8 +8,6 @@ import math
 ######### GLOBAL CONSTANTS #########
 
 isPressed = True
-# Earth radius in meters
-EARTH_RADIUS = 6378137.0
 
 
 ######### TELEMETRY DETAILS #########
@@ -169,47 +167,91 @@ async def hover(duration):
 
 # Move Right
 async def move_right(uav: System, distance_m):
-    current_lat, current_lon, current_alt = await get_coord()
-
-    delta_lon = (distance_m / EARTH_RADIUS) * (180 / math.pi) / math.cos(current_lat * math.pi / 180)
-    new_lon = current_lon + delta_lon
-
-    await uav.action.goto_location(current_lat, new_lon, current_alt, current_alt)
-    log.info(f"Moved {distance_m} meters right to new location: Latitude: {current_lat}, Longitude: {new_lon}, Altitude: {current_alt}")
+    log.debug("Moving Right")
+    try:
+        north, east, down = await get_position_ned(uav)
+        roll, pitch, yaw = await get_attitude_body(uav)
+        log.debug("Recieved Position: North: %s  East: %s Down: %s", north, east, down)
+        log.debug("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw))
+        # 0 degrees is assumed North
+        north -= distance_m * math.sin(math.radians(yaw))
+        east += distance_m * math.cos(math.radians(yaw))
+        log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
+        await uav.offboard.start()
+        await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
+        await asyncio.sleep(10)
+        await stop_offboard(uav)
+        log.info("Moved Right by %s meters", distance_m)
+    except Exception as e:
+        log.error(e)
     
 # Move Left
 async def move_left(uav: System, distance_m):
-    current_lat, current_lon, current_alt = await get_coord()
-
-    delta_lon = (distance_m / EARTH_RADIUS) * (180 / math.pi) / math.cos(current_lat * math.pi / 180)
-    new_lon = current_lon - delta_lon
-
-    await uav.action.goto_location(current_lat, new_lon, current_alt, current_alt)
-    log.info(f"Moved {distance_m} meters left to new location: Latitude: {current_lat}, Longitude: {new_lon}, Altitude: {current_alt}")
+    log.debug("Moving Left")
+    try:
+        north, east, down = await get_position_ned(uav)
+        roll, pitch, yaw = await get_attitude_body(uav)
+        log.debug("Recieved Position: North: %s  East: %s Down: %s", north, east, down)
+        log.debug("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw))
+        # 0 degrees is assumed North
+        north += distance_m * math.sin(math.radians(yaw))
+        east -= distance_m * math.cos(math.radians(yaw))
+        log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
+        await uav.offboard.start()
+        await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
+        await asyncio.sleep(10)
+        await stop_offboard(uav)
+        log.info("Moved Left by %s meters", distance_m)
+    except Exception as e:
+        log.error(e)
 
 # Move Forward
 async def move_forward(uav: System, distance_m):
-    current_lat, current_lon, current_alt = await get_coord()
-
-    delta_lat = (distance_m / EARTH_RADIUS) * (180 / math.pi)
-    new_lat = current_lat + delta_lat
-
-    await uav.action.goto_location(new_lat, current_lon, current_alt, current_alt)
-    log.info(f"Moved {distance_m} meters forward to new location: Latitude: {new_lat}, Longitude: {current_lon}, Altitude: {current_alt}")
+    log.debug("Moving Forward")
+    try:
+        north, east, down = await get_position_ned(uav)
+        roll, pitch, yaw = await get_attitude_body(uav)
+        log.debug("Recieved Position: North: %s  East: %s Down: %s", north, east, down)
+        log.debug("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw))
+        # 0 degrees is assumed North
+        north += distance_m * math.cos(math.radians(yaw))
+        east += distance_m * math.sin(math.radians(yaw))
+        log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
+        await uav.offboard.start()
+        await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
+        await asyncio.sleep(10)
+        await stop_offboard(uav)
+        log.info("Moved Forward by %s meters", distance_m)
+    except Exception as e:
+        log.error(e)
 
 # Move Backward
 async def move_backward(uav: System, distance_m):
-    current_lat, current_lon, current_alt = await get_coord()
-
-    delta_lat = (distance_m / EARTH_RADIUS) * (180 / math.pi)
-    new_lat = current_lat - delta_lat
-
-    await uav.action.goto_location(new_lat, current_lon, current_alt, current_alt)
-    log.info(f"Moved {distance_m} meters backward to new location: Latitude: {new_lat}, Longitude: {current_lon}, Altitude: {current_alt}")
+    log.debug("Moving Backward")
+    try:
+        north, east, down = await get_position_ned(uav)
+        roll, pitch, yaw = await get_attitude_body(uav)
+        log.debug("Recieved Position: North: %s  East: %s Down: %s", north, east, down)
+        log.debug("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw))
+        # 0 degrees is assumed North
+        north -= distance_m * math.cos(math.radians(yaw))
+        east -= distance_m * math.sin(math.radians(yaw))
+        log.debug("Starting OFFBOARD MODE")
+        await uav.offboard.start()
+        await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
+        await asyncio.sleep(10)
+        await stop_offboard(uav)
+        log.info("Moved Backward by %s meters", distance_m)
+    except Exception as e:
+        log.error(e)
 
 # Move Up
 async def move_up(uav: System, distance_m):
-    current_lat, current_lon, current_alt = await get_coord()
+    current_lat, current_lon, current_alt = await get_coord(uav)
 
     new_alt = current_alt + distance_m
 
@@ -218,7 +260,7 @@ async def move_up(uav: System, distance_m):
 
 # Move Down
 async def move_down(uav: System, distance_m):
-    current_lat, current_lon, current_alt = await get_coord()
+    current_lat, current_lon, current_alt = await get_coord(uav)
 
     new_alt = current_alt - distance_m
 
@@ -235,7 +277,7 @@ async def move_to_location(uav: System, x, y, z):
     except Exception as e:
         log.error(e)
         
-# Adjust Throttle
+# Adjust Yaw
 async def adjust_yaw_ai(uav: System, ya):
     log.debug("adjusting yaw angle by AI")
     try:
@@ -247,6 +289,7 @@ async def adjust_yaw_ai(uav: System, ya):
         global isPressed
         isPressed = True
         await uav.offboard.set_attitude(Attitude(roll, pitch, ya, 0.74 ))
-        await asyncio.sleep(0.01)
+        await asyncio.sleep(10)
+        await stop_offboard(uav)
     except Exception as e:
         log.error(e)
