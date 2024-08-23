@@ -12,6 +12,8 @@ argparse==1.4.0
     # via -r requirements.in
 asyncio==3.4.3
     # via -r requirements.in
+bidict==0.23.1
+    # via python-socketio
 blinker==1.8.2
     # via flask
 cachetools==5.4.0
@@ -25,6 +27,10 @@ click==8.1.7
 evdev==1.7.1
     # via pynput
 flask==3.0.3
+    # via
+    #   -r requirements.in
+    #   flask-socketio
+flask-socketio==5.3.6
     # via -r requirements.in
 google-ai-generativelanguage==0.6.6
     # via google-generativeai
@@ -58,6 +64,8 @@ grpcio==1.65.4
     #   mavsdk
 grpcio-status==1.48.2
     # via google-api-core
+h11==0.14.0
+    # via wsproto
 httplib2==0.22.0
     # via
     #   google-api-python-client
@@ -105,12 +113,18 @@ pynput==1.7.7
     # via -r requirements.in
 pyparsing==3.1.2
     # via httplib2
+python-engineio==4.9.1
+    # via python-socketio
+python-socketio==5.11.3
+    # via flask-socketio
 python-xlib==0.33
     # via pynput
 requests==2.32.3
     # via google-api-core
 rsa==4.9
     # via google-auth
+simple-websocket==1.0.0
+    # via python-engineio
 six==1.16.0
     # via
     #   pynput
@@ -128,3 +142,5 @@ urllib3==2.2.2
     # via requests
 werkzeug==3.0.3
     # via flask
+wsproto==1.2.0
+    # via simple-websocket

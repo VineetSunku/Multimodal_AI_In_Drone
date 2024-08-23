@@ -33,17 +33,19 @@ async def isArmed(uav: System):
 
 async def get_position_ned(uav: System):
     async for pos in uav.telemetry.position_velocity_ned():
-        North = pos.position.north_m
-        East = pos.position.east_m
-        Down = pos.position.down_m
+        North = pos.position.north_m or 0
+        East = pos.position.east_m or 0
+        Down = pos.position.down_m or 0
         return North, East, Down
+    return 0,0,0
 
 async def get_attitude_body(uav: System):
     async for att in uav.telemetry.attitude_euler():
-        Roll = att.roll_deg
-        Pitch = att.pitch_deg
-        Yaw = att.yaw_deg
+        Roll = att.roll_deg or 0
+        Pitch = att.pitch_deg or 0
+        Yaw = att.yaw_deg or 0
         return Roll, Pitch, Yaw
+    return 0,0,0
 
 async def get_flight_mode(uav: System):
     async for flight_mode in uav.telemetry.flight_mode():

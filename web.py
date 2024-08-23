@@ -86,7 +86,7 @@ def sendMessage():
         writer = csv.writer(csvFile)
         writer.writerow([data['who'], data['message']])
     emit_update('person')
-    gen_code = generate_response(data['message'])
+    gen_code = generate_response(data['message']) or ""
     emit_update('ai')
     exec(gen_code)
     return jsonify({'response': gen_code})
