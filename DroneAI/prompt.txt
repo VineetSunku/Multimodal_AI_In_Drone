@@ -33,8 +33,9 @@ async def function_name(): #you can change the function name
     await function2() #and so on
 run_in_loop(function_name())
 
-Wait for 10 seconds between calling consecutive functions defined above for the UAV to stabilize. Use asyncio.sleep() method for the same. Do not use time.sleep() method
-Takeoff to an altitude of 2.5 metres by default to provide sufficient clearance for the UAV. While controlling the UAV, if the UAV is already armed (check with isArmed() method), you do not have to takeoff the UAV again. 
-You do not have to import asyncio.
+Wait for 3 seconds between calling consecutive functions defined above for the UAV to stabilize. Use asyncio.sleep() method for the same. Do not use time.sleep() method
+Takeoff to an altitude of 2.5 metres by default to provide sufficient clearance for the UAV. 
+Do not takeoff or land the drone unless asked specifically.
+Don't import asyncio.
 
 Are you ready?

@@ -68,13 +68,13 @@ def keyPressed():
     elif keyDir == "dod":
         run_in_loop(adjust_throttle(uav, 0.4))
     elif keyDir == "wd":
-        run_in_loop(adjust_pitch(uav, 20))
-    elif keyDir == "sd":
         run_in_loop(adjust_pitch(uav, -20))
+    elif keyDir == "sd":
+        run_in_loop(adjust_pitch(uav, 20))
     elif keyDir == "ad":
-        run_in_loop(adjust_roll(uav, 20))
-    elif keyDir == "dd":
         run_in_loop(adjust_roll(uav, -20))
+    elif keyDir == "dd":
+        run_in_loop(adjust_roll(uav, 20))
     else:
         run_in_loop(stop_offboard(uav))
     return jsonify({"status": "Yaw initiated"})

@@ -66,7 +66,7 @@ async def adjust_yaw(uav: System, dir):
         count = 0
         global isPressed
         isPressed = True
-        if dir=="left":
+        if dir=="right":
             while isPressed:
                 yaw += 1
                 if yaw>180:
@@ -98,7 +98,7 @@ async def arm_and_takeoff(uav: System, alt: float):
     await uav.action.set_takeoff_altitude(altitude=alt)
     log.info("Taking Off")
     await uav.action.takeoff()
-    await asyncio.sleep(10)  # Wait for 10 seconds to stabilize
+    await asyncio.sleep(3)  # Wait for 3 seconds to stabilize
 
 # Land UAV
 async def land_uav(uav: System):
@@ -182,7 +182,7 @@ async def move_right(uav: System, distance_m):
         log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
         await uav.offboard.start()
         await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
-        await asyncio.sleep(10)
+        await asyncio.sleep(3)
         await stop_offboard(uav)
         log.info("Moved Right by %s meters", distance_m)
     except Exception as e:
@@ -203,7 +203,7 @@ async def move_left(uav: System, distance_m):
         log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
         await uav.offboard.start()
         await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
-        await asyncio.sleep(10)
+        await asyncio.sleep(3)
         await stop_offboard(uav)
         log.info("Moved Left by %s meters", distance_m)
     except Exception as e:
@@ -224,7 +224,7 @@ async def move_forward(uav: System, distance_m):
         log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
         await uav.offboard.start()
         await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
-        await asyncio.sleep(10)
+        await asyncio.sleep(3)
         await stop_offboard(uav)
         log.info("Moved Forward by %s meters", distance_m)
     except Exception as e:
@@ -245,7 +245,7 @@ async def move_backward(uav: System, distance_m):
         log.debug("Starting OFFBOARD MODE")
         await uav.offboard.start()
         await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
-        await asyncio.sleep(10)
+        await asyncio.sleep(3)
         await stop_offboard(uav)
         log.info("Moved Backward by %s meters", distance_m)
     except Exception as e:
@@ -290,8 +290,8 @@ async def adjust_yaw_ai(uav: System, ya):
         await uav.offboard.start()
         global isPressed
         isPressed = True
-        await uav.offboard.set_attitude(Attitude(roll, pitch, ya, 0.74 ))
-        await asyncio.sleep(10)
+        await uav.offboard.set_attitude(Attitude(roll, pitch, (ya+yaw +180)%360-180, 0.72 ))
+        await asyncio.sleep(3)
         await stop_offboard(uav)
     except Exception as e:
         log.error(e)
