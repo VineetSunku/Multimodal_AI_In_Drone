@@ -24,14 +24,26 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via flask
+contourpy==1.3.0
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
 evdev==1.7.1
     # via pynput
+filelock==3.15.4
+    # via
+    #   torch
+    #   triton
 flask==3.0.3
     # via
     #   -r requirements.in
     #   flask-socketio
 flask-socketio==5.3.6
     # via -r requirements.in
+fonttools==4.53.1
+    # via matplotlib
+fsspec==2024.6.1
+    # via torch
 google-ai-generativelanguage==0.6.6
     # via google-generativeai
 google-api-core[grpc]==2.19.1
@@ -75,17 +87,81 @@ idna==3.7
 itsdangerous==2.2.0
     # via flask
 jinja2==3.1.4
-    # via flask
+    # via
+    #   flask
+    #   torch
+kiwisolver==1.4.7
+    # via matplotlib
 markupsafe==2.1.5
     # via
     #   jinja2
     #   werkzeug
+matplotlib==3.9.2
+    # via
+    #   seaborn
+    #   ultralytics
 mavsdk==2.8.1
     # via -r requirements.in
-numpy==2.0.1
-    # via opencv-python
+mpmath==1.3.0
+    # via sympy
+networkx==3.3
+    # via torch
+numpy==1.26.4
+    # via
+    #   contourpy
+    #   matplotlib
+    #   opencv-python
+    #   pandas
+    #   scipy
+    #   seaborn
+    #   torchvision
+    #   ultralytics-thop
+nvidia-cublas-cu12==12.1.3.1
+    # via
+    #   nvidia-cudnn-cu12
+    #   nvidia-cusolver-cu12
+    #   torch
+nvidia-cuda-cupti-cu12==12.1.105
+    # via torch
+nvidia-cuda-nvrtc-cu12==12.1.105
+    # via torch
+nvidia-cuda-runtime-cu12==12.1.105
+    # via torch
+nvidia-cudnn-cu12==9.1.0.70
+    # via torch
+nvidia-cufft-cu12==11.0.2.54
+    # via torch
+nvidia-curand-cu12==10.3.2.106
+    # via torch
+nvidia-cusolver-cu12==11.4.5.107
+    # via torch
+nvidia-cusparse-cu12==12.1.0.106
+    # via
+    #   nvidia-cusolver-cu12
+    #   torch
+nvidia-nccl-cu12==2.20.5
+    # via torch
+nvidia-nvjitlink-cu12==12.6.68
+    # via
+    #   nvidia-cusolver-cu12
+    #   nvidia-cusparse-cu12
+nvidia-nvtx-cu12==12.1.105
+    # via torch
 opencv-python==4.10.0.84
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   ultralytics
+packaging==24.1
+    # via matplotlib
+pandas==2.2.2
+    # via
+    #   seaborn
+    #   ultralytics
+pillow==10.4.0
+    # via
+    #   matplotlib
+    #   torchvision
+    #   ultralytics
 proto-plus==1.24.0
     # via
     #   google-ai-generativelanguage
@@ -99,6 +175,10 @@ protobuf==3.19.6
     #   grpcio-status
     #   mavsdk
     #   proto-plus
+psutil==6.0.0
+    # via ultralytics
+py-cpuinfo==9.0.0
+    # via ultralytics
 pyasn1==0.6.0
     # via
     #   pyasn1-modules
@@ -112,30 +192,67 @@ pydantic-core==2.20.1
 pynput==1.7.7
     # via -r requirements.in
 pyparsing==3.1.2
-    # via httplib2
+    # via
+    #   httplib2
+    #   matplotlib
+python-dateutil==2.9.0.post0
+    # via
+    #   matplotlib
+    #   pandas
 python-engineio==4.9.1
     # via python-socketio
 python-socketio==5.11.3
     # via flask-socketio
 python-xlib==0.33
     # via pynput
+pytz==2024.1
+    # via pandas
+pyyaml==6.0.2
+    # via ultralytics
 requests==2.32.3
-    # via google-api-core
+    # via
+    #   google-api-core
+    #   ultralytics
 rsa==4.9
     # via google-auth
+scipy==1.14.1
+    # via ultralytics
+seaborn==0.13.2
+    # via ultralytics
 simple-websocket==1.0.0
     # via python-engineio
 six==1.16.0
     # via
     #   pynput
+    #   python-dateutil
     #   python-xlib
+sympy==1.13.2
+    # via torch
+torch==2.4.0
+    # via
+    #   torchvision
+    #   ultralytics
+    #   ultralytics-thop
+torchvision==0.19.0
+    # via ultralytics
 tqdm==4.66.5
-    # via google-generativeai
+    # via
+    #   google-generativeai
+    #   ultralytics
+triton==3.0.0
+    # via torch
 typing-extensions==4.12.2
     # via
     #   google-generativeai
     #   pydantic
     #   pydantic-core
+    #   torch
+tzdata==2024.1
+    # via pandas
+ultralytics==8.2.79
+    # via -r requirements.in
+ultralytics-thop==2.0.6
+    # via ultralytics
 uritemplate==4.1.1
     # via google-api-python-client
 urllib3==2.2.2

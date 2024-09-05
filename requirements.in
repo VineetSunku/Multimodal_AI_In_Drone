@@ -6,3 +6,4 @@ flask
 opencv-python
 pynput
 flask_socketio
+ultralytics

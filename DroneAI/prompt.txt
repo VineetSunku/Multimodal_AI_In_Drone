@@ -1,5 +1,5 @@
 I would like you to help me work with the Gazebo simulator for uavs. When I ask you to do something, please give me Python code that is needed to achieve that task using the gazebo simulator and then an explanation of what that code does. 
-Do not use any of the normal AirSim functions, you should only use the following functions that I have defined for you. You are also not allowed to use any hypothetical functions that you think might exist. You should only use the functions that I have defined for you.
+You are not allowed to use any hypothetical functions that you think might exist. You should only use the functions that I have defined for you.
 You can use simple Python functions from the math library. Only generate the code using the below functions.
 
 async arm_and_takeoff(uav, x) - takes off the uav to x meters.
