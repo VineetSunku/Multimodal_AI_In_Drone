@@ -1,5 +1,5 @@
 import asyncio
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 from mavsdk import System
 from mavsdk.manual_control import ManualControlResult
 import threading
@@ -8,10 +8,10 @@ import csv
 import cv2
 from flask_socketio import SocketIO, emit
 from DroneAI.main import generate_response
+from DroneVideo import videoFeed as vf
 
 app = Flask(__name__)
 socketio = SocketIO(app)
-camera = cv2.VideoCapture(0)
 
 ######### UAV CONNECTIONS ######### 
 uav = System()
@@ -91,25 +91,20 @@ def sendMessage():
     exec(gen_code)
     return jsonify({'response': gen_code})
         
-@app.route('/video')
-def video():
-    return "1"
-    # return Response(getVideo(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
-def getVideo():
-    while True:
-        ifCamera, frame = camera.read()
-        if not ifCamera:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-        yield(b'--frame\r\n'
-              b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-        
 def emit_update(who):
     data = read_csv('./logs/Chats.csv')
     socketio.emit(who, {'data': data[-1][1]})
+
+######### VIDEO FEED #########
+
+@app.route('/video')
+def video():
+    return Response(getVideo(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+def getVideo():
+    for frames in vf.main():
+        yield(b'--frame\r\n'
+              b'Content-Type: image/jpeg\r\n\r\n' + frames + b'\r\n')
 
 if __name__ == '__main__':
     threading.Thread(target=loop.run_forever).start()
