@@ -7,7 +7,8 @@ from DroneFunctions.basicMoves import *
 import csv
 import cv2
 from flask_socketio import SocketIO, emit
-from DroneAI.main import generate_response
+from DroneAI.Gemini import model, genai, extract_python_code, generate_response as generate_gemini_response
+from DroneAI.LLAVA import generate_response as generate_llava_response
 from DroneVideo import videoFeed as vf
 
 app = Flask(__name__)
@@ -86,8 +87,9 @@ def sendMessage():
         writer = csv.writer(csvFile)
         writer.writerow([data['who'], data['message']])
     emit_update('person')
-    gen_code = generate_response(data['message']) or ""
-    emit_update('ai')
+    ques = data['message']
+    gen_code = generate_gemini_response(ques) if data['VLM']=="true" else generate_llava_response(ques) or ""
+    emit_update('Gemini') if data['VLM']=="true" else emit_update('LLaVA') 
     exec(gen_code)
     return jsonify({'response': gen_code})
         
@@ -105,6 +107,36 @@ def getVideo():
     for frames in vf.main():
         yield(b'--frame\r\n'
               b'Content-Type: image/jpeg\r\n\r\n' + frames + b'\r\n')
+
+#For execution of prompts requiring the camera feed
+        
+def capture_image(ques):
+    script_path = 'DroneFunctions/snapShot.py'
+
+    # Run the image capture script using subprocess
+    subprocess.run(['python3', script_path], check=True)
+
+    # Path where the image was saved (make sure this matches the path in the image capture script)
+    timestamp = datetime.now().strftime('%m%d_%H')
+    image_name = f"image_{timestamp}.jpg"
+
+    image_path = os.path.join(os.getcwd(), 'logs/public', image_name)
+
+    print(ques)
+    sample_file = genai.upload_file(path=image_path,
+                        display_name=image_name)
+    response = model.generate_content([sample_file,ques])
+    gen_code = extract_python_code(response.text)
+    exec(gen_code)
+    print("Generated Code")
+    print(response.text)
+    print(gen_code)
+    with open('./logs/Chats.csv', 'a', newline='') as csvFile:
+        writer = csv.writer(csvFile)
+        writer.writerow(['AI', response.text]) 
+    emit_update('ai')  
+    print('Capture Image function is being executed')
+
 
 if __name__ == '__main__':
     threading.Thread(target=loop.run_forever).start()

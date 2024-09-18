@@ -4,7 +4,9 @@ from mavsdk.offboard import OffboardError, PositionNedYaw, Attitude
 from mavsdk import System
 from mavsdk import telemetry
 import math
-
+import subprocess
+import os
+from datetime import datetime
 ######### GLOBAL CONSTANTS #########
 
 isPressed = True
@@ -294,4 +296,4 @@ async def adjust_yaw_ai(uav: System, ya):
         await asyncio.sleep(3)
         await stop_offboard(uav)
     except Exception as e:
-        log.error(e)
+        log.error(e)  

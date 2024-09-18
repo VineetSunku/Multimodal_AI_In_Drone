@@ -2,6 +2,7 @@
 venv
 env/
 node_modules/
+logs/
 
 # Ignore Python bytecode files
 *.pyc
@@ -13,5 +14,4 @@ __pycache__/
 .vscode/
 *.log
 *.csv
-/logs
 *.pt

@@ -22,12 +22,37 @@
         </div>
         <div class="w-1 h-screen bg-gray-500"></div>
         <div class="w-full relative h-screen flex flex-col justify-start items-center">
-            <div class="w-full h-[6%] bg-gray-100 flex flex-row">
+            <div class="w-full h-[6%] bg-gray-100 grid grid-cols-3">
                 <div id="ControllerTab" onclick="controllerColour()"
                     class="bg-white px-2 border-2 flex justify-center items-center border-b-white">
-                    Controller</div>
+                    Controller
+                </div>
                 <div id="ChatTab" onclick="chatColour()"
-                    class="px-2 flex justify-center items-center hover:cursor-pointer">Chat</div>
+                    class="px-2 flex justify-center items-center hover:cursor-pointer">
+                    Chat
+                </div>
+                <div id="VLMDropdown" class="justify-self-end mr-2 hidden items-center">
+
+                    <div class="relative inline-block text-left">
+                        <div>
+                          <button onclick="ListVLMDropdown()" type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                            <div id="VLMSelected">Choose VLM</div>
+                            <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </div>
+                      
+                        <div id="VLMOptions" class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                          <div class="py-1" role="none">
+                            <a onclick="VLMSelector('Gemini')" class="block px-4 py-2 text-sm text-gray-700 hover:cursor-pointer" role="menuitem" tabindex="-1" id="menu-item-0">Gemini</a>
+                            <a onclick="VLMSelector('LLaVA')" class="block px-4 py-2 text-sm text-gray-700 hover:cursor-pointer" role="menuitem" tabindex="-1" id="menu-item-1">LLaVA</a>
+                          </div>
+                        </div>
+                      </div>
+                      
+
+                </div>
             </div>
             <div id="Controller" class="flex w-full h-full justify-center items-center">
                 <div id="wasd" class="hidden gap-x-4 justify-center items-center">
@@ -82,14 +107,18 @@
                     <div id="Chatsss" class="flex flex-col w-full gap-2 py-2">
                         <!-- Messages go here -->
                         {% for item in data %}
-                        {% if item[0]=="AI" %}
+                        {% if item[0]=="Gemini" %}
                         <!-- Example Received Message -->
-                        <div class="bg-gray-300 text-black p-2 rounded-lg max-w-xs">
+                        <div class="bg-blue-200 text-black p-2 rounded-lg max-w-xs">
+                            {{ item[1] }}
+                        </div>
+                        {% elif item[0]=="LLaVA" %}
+                        <div class="bg-green-200 text-black p-2 rounded-lg max-w-xs">
                             {{ item[1] }}
                         </div>
                         {% else %}
                         <!-- Example Message -->
-                        <div class="self-end bg-blue-200 text-black p-2 rounded-lg max-w-xs">
+                        <div class="self-end bg-gray-300 text-black p-2 rounded-lg max-w-xs">
                             {{ item[1] }}
                         </div>
                         {% endif %}
@@ -137,7 +166,7 @@
         socket.on('person', function (data) {
             const personContainer = document.getElementById('Chatsss');
             const newDiv = document.createElement('div');
-            newDiv.className = 'self-end bg-blue-200 text-black p-2 rounded-lg max-w-xs';
+            newDiv.className = 'self-end bg-gray-300 text-black p-2 rounded-lg max-w-xs';
             newDiv.innerText = data.data;
             personContainer.appendChild(newDiv);
             const load = document.createElement('div');
@@ -149,10 +178,10 @@
                 divElement.scrollTop = divElement.scrollHeight;
             }, 100);
         });
-        socket.on('ai', function (data) {
+        socket.on('Gemini', function (data) {
             const personContainer = document.getElementById('Chatsss');
             const newDiv = document.createElement('div');
-            newDiv.className = 'bg-gray-300 text-black p-2 rounded-lg max-w-xs';
+            newDiv.className = 'bg-blue-200 text-black p-2 rounded-lg max-w-xs';
             newDiv.innerText = data.data;
             document.getElementById('load').remove();
             personContainer.appendChild(newDiv);
@@ -161,6 +190,20 @@
                 divElement.scrollTop = divElement.scrollHeight;
             }, 100);
         });
+
+        socket.on('LLaVA', function (data) {
+            const personContainer = document.getElementById('Chatsss');
+            const newDiv = document.createElement('div');
+            newDiv.className = 'bg-green-200 text-black p-2 rounded-lg max-w-xs';
+            newDiv.innerText = data.data;
+            document.getElementById('load').remove();
+            personContainer.appendChild(newDiv);
+            setTimeout(function () {
+                var divElement = document.getElementById('ChatHistory');
+                divElement.scrollTop = divElement.scrollHeight;
+            }, 100);
+        });
+
 
         // TAB SELECTOR //
         function chatColour() {
@@ -176,6 +219,9 @@
             var element3 = document.getElementById("Chat");
             element3.classList.add("flex");
             element3.classList.remove("hidden");
+            var element4 = document.getElementById("VLMDropdown");
+            element4.classList.add("flex");
+            element4.classList.remove("hidden");
             localStorage.setItem("isChat", true);
         }
         function controllerColour() {
@@ -191,7 +237,37 @@
             var element3 = document.getElementById("Chat");
             element3.classList.add("hidden");
             element3.classList.remove("flex");
+            var element4 = document.getElementById("VLMDropdown");
+            element4.classList.add("hidden");
+            element4.classList.remove("flex");
             localStorage.setItem("isChat", false);
+        }
+
+        // VLM SELECTOR //
+        function VLMSelector(VLM) {
+            if (VLM == "Gemini") {
+                localStorage.setItem("isGemini", true);
+                document.getElementById("VLMSelected").innerText = 'Gemini';
+            } else {
+                localStorage.setItem("isGemini", false);
+                document.getElementById("VLMSelected").innerText = 'LLaVA';
+            }
+            document.getElementById("VLMOptions").classList.remove("absolute");
+            document.getElementById("VLMOptions").classList.add("hidden");
+        }
+
+        function ListVLMDropdown() {
+            const dropdown = document.getElementById("VLMOptions");
+
+            if (dropdown.classList.contains("hidden")) {
+                // If hidden, open the dropdown
+                dropdown.classList.remove("hidden");
+                dropdown.classList.add("absolute");
+            } else {
+                // If already open, close the dropdown
+                dropdown.classList.add("hidden");
+                dropdown.classList.remove("absolute");
+            }
         }
 
         // CONTROLLER //
@@ -203,6 +279,7 @@
                 divElement.scrollTop = divElement.scrollHeight;
             }, 100);
 
+            localStorage.setItem("isGemini", true);
             //
             if (localStorage.getItem("isTakenOff") == "true") {
                 document.getElementById("wasd").classList.remove("hidden");
@@ -224,6 +301,9 @@
                 var element3 = document.getElementById("Chat");
                 element3.classList.add("flex");
                 element3.classList.remove("hidden");
+                var element4 = document.getElementById("VLMDropdown");
+                element4.classList.add("flex");
+                element4.classList.remove("hidden");
             }
         }
 
@@ -378,12 +458,13 @@
         // CHAT //
         function sendMessage() {
             var message = document.getElementById("textMessage").value;
+            var VLM = localStorage.getItem("isGemini");
             document.getElementById("textMessage").value = '';
             $.ajax({
                 url: '/send_message',
                 type: 'POST',
                 contentType: 'application/json',
-                data: JSON.stringify({ 'who': 'person', 'message': message }),
+                data: JSON.stringify({ 'who': 'person', 'message': message, 'VLM': VLM }),
                 error: function (error) {
                     console.log(error);
                 }

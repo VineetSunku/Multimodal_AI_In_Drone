@@ -16,7 +16,10 @@ This repository requires Python-gz-transport13 and since at present as a pypi pa
 ```
 sudo apt install python3-gz-transport13
 ```
-
+The system-wide package needs to be accessed from withiin the virtual environment as well. For this, once the virtual environment is created,
+```
+ln -s /usr/lib/python3/dist-packages/gz ~/venv/lib/python3.10/site-packages/ #Paths may change
+```
 ### Clone the Repository
 
 ```
