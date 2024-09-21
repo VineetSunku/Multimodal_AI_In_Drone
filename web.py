@@ -42,7 +42,7 @@ def read_csv(file_path):
 
 @app.route('/')
 def index():
-    data = read_csv('./logs/Chats.csv')
+    data = read_csv('./logs/chats.csv')
     return render_template('index.html', data=data)
 
 @app.route('/takeoff', methods=['POST'])
@@ -83,7 +83,7 @@ def keyPressed():
 @app.route('/send_message', methods=['POST'])
 def sendMessage():
     data = request.get_json()
-    with open('./logs/Chats.csv','a', newline='') as csvFile:
+    with open('./logs/chats.csv','a', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow([data['who'], data['message']])
     emit_update('person')
@@ -94,7 +94,7 @@ def sendMessage():
     return jsonify({'response': gen_code})
         
 def emit_update(who):
-    data = read_csv('./logs/Chats.csv')
+    data = read_csv('./logs/chats.csv')
     socketio.emit(who, {'data': data[-1][1]})
 
 ######### VIDEO FEED #########
@@ -131,7 +131,7 @@ def capture_image(ques):
     print("Generated Code")
     print(response.text)
     print(gen_code)
-    with open('./logs/Chats.csv', 'a', newline='') as csvFile:
+    with open('./logs/chats.csv', 'a', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow(['AI', response.text]) 
     emit_update('ai')  

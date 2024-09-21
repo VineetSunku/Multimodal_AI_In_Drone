@@ -38,7 +38,7 @@ def generate_response(ques):
     )
     gen_code = extract_python_code(response['message']['content'])
 
-    with open('./logs/Chats.csv','a', newline='') as csvFile:
+    with open('./logs/chats.csv','a', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow(['LLaVA', response['message']['content']])
     return gen_code

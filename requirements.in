@@ -8,3 +8,7 @@ pynput
 flask_socketio
 ultralytics
 ollama
+tensorflow
+tensorflow_hub
+tensorflow_text
+scikit-learn

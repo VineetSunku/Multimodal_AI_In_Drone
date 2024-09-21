@@ -63,7 +63,7 @@ def generate_response(ques):
     messages.append({'role':'user', 'parts':[ques]})
     response = model.generate_content(messages)
     gen_code = extract_python_code(response.text)
-    with open('./logs/Chats.csv','a', newline='') as csvFile:
+    with open('./logs/chats.csv','a', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow(['Gemini', response.text])
 
