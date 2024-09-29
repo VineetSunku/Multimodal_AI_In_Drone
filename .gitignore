@@ -13,5 +13,4 @@ __pycache__/
 .idea/
 .vscode/
 *.log
-*.csv
 *.pt

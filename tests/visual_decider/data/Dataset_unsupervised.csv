@@ -1,0 +1,2977 @@
+Command,Camera
+Follow the person in front of you.,1
+Detect any obstacles and avoid them.,1
+Scan the area for moving objects.,1
+Identify the red car below and hover above it.,1
+Track the object moving to the right.,1
+Record a video of the landscape.,1
+Capture an image of the building in front.,1
+Look for any signs of fire in the forest.,1
+Find a safe landing spot in the open field.,1
+Search for the marked target and move towards it.,1
+Monitor traffic and report congestion.,1
+Take pictures of the crowd at the event.,1
+Scan the area for any human activity.,1
+Locate the blue car in the parking lot.,1
+Check if there's a person at the door.,1
+Identify any animals in the open space.,1
+Detect and follow the cyclist ahead.,1
+Look for damage to the roof of the house.,1
+Track the boat in the water below.,1
+Record a video of the sunset.,1
+"Fly to the coordinates (37.7749, -122.4194).",0
+Return to the launch point.,0
+Increase your altitude by 10 meters.,0
+Rotate 90 degrees to the left.,0
+Hover at your current position.,0
+Move forward 20 meters.,0
+Perform a 360-degree spin.,0
+Descend to 5 meters altitude.,0
+Send telemetry data to the control station.,0
+Fly in a circle with a 10-meter radius.,0
+Change to offboard mode.,0
+Set speed to 5 m/s.,0
+Return to base.,0
+Increase speed by 2 m/s.,0
+Change the flight mode to autonomous.,0
+Pause the current mission.,0
+Hover for 30 seconds.,0
+Land immediately.,0
+Move up by 20 meters,0
+Capture a photo of the tree line to the east.,1
+Identify any animals near the riverbank.,1
+Follow the drone ahead of you.,1
+Locate the person wearing a blue jacket.,1
+Scan the horizon for any smoke.,1
+Track the group of hikers below.,1
+Look for any vehicles on the road.,1
+Record a time-lapse of the construction site.,1
+Find the tallest building in the area and hover near it.,1
+Check for any movement on the ground.,1
+Detect the nearest landing pad and land.,1
+Focus the camera on the street below.,1
+Search for the red flag and move toward it.,1
+Look for any boats in the lake.,1
+Capture a panoramic view of the landscape.,1
+Identify and track the runner in the race.,1
+Record video footage of the forest canopy.,1
+Locate the damaged power line.,1
+Find the car with a flat roof and follow it.,1
+Check if there�s anyone near the entrance of the building.,1
+Fly to the waypoint at 50 meters altitude.,0
+Maintain your current altitude and circle the area.,0
+Ascend by 20 meters and hold position.,0
+Fly west for 100 meters.,0
+Descend to 2 meters altitude.,0
+Perform a hover for 60 seconds.,0
+Move backward 10 meters.,0
+Activate landing sequence.,0
+Change your heading by 45 degrees clockwise.,0
+Fly to the next mission waypoint.,0
+Return to home position and prepare for landing.,0
+Reduce speed to 3 m/s.,0
+Turn off the external lights.,0
+Perform a figure-eight maneuver.,0
+Fly in a straight line for 30 meters.,0
+Begin auto-pilot mode.,0
+Pause the current flight.,0
+Ascend to 100 meters and switch to offboard mode.,0
+Set your maximum altitude to 150 meters.,0
+Move diagonally 20 meters to the northeast.,0
+Zoom in on the object directly below you.,1
+Capture a wide-angle photo of the cityscape.,1
+Look for the drone pad and prepare for landing.,1
+Track the cyclist in the bike lane.,1
+Identify the highest point in the field and hover over it.,1
+Check for any cars approaching the intersection.,1
+Search for any moving objects in the parking lot.,1
+Find the green boat on the river.,1
+Record a video of the ongoing soccer match.,1
+Locate the source of the smoke in the distance.,1
+Take a picture of the bridge.,1
+Identify the person wearing a yellow helmet.,1
+Scan the area for unusual activity.,1
+Follow the delivery van ahead.,1
+Look for the red marker and fly towards it.,1
+Track the movement of the person walking along the street.,1
+Capture a photo,0
+Monitor the activity at the construction site.,1
+Search for any wildlife near the lake.,1
+Focus the camera on the target and follow it.,1
+Fly to the specified altitude of 150 meters.,0
+Return to your takeoff location immediately.,0
+Move left by 15 meters.,0
+Ascend to 20 meters and hold position.,0
+Rotate 180 degrees and hover.,0
+Decrease speed by 2 m/s.,0
+Start a return-to-home procedure.,0
+Hold your position for 5 minutes.,0
+Turn off the motors.,0
+Fly in a straight line towards the waypoint.,0
+Circle the launch point at a radius of 10 meters.,0
+Descend and prepare for landing.,0
+Rotate the drone by 90 degrees counterclockwise.,0
+Switch to manual control mode.,0
+Increase your altitude by 50 meters.,0
+Begin the pre-programmed flight path.,0
+Pause the mission and hover.,0
+Fly forward at 3 m/s for 100 meters.,0
+Ascend to 500 meters and loiter.,0
+Turn off the external camera feed.,0
+Land on my hand,1
+Land on the palm of my hand,1
+Takeoff from the palm of my hand,0
+Takeoff from my hand,0
+Takeoff to 2.5 meters,0
+Follow the red car,1
+Move towards the edible object,1
+Scan the area for humans,1
+Scan the area for wildlife,1
+Count the number of people moving left to right,1
+Count the number of people in the scene,1
+Do a backflip,0
+Do a frontflip,0
+Perform a backflip,0
+Move the drone forward by 10 meters,0
+Survey a square land of area of 100 meters squared,0
+Move in an equilateral triangle of side length 20 meters,0
+Roll the drone by 10 degrees for 10 seconds,0
+Change the pitch of the drone to 15 degrees for 30 seconds,0
+Increase the yaw of the drone by 20 degrees,0
+Land on the helipad,1
+What do you see in front of you?,1
+follow me,1
+keep moving forward until you see a stop sign,1
+land on the brown package,1
+land on the green box,1
+How many fingers am I holding up?,1
+follow my hand,1
+Begin video recording,1
+Fly to the park,1
+Land on top of the moving car,1
+Find the red truck,1
+Inspect the area for signs of wildlife,1
+inspect the area for fire,1
+is there a fire in front of you?,1
+climb to the 10th floor and check for fire through the window,1
+land on top of the pink car,1
+can you tell me what is in front of you?,1
+Can you move 10 meteres to the right?,0
+Please do a backflip,0
+Please move forward by 2000cm,0
+Orbit around the red car 3 times,1
+Orbit in a circle 5 times,0
+Stop the drone immediately,0
+Where are you?,0
+Where are you right now?,0
+What do you see?,1
+Move towards the person in front of you and take a photo,1
+Move towards the pink truck,1
+Look around and tell me what you see,0
+Can you identify the object in front of you?,1
+Can you identify the object behind you?,1
+Move right by 30 meters,0
+What crop do you see in the field below you?,1
+Find the weed in the field and hover over it,1
+Follow the person with the red umbrella,1
+Adjust the throttle of the drone to 0.6,0
+Increase the throttle of the UAV by 0.1,0
+What flight mode are you in?,0
+Please takeoff the UAV to a height of 10 meters,0
+Turn left,0
+"Go front 25 meters, then left by 10 meters",0
+"Go front 25 meters, then left by 10 meters, then tell me what you see",1
+Circle around me 10 times clockwise,1
+Form a circle of radius 10 meters,0
+Turn right,0
+Fly to the location marked by the mission control team.,0
+Take a photo of the target and send it to the ground station.,1
+Hover for 10 seconds to stabilize the platform.,0
+Scan the area for any obstacles and update the navigation system.,1
+"Change the altitude to 500 feet and head towards the coordinates 37.7749, -122.4194.",0
+Take a 360-degree photo of the surroundings and transmit it to the control center.,1
+Maintain a safe distance of 100 meters from the object and track it for 5 minutes.,1
+Return to the home location and land safely.,0
+Observe the area and wait for further instructions from the mission control team.,0
+Inspect the area with a high-resolution camera and provide a detailed report.,1
+Adjust the gimbal to focus on the subject and capture a high-quality photo.,1
+Stay at the current location and wait for the next command from the ground station.,0
+"Fly to coordinates 43.6532, -79.3832 at an altitude of 100 meters",0
+Capture a photo of the surrounding environment,1
+Navigate to the next landing site,1
+Observe the terrain ahead for obstacles,1
+Hover at the current position for 10 seconds,0
+Provide a 360-degree view of the area,1
+Follow the leader at a distance of 50 meters,1
+Observe the crowd for any suspicious activity,1
+Change altitude to 200 meters,0
+Follow the subject for 5 minutes,1
+Return to base station,0
+Provide a close-up of the target,1
+Fly at a speed of 50 km/h,0
+Observe the traffic ahead for congestion,1
+Navigate through the narrow passage,0
+Provide a wide-angle view of the surroundings,1
+Follow the GPS route,0
+Observe the weather conditions,1
+Change direction to 270 degrees,0
+Follow the subject for 10 minutes,1
+Fly at a height of 500 meters,0
+Provide a high-resolution image of the target,1
+Navigate to the designated checkpoint,0
+Observe the surroundings for any potential threats,1
+Hover at the current position for 15 seconds,0
+Follow the subject at a distance of 20 meters,1
+Change altitude to 300 meters,0
+Provide a 3D scan of the environment,1
+Fly to the next waypoint,0
+Observe the crowd for any suspicious activity,1
+Follow the GPS route,0
+Navigate through the dense forest,1
+Observe the surroundings for any potential threats,1
+Hover at the current position for 20 seconds,0
+Provide a close-up of the target,1
+Fly at a speed of 75 km/h,0
+Follow the subject for 15 minutes,1
+Navigate to the designated landing site,0
+The red car's name is Jeffrey. Follow Jeffrey,1
+My dog responds to the name Jimmy. Follow him,1
+Make sure my cat is safe,1
+is my cat safe?,1
+is my baby in the cradle?,1
+that woman in the pink T shirt is my wife. Follow her,1
+Follow my wife,1
+Follow the speeding car,1
+What is the speed at which the yellow car is travelling?,1
+Fly to the location marked by the red pin on the map and capture a 360-degree photo of the area.,1
+Change altitude to 500 feet and hover in place for 5 minutes.,0
+Obtain a thermal image of the area to the east and identify any potential heat signatures.,1
+Follow the designated patrol route and monitor for any signs of wildlife.,1
+Take a video of the damaged bridge and provide a structural assessment of the damage.,1
+Land at the designated landing site and await further instructions.,0
+Scan the area for any signs of flooding and provide a water level reading.,1
+Fly over the designated search area and use the camera to scan for any signs of survivors.,1
+Hover above the target and provide a detailed video of the object's dimensions and material composition.,1
+Maintain a steady hover above the ground and provide a stabilized video feed.,1
+Takeoff at 10:00 AM and fly to the north for 5 kilometers,0
+Fly over the city and capture images of the skyscrapers,1
+Land at the designated helipad and prepare for maintenance,0
+Capture a 360-degree panorama of the beach at sunset,1
+Fly at 20 meters altitude and follow the coastline for 2 kilometers,1
+Hover for 5 minutes and scan the area for any obstacles,1
+"Fly to the coordinates 37.7749, -122.4194 and take a photo of the Golden Gate Bridge",1
+Fly over the forest and capture images of the wildlife,1
+Return to the starting point and perform a pre-programmed aerial dance routine,0
+Fly at 50 meters altitude and capture images of the crops in the field,1
+Land safely and shut down the engines,0
+Follow the GPS and fly to the location of the lost hiker,1
+Fly over the stadium and capture images of the fans before the game,1
+"Fly to the coordinates 40.7128, -74.0060 and take a photo of the Statue of Liberty",1
+Fly at 20 meters altitude and follow the highway for 5 kilometers,1
+Take a 3D scan of the building and capture images of the surrounding area,1
+Fly over the desert and capture images of the sand dunes,1
+Land at the designated landing pad and prepare for takeoff again,0
+Fly to the location of the accident and take a photo of the scene,1
+Fly at 10 meters altitude and follow the river for 2 kilometers,1
+Hover for 2 minutes and scan the area for any obstacles,1
+"Fly to the coordinates 34.0522, -118.2437 and take a photo of the Hollywood Sign",1
+Fly over the city and capture images of the traffic,1
+Return to the starting point and perform a pre-programmed aerial stunt routine,0
+Fly at 30 meters altitude and capture images of the buildings in the city,1
+Land safely and shut down the engines,0
+Follow the GPS and fly to the location of the missing child,1
+Fly over the stadium and capture images of the fans during the game,1
+"Fly to the coordinates 51.5074, -0.1278 and take a photo of the London Eye",1
+Fly at 15 meters altitude and follow the coastline for 3 kilometers,1
+Take a 3D scan of the building and capture images of the surrounding area,1
+Fly over the forest and capture images of the wildlife,1
+Land at the designated landing pad and prepare for takeoff again,0
+Fly to the location of the accident and take a photo of the scene,1
+Fly at 25 meters altitude and follow the highway for 4 kilometers,1
+Hover for 3 minutes and scan the area for any obstacles,1
+"Fly to the coordinates 40.7128, -74.0060 and take a photo of the Statue of Liberty",1
+Fly over the city and capture images of the skyscrapers,1
+Return to the starting point and perform a pre-programmed aerial dance routine,0
+Fly at 40 meters altitude and capture images of the crops in the field,1
+Land safely and shut down the engines,0
+Follow the GPS and fly to the location of the lost hiker,1
+Fly over the stadium and capture images of the fans before the game,1
+"Fly to the coordinates 37.7749, -122.4194 and take a photo of the Golden Gate Bridge",1
+Fly at 20 meters altitude and follow the river for 2 kilometers,1
+Hover for 4 minutes and scan the area for any obstacles,1
+Fly to the location of the accident and take a photo of the scene,1
+Fly over the desert and capture images of the sand dunes,1
+Land at the designated landing pad and prepare for takeoff again,0
+"Fly to the coordinates 34.0522, -118.2437 and take a photo of the Hollywood Sign",1
+Fly at 35 meters altitude and capture images of the buildings in the city,1
+Fly over the city and capture images of the traffic,1
+Return to the starting point and perform a pre-programmed aerial stunt routine,0
+Fly at 45 meters altitude and capture images of the crops in the field,1
+Land safely and shut down the engines,0
+Follow the GPS and fly to the location of the missing child,1
+Fly over the stadium and capture images of the fans during the game,1
+"Fly to the coordinates 51.5074, -0.1278 and take a photo of the London Eye",1
+Fly at 18 meters altitude and follow the coastline for 2 kilometers,1
+Take a 3D scan of the building and capture images of the surrounding area,1
+Fly over the forest and capture images of the wildlife,1
+Land at the designated landing pad and prepare for takeoff again,0
+Fly to the location of the accident and take a photo of the scene,1
+Fly at 22 meters altitude and follow the highway for 3 kilometers,1
+Hover for 5 minutes and scan the area for any obstacles,1
+"Fly to the coordinates 40.7128, -74.0060 and take a photo of the Statue of Liberty",1
+Fly over the city and capture images of the skyscrapers,1
+Return to the starting point and perform a pre-programmed aerial dance routine,0
+Fly at 48 meters altitude and capture images of the crops in the field,1
+Land safely and shut down the engines,0
+Follow the GPS and fly to the location of the lost hiker,1
+Fly over the stadium and capture images of the fans before the game,1
+"Fly to the coordinates 37.7749, -122.4194 and take a photo of the Golden Gate Bridge",1
+Fly at 28 meters altitude and follow the river for 3 kilometers,1
+Hover for 6 minutes and scan the area for any obstacles,1
+Fly to the location of the accident and take a photo of the scene,1
+Fly over the desert and capture images of the sand dunes,1
+Land at the designated landing pad and prepare for takeoff again,0
+"Fly to the coordinates 34.0522, -118.2437 and take a photo of the Hollywood Sign",1
+Fly at 42 meters altitude and capture images of the buildings in the city,1
+Fly over the city and capture images of the traffic,1
+Return to the starting point and perform a pre-programmed aerial stunt routine,0
+Fly at 50 meters altitude and capture images of the crops in the field,1
+Land safely and shut down the engines,0
+Follow the GPS and fly to the location of the missing child,1
+Fly over the stadium and capture images of the fans during the game,1
+"Fly to the coordinates 51.5074, -0.1278 and take a photo of the London Eye",1
+Fly at 20 meters altitude and follow the coastline for 4 kilometers,1
+Take a 3D scan of the building and capture images of the surrounding area,1
+Fly over the forest and capture images of the wildlife,1
+Land at the designated landing pad and prepare for takeoff again,0
+Fly to the location of the accident and take a photo of the scene,1
+Takeoff at 10:00 AM on 2023-03-15 and ascend to 100 meters,0
+Capture image of the terrain in front of the UAV at 50 meters altitude,1
+Descend to 20 meters and follow the red balloon,1
+"Fly over the city of Tokyo, Japan at 100 meters",1
+Land at 12:00 PM on 2023-03-15,0
+Observe and track the movement of the crowd at the Rio Carnival in Brazil,1
+Fly over the Great Barrier Reef in Australia and capture images of marine life,1
+Follow the drone following the route of the Tour de France,1
+Return to the starting point and takeoff again at 3:00 PM on 2023-03-16,0
+Monitor the traffic in New York City during rush hour,1
+Fly over the ancient city of Machu Picchu in Peru and capture images of the architecture,1
+"Takeoff at location 43.6532, -79.3832",0
+"Fly to location 34.0522, -118.2437 at 100 feet",0
+"Take a photo of the landscape at location 40.7128, -74.0060",1
+"Land at location 51.5074, -0.1278",0
+"Scan for obstacles at location 37.7749, -122.4194",1
+"Follow the subject at location 29.7604, -95.3698 for 5 minutes",1
+"Return to base at location 38.8977, -77.0365",0
+"Inspect the area at location 51.5074, 0.1278 for 10 minutes",1
+"Follow the subject at location 40.7128, -74.0060 for 3 minutes",1
+"Fly to location 41.8781, -87.6298 at 50 feet",0
+"Scan for obstacles at location 34.0522, -118.2437",1
+"Follow the subject at location 29.7604, -95.3698 for 2 minutes",1
+"Land at location 38.8977, -77.0365",0
+"Take a photo of the subject at location 51.5074, 0.1278",1
+"Fly to location 40.7128, -74.0060 at 200 feet",0
+"Scan the area at location 37.7749, -122.4194 for 15 minutes",1
+"Follow the subject at location 43.6532, -79.3832 for 4 minutes",1
+"Return to base at location 29.7604, -95.3698",0
+"Follow the subject at location 38.8977, -77.0365 for 8 minutes",1
+"Takeoff at location 34.0522, -118.2437",0
+"Fly to location 41.8781, -87.6298 at 300 feet",0
+"Scan the area at location 51.5074, -0.1278 for 12 minutes",1
+"Follow the subject at location 40.7128, -74.0060 for 1 minute",1
+"Take a photo of the landscape at location 43.6532, -79.3832",1
+"Fly to location 38.8977, -77.0365 at 150 feet",0
+"Scan for obstacles at location 37.7749, -122.4194",1
+"Return to base at location 51.5074, 0.1278",0
+"Follow the subject at location 29.7604, -95.3698 for 6 minutes",1
+"Inspect the area at location 40.7128, -74.0060 for 11 minutes",1
+"Takeoff at location 34.0522, -118.2437",0
+"Fly to location 41.8781, -87.6298 at 250 feet",0
+"Take a photo of the subject at location 43.6532, -79.3832",1
+"Land at location 51.5074, -0.1278",0
+"Follow the subject at location 38.8977, -77.0365 for 9 minutes",1
+"Scan the area at location 40.7128, -74.0060 for 14 minutes",1
+"Return to base at location 29.7604, -95.3698",0
+"Inspect the area at location 34.0522, -118.2437 for 10 minutes",1
+"Fly to location 51.5074, 0.1278 at 200 feet",0
+"Take a photo of the landscape at location 38.8977, -77.0365",1
+"Scan for obstacles at location 40.7128, -74.0060",1
+"Follow the subject at location 43.6532, -79.3832 for 5 minutes",1
+"Land at location 41.8781, -87.6298",0
+"Fly to location 51.5074, -0.1278 at 100 feet",0
+"Scan the area at location 37.7749, -122.4194 for 13 minutes",1
+"Return to base at location 40.7128, -74.0060",0
+"Take a photo of the subject at location 29.7604, -95.3698",1
+"Follow the subject at location 38.8977, -77.0365 for 7 minutes",1
+"Inspect the area at location 34.0522, -118.2437 for 9 minutes",1
+"Fly to location 43.6532, -79.3832 at 300 feet",0
+"Scan for obstacles at location 51.5074, 0.1278",1
+"Takeoff at location 40.7128, -74.0060",0
+"Take a photo of the landscape at location 38.8977, -77.0365",1
+"Follow the subject at location 41.8781, -87.6298 for 3 minutes",1
+"Land at location 29.7604, -95.3698",0
+"Fly to location 51.5074, -0.1278 at 250 feet",0
+"Scan the area at location 43.6532, -79.3832 for 12 minutes",1
+"Return to base at location 40.7128, -74.0060",0
+"Follow the subject at location 34.0522, -118.2437 for 6 minutes",1
+"Take a photo of the subject at location 38.8977, -77.0365",1
+"Inspect the area at location 51.5074, 0.1278 for 11 minutes",1
+"Fly to location 29.7604, -95.3698 at 200 feet",0
+"Scan for obstacles at location 40.7128, -74.0060",1
+"Takeoff at location 34.0522, -118.2437",0
+"Scan the area at location 43.6532, -79.3832 for 15 minutes",1
+"Follow the subject at location 51.5074, -0.1278 for 8 minutes",1
+"Return to base at location 38.8977, -77.0365",0
+"Fly to location 41.8781, -87.6298 at 300 feet",0
+"Take a photo of the landscape at location 29.7604, -95.3698",1
+"Land at location 51.5074, 0.1278",0
+"Follow the subject at location 40.7128, -74.0060 for 2 minutes",1
+"Fly to coordinates 43.6532,-79.3832",0
+Capture image of the Statue of Liberty,1
+Ascend to 500 meters,0
+Hover at 200 meters for 10 seconds,0
+Follow the person in the red jacket,1
+Return to base and land safely,0
+Scan the area for any obstacles,1
+Fly at 50 km/h for 2 minutes,0
+Capture a 360-degree video of the city,1
+Maintain a distance of 10 meters from the subject,1
+Descend to 100 meters,0
+Follow the moving vehicle,1
+Fly to the location of the nearest hospital,0
+Observe the wildlife in the area,1
+Fly at 30 km/h for 5 minutes,0
+Take a photo of the damaged building,1
+Return to base,0
+Hover at 150 meters for 15 seconds,0
+Follow the person with the blue backpack,1
+Scan the area for any hazards,1
+Fly at 40 km/h for 3 minutes,0
+Capture a close-up of the flower,1
+Descend to 50 meters,0
+Follow the group of people,1
+Fly to the location of the nearest police station,0
+Observe the traffic conditions,1
+Fly at 20 km/h for 10 minutes,0
+Take a video of the sunset,1
+Return to base and land,0
+Hover at 200 meters for 20 seconds,0
+Follow the moving car,1
+Scan the area for any signs of danger,1
+Fly at 60 km/h for 4 minutes,0
+Capture a photo of the historical landmark,1
+Descend to 200 meters,0
+Follow the person in the yellow shirt,1
+Fly to the location of the nearest park,0
+Observe the weather conditions,1
+Fly at 10 km/h for 15 minutes,0
+Take a close-up of the animal,1
+Return to base,0
+Hover at 100 meters for 25 seconds,0
+Follow the group of children,1
+Scan the area for any signs of pollution,1
+Fly at 80 km/h for 5 minutes,0
+Capture a 360-degree photo of the city,1
+Descend to 300 meters,0
+Follow the person with the red hat,1
+Fly to the location of the nearest school,0
+Observe the road conditions,1
+Fly at 5 km/h for 20 minutes,0
+Take a video of the people dancing,1
+Return to base and land safely,0
+Hover at 250 meters for 30 seconds,0
+Follow the moving bike,1
+Scan the area for any signs of emergency,1
+Fly at 90 km/h for 6 minutes,0
+Capture a close-up of the plant,1
+Descend to 400 meters,0
+Follow the group of people in the park,1
+Fly to the location of the nearest library,0
+Observe the traffic jam,1
+Fly at 15 km/h for 18 minutes,0
+Take a photo of the injured person,1
+Return to base,0
+Hover at 150 meters for 35 seconds,0
+Follow the person in the blue shirt,1
+Scan the area for any signs of fire,1
+Fly at 70 km/h for 7 minutes,0
+Capture a 360-degree photo of the forest,1
+Descend to 500 meters,0
+Follow the group of people on the beach,1
+Fly to the location of the nearest hospital,0
+Observe the weather forecast,1
+Fly at 25 km/h for 22 minutes,0
+Take a close-up of the flower,1
+Return to base and land safely,0
+Hover at 200 meters for 40 seconds,0
+Follow the person with the green hat,1
+Scan the area for any signs of crime,1
+Fly at 85 km/h for 8 minutes,0
+Capture a photo of the monument,1
+Descend to 600 meters,0
+Follow the group of people in the city,1
+Fly to the location of the nearest police station,0
+Observe the road conditions,1
+Fly at 10 km/h for 24 minutes,0
+Take a video of the people playing,1
+Return to base,0
+Hover at 250 meters for 45 seconds,0
+Follow the person in the yellow shirt,1
+Scan the area for any signs of emergency,1
+Fly at 95 km/h for 9 minutes,0
+Capture a 360-degree photo of the mountain,1
+Descend to 700 meters,0
+Follow the group of people in the park,1
+Fly to the location of the nearest fire station,0
+Observe the traffic jam,1
+Fly at 20 km/h for 26 minutes,0
+Take a photo of the damaged building,1
+Return to base and land safely,0
+Hover at 300 meters for 50 seconds,0
+Follow the person with the red backpack,1
+Scan the area for any signs of pollution,1
+Fly at 100 km/h for 10 minutes,0
+Capture a close-up of the animal,1
+Descend to 800 meters,0
+Follow the group of people on the beach,1
+Fly to the location of the nearest school,0
+Observe the weather conditions,1
+Fly at 30 km/h for 28 minutes,0
+Take a video of the people dancing,1
+Return to base,0
+Hover at 350 meters for 55 seconds,0
+Follow the person in the blue shirt,1
+Scan the area for any signs of crime,1
+Fly at 105 km/h for 11 minutes,0
+Takeoff at the north gate of the facility.,0
+Capture aerial footage of the construction site for quality control.,1
+Hover at an altitude of 20 meters for 30 seconds.,0
+Scan the perimeter fence for any damage or breaches.,1
+Land at the designated helipad on the rooftop.,0
+Inspect the solar panels on the eastern wing for any issues.,1
+"Fly to the coordinates 43.6532, -79.3832 for aerial photography.",1
+Hover at 10 meters above the water's surface for 1 minute.,0
+Scan the interior of the building for any signs of occupants.,1
+Follow the subject at a distance of 10 meters for 2 minutes.,1
+Return to base and prepare for recharging.,0
+Scan the area for any signs of wildlife or obstacles.,1
+Fly to the designated coordinates and drop a payload at the specified location.,0
+Capture a 360-degree panorama of the surrounding area.,1
+Hover at 5 meters above the ground for 30 seconds.,0
+Scan the roof for any damage or leaks.,1
+Follow the subject for 5 minutes and maintain a safe distance.,1
+Land on the designated pad and shut down systems.,0
+"Fly to the coordinates 40.7128, -74.0060 for aerial photography.",1
+Scan the area for any signs of natural disasters or hazards.,1
+Hover at 10 meters above the ground for 1 minute.,0
+Follow the subject at a distance of 20 meters for 3 minutes.,1
+Capture a photo of the subject from a 45-degree angle.,1
+Return to base and perform routine maintenance checks.,0
+Scan the area for any signs of wildfires or forest fires.,1
+Fly to the designated coordinates and perform a 360-degree scan.,1
+Hover at 5 meters above the water's surface for 1 minute.,0
+Capture a video of the subject for 2 minutes.,1
+Scan the area for any signs of pollution or environmental hazards.,1
+Follow the subject for 10 minutes and maintain a safe distance.,1
+Land on the designated pad and perform system checks.,0
+"Fly to the coordinates 34.0522, -118.2437 for aerial photography.",1
+Scan the area for any signs of crime or suspicious activity.,1
+Hover at 10 meters above the ground for 2 minutes.,0
+Capture a 3D scan of the surrounding area.,1
+Follow the subject at a distance of 15 meters for 4 minutes.,1
+Return to base and prepare for recharging.,0
+Scan the area for any signs of natural disasters or hazards.,1
+Fly to the designated coordinates and drop a payload at the specified location.,0
+Capture a photo of the subject from a 90-degree angle.,1
+Scan the area for any signs of pollution or environmental hazards.,1
+Hover at 5 meters above the water's surface for 2 minutes.,0
+Follow the subject for 5 minutes and maintain a safe distance.,1
+Land on the designated pad and shut down systems.,0
+"Fly to the coordinates 51.5074, -0.1278 for aerial photography.",1
+Scan the area for any signs of crime or suspicious activity.,1
+Hover at 10 meters above the ground for 3 minutes.,0
+Capture a 360-degree panorama of the surrounding area.,1
+Follow the subject at a distance of 20 meters for 2 minutes.,1
+Return to base and perform routine maintenance checks.,0
+Scan the area for any signs of wildfires or forest fires.,1
+Fly to the designated coordinates and perform a 360-degree scan.,1
+Hover at 5 meters above the ground for 1 minute.,0
+Capture a video of the subject for 3 minutes.,1
+Scan the area for any signs of pollution or environmental hazards.,1
+Follow the subject for 10 minutes and maintain a safe distance.,1
+Land on the designated pad and perform system checks.,0
+"Fly to the coordinates 28.6139, 77.2256 for aerial photography.",1
+Scan the area for any signs of crime or suspicious activity.,1
+Hover at 10 meters above the ground for 4 minutes.,0
+Capture a 3D scan of the surrounding area.,1
+Follow the subject at a distance of 15 meters for 5 minutes.,1
+Return to base and prepare for recharging.,0
+Scan the area for any signs of natural disasters or hazards.,1
+Fly to the designated coordinates and drop a payload at the specified location.,0
+Capture a photo of the subject from a 45-degree angle.,1
+Scan the area for any signs of pollution or environmental hazards.,1
+Hover at 5 meters above the water's surface for 3 minutes.,0
+Follow the subject for 5 minutes and maintain a safe distance.,1
+Land on the designated pad and shut down systems.,0
+"Fly to the coordinates 37.7749, -122.4194 for aerial photography.",1
+Scan the area for any signs of crime or suspicious activity.,1
+Hover at 10 meters above the ground for 5 minutes.,0
+Capture a 360-degree panorama of the surrounding area.,1
+Follow the subject at a distance of 20 meters for 3 minutes.,1
+Return to base and perform routine maintenance checks.,0
+Scan the area for any signs of wildfires or forest fires.,1
+Fly to the designated coordinates and perform a 360-degree scan.,1
+Hover at 5 meters above the ground for 2 minutes.,0
+Capture a video of the subject for 4 minutes.,1
+Scan the area for any signs of pollution or environmental hazards.,1
+Follow the subject for 10 minutes and maintain a safe distance.,1
+Land on the designated pad and perform system checks.,0
+"Fly to the coordinates 45.5236, -122.6750 for aerial photography.",1
+Scan the area for any signs of crime or suspicious activity.,1
+Hover at 10 meters above the ground for 6 minutes.,0
+Land at the designated location.,0
+Capture a photo of the landing site.,1
+Hover at an altitude of 100 meters.,0
+Scan the area for any obstacles.,1
+"Fly to the coordinates 43.213, -5.083.",0
+Obtain a high-resolution image of the target.,1
+Follow the subject at a distance of 10 meters.,1
+Change altitude to 50 meters.,0
+Obtain a 360-degree view of the surroundings.,1
+Fly at a speed of 20 knots.,0
+Capture a time-lapse video of the landscape.,1
+"Take off and navigate to the location of the fire at 123 Main St, USA.",0
+"Obtain a 360-degree view of the area surrounding the construction site in Paris, France.",1
+"Fly over the Eiffel Tower in Tokyo, Japan and take a photo of the Tokyo Tower.",1
+"Descend and land at the designated landing site near the stadium in Sydney, Australia.",0
+"Scan the coastline of Rio de Janeiro, Brazil for any signs of damage.",1
+"Hover over the intersection of 5th and Main St, London, UK and take a photo of the traffic.",1
+"Navigate to the location of the reported accident on the highway in New Delhi, India and provide a visual of the scene.",1
+"Fly to the top of the Statue of Liberty in New York, USA and take a panoramic view.",1
+"Descend and land at the designated landing site near the hospital in Cairo, Egypt.",0
+"Scan the area of the reported flood in Mumbai, India and provide a visual of the affected areas.",1
+"Hover over the Grand Canyon, USA and take a photo of the Colorado River.",1
+"Navigate to the location of the reported power outage in Dubai, UAE and provide a visual of the affected area.",1
+Fly to the top of the Great Wall of China and take a panoramic view.,1
+"Descend and land at the designated landing site near the school in Nairobi, Kenya.",0
+"Scan the area of the reported earthquake in Istanbul, Turkey and provide a visual of the affected areas.",1
+"Hover over the Taj Mahal, India and take a photo of the surrounding gardens.",1
+"Navigate to the location of the reported landslide in Kathmandu, Nepal and provide a visual of the affected area.",1
+"Fly to the top of the Christ the Redeemer statue in Rio de Janeiro, Brazil and take a panoramic view.",1
+Descend and land at the designated landing site near the university in Singapore.,0
+"Scan the area of the reported forest fire in Melbourne, Australia and provide a visual of the affected areas.",1
+"Hover over the Colosseum, Italy and take a photo of the ancient ruins.",1
+"Navigate to the location of the reported drought in Cape Town, South Africa and provide a visual of the affected area.",1
+"Fly to the top of the Burj Khalifa in Dubai, UAE and take a panoramic view.",1
+"Descend and land at the designated landing site near the temple in Bangkok, Thailand.",0
+"Scan the area of the reported typhoon in Tokyo, Japan and provide a visual of the affected areas.",1
+"Hover over the Sydney Opera House, Australia and take a photo of the harbor.",1
+"Navigate to the location of the reported heatwave in Madrid, Spain and provide a visual of the affected area.",1
+"Fly to the top of the Eiffel Tower, France and take a panoramic view.",1
+"Descend and land at the designated landing site near the stadium in Moscow, Russia.",0
+"Scan the area of the reported hurricane in New Orleans, USA and provide a visual of the affected areas.",1
+"Hover over the Great Pyramid of Giza, Egypt and take a photo of the surrounding desert.",1
+"Navigate to the location of the reported tsunami in Osaka, Japan and provide a visual of the affected area.",1
+"Fly to the top of the Sydney Harbour Bridge, Australia and take a panoramic view.",1
+"Descend and land at the designated landing site near the library in Abu Dhabi, UAE.",0
+"Scan the area of the reported drought in Nairobi, Kenya and provide a visual of the affected areas.",1
+"Hover over the Christ the Redeemer statue, Brazil and take a photo of the surrounding city.",1
+"Navigate to the location of the reported wildfire in Los Angeles, USA and provide a visual of the affected area.",1
+"Fly to the top of the London Eye, UK and take a panoramic view.",1
+"Descend and land at the designated landing site near the museum in Berlin, Germany.",0
+"Scan the area of the reported flood in Mumbai, India and provide a visual of the affected areas.",1
+"Hover over the Acropolis of Athens, Greece and take a photo of the Parthenon.",1
+"Navigate to the location of the reported earthquake in Istanbul, Turkey and provide a visual of the affected area.",1
+"Fly to the top of the CN Tower in Toronto, Canada and take a panoramic view.",1
+"Descend and land at the designated landing site near the hospital in Dubai, UAE.",0
+"Scan the area of the reported heatwave in Bangkok, Thailand and provide a visual of the affected area.",1
+"Hover over the Golden Gate Bridge, USA and take a photo of the San Francisco Bay.",1
+"Navigate to the location of the reported landslide in Kathmandu, Nepal and provide a visual of the affected area.",1
+"Fly to the top of the Petronas Twin Towers in Kuala Lumpur, Malaysia and take a panoramic view.",1
+Descend and land at the designated landing site near the school in Singapore.,0
+"Scan the area of the reported wildfire in Melbourne, Australia and provide a visual of the affected areas.",1
+"Hover over the White House, USA and take a photo of the surrounding city.",1
+"Navigate to the location of the reported drought in Cape Town, South Africa and provide a visual of the affected area.",1
+"Fly to the top of the Arc de Triomphe in Paris, France and take a panoramic view.",1
+"Descend and land at the designated landing site near the temple in Beijing, China.",0
+"Scan the area of the reported hurricane in New York, USA and provide a visual of the affected areas.",1
+"Hover over the Colosseum, Italy and take a photo of the ancient ruins.",1
+"Navigate to the location of the reported tsunami in Osaka, Japan and provide a visual of the affected area.",1
+"Fly to the top of the Burj Khalifa, UAE and take a panoramic view.",1
+"Descend and land at the designated landing site near the university in Moscow, Russia.",0
+"Scan the area of the reported wildfire in Sydney, Australia and provide a visual of the affected areas.",1
+Hover over the Great Wall of China and take a photo of the surrounding mountains.,1
+"Navigate to the location of the reported heatwave in Madrid, Spain and provide a visual of the affected area.",1
+"Fly to the top of the Sydney Opera House, Australia and take a panoramic view.",1
+"Descend and land at the designated landing site near the museum in Dubai, UAE.",0
+"Scan the area of the reported landslide in Istanbul, Turkey and provide a visual of the affected area.",1
+"Hover over the Eiffel Tower, France and take a photo of the surrounding city.",1
+"Navigate to the location of the reported drought in Nairobi, Kenya and provide a visual of the affected area.",1
+"Fly to the top of the Christ the Redeemer statue, Brazil and take a panoramic view.",1
+"Descend and land at the designated landing site near the library in Abu Dhabi, UAE.",0
+"Scan the area of the reported wildfire in Los Angeles, USA and provide a visual of the affected areas.",1
+Take off and fly over the terrain to capture high-resolution images of the coastline.,1
+Increase altitude by 50 meters and adjust heading to 270 degrees.,0
+Obtain a 360-degree view of the stadium during the football match.,1
+Descend to 100 meters and hover above the designated landing site.,0
+Capture images of the crowd from a low angle to get a better view of their facial expressions.,1
+Adjust the camera to a wide-angle shot and record 10 seconds of footage of the sunset.,1
+Return to the base station and prepare for recharging.,0
+Fly over the city and take a panoramic view of the city skyline at dusk.,1
+"Maintain current altitude and heading, and provide live video feed for the remote operator.",1
+Begin orbiting the target location at an altitude of 500 meters.,1
+Land safely at the designated site and shut down the engines.,0
+Takeoff and ascend to 100 meters,0
+Hover at 50 meters for 5 minutes,0
+Capture a 360-degree panorama of the surrounding area,1
+Fly at 20 meters above the terrain,0
+Track and follow the object with ID 12345,1
+Return to the home location and land,0
+Take a photo of the identified object,1
+"Fly to the location with GPS coordinates 43.6532, 79.3832",0
+Observe and record the wildlife in the area,1
+Fly at a speed of 10 meters per second for 2 minutes,0
+Capture a video of the surrounding environment,1
+Follow the subject with a speed of 5 meters per second,1
+Fly in a square pattern over the area,0
+Track and follow the subject with a camera angle of 45 degrees,1
+Return to the home location,0
+Fly at 30 meters above the terrain,0
+Capture a close-up photo of the subject,1
+"Fly to the location with GPS coordinates 40.7128, 74.0060",0
+Observe and record the weather conditions,1
+Fly at a speed of 20 meters per second for 3 minutes,0
+Track and follow the subject with a camera zoom of 2x,1
+Follow the subject with a camera angle of 90 degrees,1
+Fly in a circular pattern over the area,0
+Capture a video of the subject from multiple angles,1
+"Fly to the location with GPS coordinates 34.0522, 118.2437",0
+Observe and record the surrounding environment,1
+Fly at 40 meters above the terrain,0
+Take a photo of the surrounding area,1
+Track and follow the subject with a speed of 10 meters per second,1
+Fly in a zigzag pattern over the area,0
+Capture a photo of the identified object from 10 meters away,1
+"Fly to the location with GPS coordinates 51.5074, 0.1278",0
+Observe and record the wildlife in the area,1
+Fly at a speed of 15 meters per second for 2 minutes,0
+Track and follow the subject with a camera zoom of 1x,1
+Follow the subject with a camera angle of 60 degrees,1
+Fly in a figure-eight pattern over the area,0
+Capture a close-up video of the subject,1
+"Fly to the location with GPS coordinates 37.7749, 122.4194",0
+Observe and record the surrounding environment,1
+Fly at 50 meters above the terrain,0
+Take a photo of the identified object with a camera angle of 45 degrees,1
+Track and follow the subject with a speed of 12 meters per second,1
+Fly in a rectangular pattern over the area,0
+Capture a photo of the subject from multiple angles,1
+"Fly to the location with GPS coordinates 43.6532, 79.3832",0
+Observe and record the wildlife in the area,1
+Fly at a speed of 18 meters per second for 3 minutes,0
+Track and follow the subject with a camera zoom of 3x,1
+Follow the subject with a camera angle of 90 degrees,1
+Fly in a spiral pattern over the area,0
+Capture a video of the surrounding environment,1
+"Fly to the location with GPS coordinates 40.7128, 74.0060",0
+Observe and record the weather conditions,1
+Fly at 60 meters above the terrain,0
+Take a photo of the surrounding area with a camera angle of 60 degrees,1
+Track and follow the subject with a speed of 20 meters per second,1
+Fly in a square pattern over the area,0
+Capture a close-up photo of the subject,1
+"Fly to the location with GPS coordinates 34.0522, 118.2437",0
+Observe and record the surrounding environment,1
+Fly at a speed of 22 meters per second for 4 minutes,0
+Track and follow the subject with a camera zoom of 4x,1
+Follow the subject with a camera angle of 45 degrees,1
+Fly in a zigzag pattern over the area,0
+Capture a photo of the identified object from 5 meters away,1
+"Fly to the location with GPS coordinates 51.5074, 0.1278",0
+Observe and record the wildlife in the area,1
+Fly at a speed of 25 meters per second for 5 minutes,0
+Track and follow the subject with a camera zoom of 5x,1
+Follow the subject with a camera angle of 90 degrees,1
+Fly in a figure-eight pattern over the area,0
+Capture a close-up video of the subject,1
+"Fly to the location with GPS coordinates 37.7749, 122.4194",0
+Observe and record the surrounding environment,1
+Fly at 70 meters above the terrain,0
+Take a photo of the identified object with a camera angle of 60 degrees,1
+Track and follow the subject with a speed of 28 meters per second,1
+Fly in a rectangular pattern over the area,0
+Capture a photo of the subject from multiple angles,1
+"Fly to the location with GPS coordinates 43.6532, 79.3832",0
+Observe and record the wildlife in the area,1
+Fly at a speed of 30 meters per second for 6 minutes,0
+Track and follow the subject with a camera zoom of 6x,1
+Follow the subject with a camera angle of 45 degrees,1
+Fly in a spiral pattern over the area,0
+Capture a video of the surrounding environment,1
+"Fly to the location with GPS coordinates 40.7128, 74.0060",0
+Observe and record the weather conditions,1
+Fly at 80 meters above the terrain,0
+Take a photo of the surrounding area with a camera angle of 90 degrees,1
+Track and follow the subject with a speed of 32 meters per second,1
+Navigate to the designated landing site.,0
+Observe the terrain for any obstacles.,1
+Perform a 360-degree scan of the area.,1
+Maintain current altitude and position.,0
+Follow the subject while maintaining a safe distance.,1
+Obtain a clear view of the target for identification.,1
+"Navigate to the coordinates 43.6532, -79.3832.",0
+Assess the damage after a potential collision.,1
+Begin descent and prepare for landing.,0
+Monitor the weather conditions for any changes.,0
+Provide a live feed of the area to the base station.,1
+"Takeoff and navigate to the designated landing site at 43.6532° N, 79.3832° W.",0
+Capture a 360-degree photo of the construction site using the wide-angle lens.,1
+Hover at an altitude of 50 meters and provide real-time feedback on the drone's battery life.,0
+Fly over the forest and take a photo of the fire damage at 12:00 PM EST.,1
+Follow the object with the ID 12345 and provide a live video feed to the operator.,1
+Land safely at the designated location and perform a system shutdown.,0
+"Navigate to the coordinates 37.7749° N, 122.4194° W and provide a high-resolution image of the Golden Gate Bridge.",1
+Adjust the camera settings to capture a low-light photo of the subject.,1
+Begin a 30-minute patrol of the perimeter fence and provide an alert if any intruders are detected.,1
+Hover at a distance of 10 meters from the target and provide a live video feed to the operator.,1
+Provide an update on the drone's battery life and navigate to the designated recharging station.,0
+Takeoff and ascend to 50 meters,0
+Hover at current position for 10 seconds,0
+Fly to the location where the last object was spotted and hover,1
+Land safely and switch to backup power source,0
+Scan the area with thermal camera for 5 seconds,1
+Return to base and recharge for 20 minutes,0
+Follow the target and maintain a 10-meter distance,1
+Switch to high-definition camera and record the scene for 10 seconds,1
+Navigate to the location with the highest elevation in the area,0
+Perform a 360-degree scan with the multi-spectral camera,1
+Descend to 20 meters and inspect the surface,1
+Fly to the location with the highest temperature reading in the area,0
+"Fly to the coordinates 37.7749, -122.4194 and capture a photo of the Golden Gate Bridge.",1
+Take off and ascend to an altitude of 100 meters.,0
+Fly over the Eiffel Tower and capture a panoramic view.,1
+Descend to 50 meters above ground level and hover for 10 seconds.,0
+Follow the subject walking in front of you and capture a video.,1
+Fly to the location where the sunrise is happening and capture a photo.,1
+Return to the home location and land safely.,0
+Fly over the Great Wall of China and capture a high-resolution image.,1
+Hover at 20 meters above the ground for 30 seconds and scan for any obstacles.,0
+Fly to the location of the setting sun and capture a time-lapse video.,1
+Fly over the city and capture a 360-degree view.,1
+Land safely and shut down the engines.,0
+"Fly to location 43.6532, -79.3832",0
+Take a photo of the Statue of Liberty,1
+Fly at an altitude of 100 meters,0
+Record a video of the Eiffel Tower,1
+Maintain a speed of 50 km/h,0
+Capture a 360-degree photo of the Taj Mahal,1
+Follow the leader,1
+Observe and report on the construction site,1
+Fly to the Eiffel Tower at a speed of 20 m/s,0
+Record a video of the Grand Canyon at sunset,1
+Maintain a distance of 10 meters from the subject,0
+Take a photo of the Mona Lisa,1
+Fly at a height of 500 feet,0
+Capture a photo of the Golden Gate Bridge,1
+Follow the path,1
+Record a video of the Great Barrier Reef,1
+Maintain a speed of 30 knots,0
+Take a 3D scan of the Empire State Building,1
+Fly to the Pyramids of Giza,0
+Record a video of the Northern Lights,1
+Maintain a distance of 20 meters from the subject,0
+Capture a photo of the Great Wall of China,1
+Follow the leader at a distance of 50 meters,1
+Observe and report on the traffic,1
+Fly to the Christ the Redeemer statue,0
+Record a video of the Aurora Borealis,1
+Maintain a speed of 60 km/h,0
+Take a photo of the Sydney Opera House,1
+Fly at a height of 1000 feet,0
+Capture a 360-degree photo of the Colosseum,1
+Follow the path at a speed of 10 m/s,1
+Record a video of the Victoria Falls,1
+Maintain a distance of 15 meters from the subject,0
+Take a photo of the Acropolis of Athens,1
+Fly to the Burj Khalifa,0
+Record a video of the Grand Teton,1
+Maintain a speed of 40 knots,0
+Capture a photo of the Leaning Tower of Pisa,1
+Follow the leader at a distance of 30 meters,1
+Observe and report on the weather,1
+Fly to the Great Blue Hole,0
+Record a video of the Iguazu Falls,1
+Maintain a speed of 50 knots,0
+Take a photo of the Christ the Redeemer statue,1
+Fly at a height of 2000 feet,0
+Capture a 360-degree photo of the Sydney Opera House,1
+Follow the path at a speed of 20 m/s,1
+Record a video of the Niagara Falls,1
+Maintain a distance of 25 meters from the subject,0
+Take a photo of the Eiffel Tower,1
+Fly to the Angel of the North,0
+Record a video of the Victoria Falls at sunset,1
+Maintain a speed of 35 knots,0
+Capture a photo of the Alhambra,1
+Follow the leader at a distance of 40 meters,1
+Observe and report on the city traffic,1
+Fly to the Monument Valley,0
+Record a video of the Grand Canyon,1
+Maintain a speed of 45 knots,0
+Take a photo of the Big Ben,1
+Fly at a height of 3000 feet,0
+Capture a 360-degree photo of the Taj Mahal,1
+Follow the path at a speed of 15 m/s,1
+Record a video of the Golden Gate Bridge,1
+Maintain a distance of 20 meters from the subject,0
+Take a photo of the Leaning Tower of Pisa,1
+Fly to the Christ the Redeemer statue at night,0
+Record a video of the Eiffel Tower at night,1
+Maintain a speed of 55 knots,0
+Capture a photo of the Great Wall of China,1
+Follow the leader at a distance of 50 meters,1
+Observe and report on the city,1
+Fly to the Empire State Building,0
+Record a video of the Iguazu Falls,1
+Maintain a speed of 60 knots,0
+Take a photo of the Alhambra,1
+Fly at a height of 4000 feet,0
+Capture a 360-degree photo of the Grand Teton,1
+Follow the path at a speed of 25 m/s,1
+Record a video of the Aurora Borealis,1
+Maintain a distance of 30 meters from the subject,0
+Take a photo of the Northern Lights,1
+Fly to the Great Blue Hole,0
+Record a video of the Niagara Falls,1
+Maintain a speed of 65 knots,0
+Capture a photo of the Golden Gate Bridge,1
+Follow the leader at a distance of 60 meters,1
+Observe and report on the construction site,1
+Fly to the Eiffel Tower,0
+Record a video of the Victoria Falls at sunset,1
+Maintain a speed of 70 knots,0
+Take a photo of the Taj Mahal,1
+Fly at a height of 5000 feet,0
+Capture a 360-degree photo of the Sydney Opera House,1
+Follow the path at a speed of 30 m/s,1
+Record a video of the Christ the Redeemer statue,1
+Maintain a distance of 35 meters from the subject,0
+Take a photo of the Acropolis of Athens,1
+Fly to the Big Ben,0
+Record a video of the Great Wall of China,1
+Maintain a speed of 75 knots,0
+Capture a photo of the Leaning Tower of Pisa,1
+Follow the leader at a distance of 65 meters,1
+Take off and hover at an altitude of 50 meters,0
+Capture a 360-degree view of the surrounding area,1
+"Fly to the location of the object at 34.0569° N, 118.2436° W",0
+Obtain a close-up shot of the building with the green roof,1
+Land at the designated landing site,0
+Observe the wildlife in the nearby forest,1
+Adjust the flight path to avoid the incoming storm,0
+"Capture a photo of the sunset at 40.7128° N, 74.0060° W",1
+Fly over the ocean at a speed of 50 km/h,0
+Take a panoramic shot of the city skyline,1
+Land at the designated emergency landing site,0
+Observe the traffic in the city,1
+"Fly to the location of the person at 38.8951° N, 77.0365° W",0
+Capture a photo of the statue with the blue dress,1
+Adjust the flight altitude to 20 meters,0
+"Observe the beach at 34.0522° N, 118.2437° W",1
+Fly over the mountain range at a speed of 80 km/h,0
+Capture a 3D model of the landscape,1
+Land at the designated landing site,0
+Observe the people at the market,1
+"Fly to the location of the object at 40.7128° N, 74.0060° W",0
+Capture a photo of the waterfall,1
+Adjust the flight path to avoid the incoming weather,0
+"Observe the forest at 35.6895° N, 139.7679° E",1
+Fly over the lake at a speed of 60 km/h,0
+Capture a panoramic shot of the city,1
+Land at the designated emergency landing site,0
+Observe the traffic in the city,1
+"Fly to the location of the person at 34.0522° N, 118.2437° W",0
+Capture a photo of the statue with the red dress,1
+Adjust the flight altitude to 30 meters,0
+"Observe the beach at 38.8951° N, 77.0365° W",1
+Fly over the mountain range at a speed of 90 km/h,0
+Capture a 3D model of the landscape,1
+Land at the designated landing site,0
+Observe the people at the market,1
+"Fly to the location of the object at 35.6895° N, 139.7679° E",0
+Capture a photo of the waterfall,1
+Adjust the flight path to avoid the incoming weather,0
+"Observe the forest at 40.7128° N, 74.0060° W",1
+Fly over the lake at a speed of 70 km/h,0
+Capture a panoramic shot of the city,1
+Land at the designated emergency landing site,0
+Observe the traffic in the city,1
+"Fly to the location of the person at 38.8951° N, 77.0365° W",0
+Capture a photo of the statue with the blue dress,1
+Adjust the flight altitude to 20 meters,0
+"Observe the beach at 35.6895° N, 139.7679° E",1
+Fly over the mountain range at a speed of 80 km/h,0
+Capture a 3D model of the landscape,1
+Land at the designated landing site,0
+Observe the people at the market,1
+"Fly to the location of the object at 40.7128° N, 74.0060° W",0
+Capture a photo of the waterfall,1
+Adjust the flight path to avoid the incoming weather,0
+"Observe the forest at 34.0522° N, 118.2437° W",1
+Fly over the lake at a speed of 60 km/h,0
+Capture a panoramic shot of the city,1
+Land at the designated emergency landing site,0
+Observe the traffic in the city,1
+"Fly to the location of the person at 35.6895° N, 139.7679° E",0
+Capture a photo of the statue with the red dress,1
+Adjust the flight altitude to 30 meters,0
+"Observe the beach at 38.8951° N, 77.0365° W",1
+Fly over the mountain range at a speed of 90 km/h,0
+Capture a 3D model of the landscape,1
+Land at the designated landing site,0
+Observe the people at the market,1
+"Fly to the location of the object at 40.7128° N, 74.0060° W",0
+Capture a photo of the waterfall,1
+Adjust the flight path to avoid the incoming weather,0
+"Observe the forest at 34.0522° N, 118.2437° W",1
+Fly over the lake at a speed of 70 km/h,0
+Capture a panoramic shot of the city,1
+Land at the designated emergency landing site,0
+Observe the traffic in the city,1
+"Fly to the location of the person at 35.6895° N, 139.7679° E",0
+Capture a photo of the statue with the blue dress,1
+Adjust the flight altitude to 20 meters,0
+"Observe the beach at 35.6895° N, 139.7679° E",1
+Fly over the mountain range at a speed of 80 km/h,0
+Capture a 3D model of the landscape,1
+Land at the designated landing site,0
+Observe the people at the market,1
+"Fly to the location of the object at 40.7128° N, 74.0060° W",0
+Capture a photo of the waterfall,1
+Adjust the flight path to avoid the incoming weather,0
+"Observe the forest at 34.0522° N, 118.2437° W",1
+Fly over the lake at a speed of 60 km/h,0
+Capture a panoramic shot of the city,1
+Takeoff and ascend to 100 meters,0
+Capture image of the landing site before landing,1
+Descend to 20 meters and maintain a steady hover,0
+Hover at 50 meters and look for obstacles,1
+Move forward 10 meters and follow the path,1
+Capture image of the surroundings at 50 meters,1
+Turn left 90 degrees and ascend to 150 meters,0
+Look for the target at 100 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 100 meters,1
+Descend to 50 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 20 meters and recharge,0
+Takeoff and ascend to 200 meters,0
+Capture image of the surroundings at 200 meters,1
+Move forward 20 meters and follow the path,1
+Look for the target at 200 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 200 meters,1
+Descend to 100 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 50 meters and recharge,0
+Takeoff and ascend to 300 meters,0
+Capture image of the surroundings at 300 meters,1
+Move forward 30 meters and follow the path,1
+Look for the target at 300 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 300 meters,1
+Descend to 150 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 75 meters and recharge,0
+Takeoff and ascend to 400 meters,0
+Capture image of the surroundings at 400 meters,1
+Move forward 40 meters and follow the path,1
+Look for the target at 400 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 400 meters,1
+Descend to 200 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 100 meters and recharge,0
+Takeoff and ascend to 500 meters,0
+Capture image of the surroundings at 500 meters,1
+Move forward 50 meters and follow the path,0
+Look for the target at 500 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 500 meters,1
+Descend to 250 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 125 meters and recharge,0
+Takeoff and ascend to 600 meters,0
+Capture image of the surroundings at 600 meters,1
+Move forward 60 meters and follow the path,1
+Look for the target at 600 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 600 meters,1
+Descend to 300 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 150 meters and recharge,0
+Takeoff and ascend to 700 meters,0
+Capture image of the surroundings at 700 meters,1
+Move forward 70 meters and follow the path,1
+Look for the target at 700 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 700 meters,1
+Descend to 350 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 175 meters and recharge,0
+Takeoff and ascend to 800 meters,0
+Capture image of the surroundings at 800 meters,1
+Move forward 80 meters and follow the path,1
+Look for the target at 800 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 800 meters,1
+Descend to 400 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 200 meters and recharge,0
+Takeoff and ascend to 900 meters,0
+Capture image of the surroundings at 900 meters,1
+Move forward 90 meters and follow the path,1
+Look for the target at 900 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 900 meters,1
+Descend to 450 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 225 meters and recharge,0
+Takeoff and ascend to 1000 meters,0
+Capture image of the surroundings at 1000 meters,1
+Move forward 100 meters and follow the path,1
+Look for the target at 1000 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 1000 meters,1
+Descend to 500 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 250 meters and recharge,0
+Takeoff and ascend to 1100 meters,0
+Capture image of the surroundings at 1100 meters,1
+Move forward 110 meters and follow the path,0
+Look for the target at 1100 meters,1
+Follow the target and maintain a safe distance,1
+Capture image of the target at 1100 meters,1
+Descend to 550 meters and land safely,0
+Capture image of the landing site after landing,1
+Hover at 275 meters and recharge,0
+Takeoff and ascend to 1200 meters,0
+Capture image of the surroundings at 1200 meters,1
+"Take off at 12:00 PM on the designated helipad, ascending to an altitude of 500 feet.",0
+Fly over the city at an altitude of 2000 feet and take 5 photos of the main landmarks.,1
+"Land on the designated helipad at 3:00 PM, with the main propellers folding in for safe shutdown.",0
+Hover at 1500 feet above the stadium and capture a 360-degree video of the ongoing event.,1
+"Follow the subject at a distance of 100 feet, keeping a steady pace of 20 knots.",1
+"Scan the area for any signs of debris or hazards, then return to base at 5:00 PM.",0
+"Capture a high-resolution photo of the solar eclipse at 12:00 AM, from an altitude of 3000 feet.",1
+"Navigate through the forest at a speed of 15 knots, maintaining a safe distance from obstacles.",0
+"Follow the coastline at a distance of 500 feet, taking note of any signs of marine life.",1
+"Fly in a circular pattern around the target at an altitude of 1000 feet, with the camera capturing a time-lapse.",1
+"Land safely at the designated helipad at 8:00 AM, with the camera powering down for the day.",0
+"Fly to coordinates 43.6532,-79.3832",0
+Take a 360-degree photo of the area around the Statue of Liberty,1
+Descend to 100 feet and prepare for landing,0
+Record a 5-minute video of the surrounding landscape,1
+Navigate to the Eiffel Tower and hover for 30 seconds,1
+Return to base and perform a system check,0
+Fly over the Great Barrier Reef and take a photo of the coral,1
+Climb to 500 feet and maintain altitude,0
+Capture a photo of the Taj Mahal during sunrise,1
+Follow the path of the Grand Canyon and record a 10-minute video,1
+Ascend to 2000 feet and begin orbiting the city,1
+Land at the designated coordinates and shut down systems,0
+Take a panoramic photo of the city skyline,1
+Fly to the top of Mount Everest and take a photo of the summit,1
+Descend to 50 feet and begin a slow patrol of the area,1
+Return to base and perform a system check,0
+Fly over the Great Wall of China and record a 15-minute video,1
+Climb to 3000 feet and begin a reconnaissance mission,1
+Take a photo of the Sydney Opera House,1
+Fly to the city of Tokyo and hover for 1 minute,1
+Descend to 100 feet and prepare for landing,0
+Record a 3-minute video of the surrounding landscape,1
+Navigate to the Golden Gate Bridge and take a photo of the traffic,1
+Return to base and perform a system check,0
+Fly over the Pyramids of Giza and record a 20-minute video,1
+Climb to 4000 feet and begin a search and rescue mission,1
+Take a photo of the Christ the Redeemer statue,1
+Fly to the city of Paris and hover for 2 minutes,1
+Descend to 150 feet and begin a slow patrol of the area,1
+Return to base and perform a system check,0
+Fly over the Colosseum and record a 25-minute video,1
+Climb to 5000 feet and begin a reconnaissance mission,1
+Take a photo of the Burj Khalifa,1
+Fly to the city of Rio and hover for 3 minutes,1
+Descend to 200 feet and prepare for landing,0
+Record a 5-minute video of the surrounding landscape,1
+Navigate to the Eiffel Tower and take a photo of the iron latticework,1
+Return to base and perform a system check,0
+Fly over the Acropolis and record a 30-minute video,1
+Climb to 6000 feet and begin a search and rescue mission,1
+Take a photo of the Chichen Itza pyramid,1
+Fly to the city of New York and hover for 4 minutes,1
+Descend to 250 feet and begin a slow patrol of the area,1
+Return to base and perform a system check,0
+Fly over the Great Wall of China and record a 35-minute video,1
+Climb to 7000 feet and begin a reconnaissance mission,1
+Take a photo of the Angkor Wat temple,1
+Fly to the city of Sydney and hover for 5 minutes,1
+Descend to 300 feet and prepare for landing,0
+Record a 10-minute video of the surrounding landscape,1
+Navigate to the Taj Mahal and take a photo of the reflecting pools,1
+Return to base and perform a system check,0
+Fly over the Golden Gate Bridge and record a 40-minute video,1
+Climb to 8000 feet and begin a search and rescue mission,1
+Take a photo of the Stonehenge monument,1
+Fly to the city of London and hover for 6 minutes,1
+Descend to 350 feet and begin a slow patrol of the area,1
+Return to base and perform a system check,0
+Fly over the Colosseum and record a 45-minute video,1
+Climb to 9000 feet and begin a reconnaissance mission,1
+Take a photo of the Sydney Opera House,1
+Fly to the city of Tokyo and hover for 7 minutes,1
+Descend to 400 feet and prepare for landing,0
+Record a 15-minute video of the surrounding landscape,1
+Navigate to the Eiffel Tower and take a photo of the elevator,1
+Return to base and perform a system check,0
+Fly over the Great Barrier Reef and record a 50-minute video,1
+Climb to 10000 feet and begin a search and rescue mission,1
+Take a photo of the Christ the Redeemer statue,1
+Fly to the city of Paris and hover for 8 minutes,1
+Descend to 450 feet and begin a slow patrol of the area,1
+Return to base and perform a system check,0
+Fly over the Pyramids of Giza and record a 55-minute video,1
+Climb to 11000 feet and begin a reconnaissance mission,1
+Take a photo of the Acropolis,1
+Fly to the city of Rio and hover for 9 minutes,1
+Descend to 500 feet and prepare for landing,0
+Record a 20-minute video of the surrounding landscape,1
+Navigate to the Taj Mahal and take a photo of the gardens,1
+Return to base and perform a system check,0
+Fly over the Golden Gate Bridge and record a 60-minute video,1
+Climb to 12000 feet and begin a search and rescue mission,1
+Take a photo of the Chichen Itza pyramid,1
+Fly to the city of New York and hover for 10 minutes,1
+Descend to 550 feet and begin a slow patrol of the area,1
+Return to base and perform a system check,0
+Fly over the Great Wall of China and record a 65-minute video,1
+Climb to 13000 feet and begin a reconnaissance mission,1
+Take a photo of the Eiffel Tower,1
+Fly to the city of Sydney and hover for 11 minutes,1
+Descend to 600 feet and prepare for landing,0
+Record a 25-minute video of the surrounding landscape,1
+Navigate to the Christ the Redeemer statue and take a photo of the face,1
+Return to base and perform a system check,0
+Fly over the Acropolis and record a 70-minute video,1
+Take off and fly to the location of the fire.,0
+Hover at 100 feet for 5 minutes.,0
+Capture aerial footage of the damaged building.,1
+Follow the firefighter and provide a steady video feed.,1
+Land safely and recharge batteries.,0
+Scan the area for any potential hazards.,0
+Inspect the roof of the building for structural damage.,1
+Provide a live feed to the command center.,1
+Return to base and refuel.,0
+Conduct a flyover of the affected area.,1
+Assist the search and rescue team.,1
+Fly at 50 feet and maintain a steady pace.,0
+Record footage of the rescue efforts.,1
+Land near the emergency responders.,0
+Provide real-time video feed to the incident commander.,1
+Assist in the assessment of the damage.,1
+Hover and wait for further instructions.,0
+Fly to the location of the missing person.,1
+Scan the area for any signs of life.,1
+Provide a live video feed to the incident commander.,1
+Return to the command center and report in.,0
+Conduct a reconnaissance mission.,1
+Fly at 200 feet and maintain a steady pace.,0
+Record aerial footage of the affected area.,1
+Assist the emergency responders with navigation.,1
+Land safely and await further instructions.,0
+Provide a real-time video feed to the emergency responders.,1
+Fly over the area and assess the situation.,1
+Conduct a flyover of the affected area at night.,1
+Hover and wait for further instructions.,0
+Scan the area for any potential hazards.,1
+Fly to the location of the emergency responders.,1
+Record footage of the rescue efforts.,1
+Provide a live feed to the incident commander.,1
+Assist the search and rescue team.,1
+Conduct a reconnaissance mission.,1
+Fly over the area and assess the situation.,1
+Scan the area for any signs of life.,1
+Provide a real-time video feed to the emergency responders.,1
+Hover and wait for further instructions.,0
+Fly at 100 feet and maintain a steady pace.,0
+Record aerial footage of the affected area.,1
+Assist the emergency responders with navigation.,1
+Fly over the area and assess the situation.,1
+Conduct a flyover of the affected area at night.,1
+Provide a live feed to the incident commander.,1
+Scan the area for any potential hazards.,1
+Fly to the location of the emergency responders.,1
+Record footage of the rescue efforts.,1
+Assist the search and rescue team.,1
+Conduct a reconnaissance mission.,1
+Fly over the area and assess the situation.,1
+Scan the area for any signs of life.,1
+Provide a real-time video feed to the emergency responders.,1
+Hover and wait for further instructions.,0
+Fly at 50 feet and maintain a steady pace.,0
+Record aerial footage of the affected area.,1
+Assist the emergency responders with navigation.,1
+Fly over the area and assess the situation.,1
+Conduct a flyover of the affected area at night.,1
+Provide a live feed to the incident commander.,1
+Scan the area for any potential hazards.,1
+Fly to the location of the emergency responders.,1
+Record footage of the rescue efforts.,1
+Assist the search and rescue team.,1
+Conduct a reconnaissance mission.,1
+Fly over the area and assess the situation.,1
+Scan the area for any signs of life.,1
+Provide a real-time video feed to the emergency responders.,1
+Hover and wait for further instructions.,0
+Fly at 200 feet and maintain a steady pace.,0
+Record aerial footage of the affected area.,1
+Assist the emergency responders with navigation.,1
+Fly over the area and assess the situation.,1
+Conduct a flyover of the affected area at night.,1
+Provide a live feed to the incident commander.,1
+Scan the area for any potential hazards.,1
+Fly to the location of the emergency responders.,1
+Record footage of the rescue efforts.,1
+Assist the search and rescue team.,1
+Conduct a reconnaissance mission.,1
+Fly over the area and assess the situation.,1
+Scan the area for any signs of life.,1
+Provide a real-time video feed to the emergency responders.,1
+Hover and wait for further instructions.,0
+Fly at 100 feet and maintain a steady pace.,0
+Record aerial footage of the affected area.,1
+Assist the emergency responders with navigation.,1
+Fly over the area and assess the situation.,1
+Conduct a flyover of the affected area at night.,1
+Provide a live feed to the incident commander.,1
+Scan the area for any potential hazards.,1
+Fly to the location of the emergency responders.,1
+Record footage of the rescue efforts.,1
+Assist the search and rescue team.,1
+Conduct a reconnaissance mission.,1
+Fly over the area and assess the situation.,1
+Scan the area for any signs of life.,1
+Provide a real-time video feed to the emergency responders.,1
+Hover and wait for further instructions.,0
+Fly at 50 feet and maintain a steady pace.,0
+Record aerial footage of the affected area.,1
+Assist the emergency responders with navigation.,1
+Fly over the area and assess the situation.,1
+Conduct a flyover of the affected area at night.,1
+Provide a live feed to the incident commander.,1
+Scan the area for any potential hazards.,1
+Fly to the location of the emergency responders.,1
+Record footage of the rescue efforts.,1
+Ascend to an altitude of 500 meters.,0
+Scan the area for any signs of damage or destruction.,1
+"Navigate to the coordinates 37.7749, -122.4194.",0
+Obtain a 360-degree view of the surroundings.,1
+Hover for 30 seconds and capture a time-lapse video.,1
+Descend to an altitude of 50 meters and follow the designated path.,1
+Acquire a high-resolution image of the target.,1
+Land safely and recharge the batteries.,0
+Monitor the weather conditions for the next 10 minutes.,1
+Follow the moving target and track its movement.,1
+Change the battery to the fully charged one.,0
+Scan the perimeter of the area for any intruders.,1
+Hover in place and stabilize for 15 seconds.,0
+Capture a panoramic image of the entire area.,1
+"Navigate to the specified GPS coordinates 48.8567, 2.2945.",0
+Take off and ascend to the designated altitude.,0
+Observe and track the movement of the subject for 5 minutes.,1
+Descend to an altitude of 10 meters and begin mapping the terrain.,1
+Switch to the backup camera for better visibility.,1
+Fly at a speed of 50 km/h and maintain course.,0
+Record a video of the area for the next 2 minutes.,1
+Maintain the current position and altitude for 10 minutes.,0
+"Navigate to the coordinates 51.5074, -0.1278.",0
+Obtain a thermal image of the target.,1
+Hover for 10 seconds and capture a photo.,1
+Follow the moving target and adjust course accordingly.,1
+Change the camera mode to night vision.,1
+Begin to create a 3D map of the surroundings.,1
+Follow the designated flight path and maintain altitude.,1
+Fly at a speed of 80 km/h and maintain course.,0
+Scan the area for any signs of wildlife.,1
+Capture a high-resolution image of the area below.,1
+Descend to an altitude of 5 meters and begin mapping the terrain.,1
+Take a 10-second video of the area.,1
+"Navigate to the coordinates 40.7128, -74.0060.",0
+Follow the moving target and adjust course accordingly.,1
+Begin to create a 2D map of the surroundings.,1
+Switch to the infrared camera for better visibility.,1
+Maintain the current position and altitude for 5 minutes.,0
+Fly at a speed of 60 km/h and maintain course.,0
+Scan the area for any signs of damage or destruction.,1
+Hover in place and stabilize for 10 seconds.,0
+Record a video of the area for the next 3 minutes.,1
+Begin to create a 3D model of the surroundings.,1
+Follow the designated flight path and adjust altitude accordingly.,1
+Capture a panoramic image of the area.,1
+Ascend to an altitude of 800 meters.,0
+Observe and track the movement of the subject for 3 minutes.,1
+Change the camera mode to ultra-wide.,1
+Scan the perimeter of the area for any intruders.,1
+Begin to create a 2D model of the surroundings.,1
+Follow the moving target and maintain course.,1
+Fly at a speed of 70 km/h and maintain course.,0
+Switch to the backup camera for better visibility.,1
+Record a video of the area for the next 1 minute.,1
+Descend to an altitude of 20 meters and begin mapping the terrain.,1
+Hover for 15 seconds and capture a photo.,1
+Maintain the current position and altitude for 10 minutes.,0
+Obtain a 3D model of the target.,1
+Follow the designated flight path and maintain altitude.,1
+Scan the area for any signs of wildlife.,1
+Begin to create a 3D map of the area.,1
+Take off and ascend to the designated altitude.,0
+Record a video of the area for the next 4 minutes.,1
+Switch to the thermal camera for better visibility.,1
+Fly at a speed of 90 km/h and maintain course.,0
+Capture a panoramic image of the area.,1
+Descend to an altitude of 15 meters and begin mapping the terrain.,1
+Observe and track the movement of the subject for 4 minutes.,1
+Begin to create a 2D map of the surroundings.,1
+Follow the moving target and adjust course accordingly.,1
+Maintain the current position and altitude for 5 minutes.,0
+Scan the area for any signs of damage or destruction.,1
+Switch to the infrared camera for better visibility.,1
+Fly at a speed of 80 km/h and maintain course.,0
+Begin to create a 3D model of the surroundings.,1
+Follow the designated flight path and maintain altitude.,1
+Take a 5-second video of the area.,1
+Record a video of the area for the next 2 minutes.,1
+Ascend to an altitude of 600 meters.,0
+Capture a high-resolution image of the area below.,1
+Switch to the backup camera for better visibility.,1
+Hover in place and stabilize for 12 seconds.,0
+Begin to create a 2D model of the surroundings.,1
+Fly at a speed of 60 km/h and maintain course.,0
+Scan the area for any signs of wildlife.,1
+Obtain a 3D model of the target.,1
+Descend to an altitude of 25 meters and begin mapping the terrain.,1
+Follow the moving target and maintain course.,1
+Record a video of the area for the next 3 minutes.,1
+Switch to the thermal camera for better visibility.,1
+Maintain the current position and altitude for 10 minutes.,0
+Begin to create a 3D map of the surroundings.,1
+Capture a panoramic image of the area.,1
+Fly at a speed of 70 km/h and maintain course.,0
+Scan the perimeter of the area for any intruders.,1
+Fly to the location marked on the map and hover for 5 seconds.,0
+Scan the area for any obstacles and navigate around them.,1
+Hover over the target and take a high-quality photo.,1
+Descend to 50 meters and begin a 360-degree sweep.,1
+Navigate to the designated landing site and prepare for landing.,0
+Fly to the location of the damaged pipeline and inspect the damage.,1
+Begin a search pattern over the search area for 10 minutes.,1
+Hover over the identified anomaly and take a sample.,1
+Land at the designated site and conduct a thorough inspection.,0
+Fly to the location of the missing person and search the surrounding area.,1
+Navigate to the designated survey site and begin data collection.,1
+Begin a mapping exercise over the designated area.,1
+Hover over the target and take a high-resolution photo.,1
+Fly to the designated area and prepare for a 5-minute reconnaissance.,1
+Descend to 20 meters and conduct a thorough inspection.,1
+Begin a search pattern over the search area for 15 minutes.,1
+Fly to the designated location and begin data collection.,1
+Hover over the identified target and take a low-light photo.,1
+Navigate to the designated site and prepare for landing.,0
+Fly to the location of the damaged bridge and inspect the damage.,1
+Begin a reconnaissance mission over the designated area.,1
+Fly to the designated site and conduct a thorough inspection.,1
+Hover over the target and take a wide-angle photo.,1
+Begin a 10-minute search pattern over the search area.,1
+Fly to the location of the missing equipment and search the surrounding area.,1
+Navigate to the designated location and begin a 5-minute survey.,1
+Hover over the target and take a close-up photo.,1
+Descend to 30 meters and conduct a thorough inspection.,1
+Fly to the designated site and prepare for a 10-minute reconnaissance.,1
+Begin a mapping exercise over the designated area.,1
+Hover over the identified target and take a high-quality photo.,1
+Fly to the location of the damaged tower and inspect the damage.,1
+Navigate to the designated site and prepare for landing.,0
+Fly to the designated location and begin data collection.,1
+Begin a search pattern over the search area for 20 minutes.,1
+Fly to the location of the missing person and search the surrounding area.,1
+Hover over the target and take a low-light photo.,1
+Descend to 10 meters and conduct a thorough inspection.,1
+Begin a 5-minute reconnaissance mission over the designated area.,1
+Fly to the designated site and conduct a thorough inspection.,1
+Hover over the identified target and take a wide-angle photo.,1
+Fly to the location of the damaged building and inspect the damage.,1
+Navigate to the designated location and begin a 10-minute survey.,1
+Hover over the target and take a close-up photo.,1
+Begin a search pattern over the search area for 15 minutes.,1
+Fly to the designated site and prepare for landing.,0
+Fly to the location of the missing equipment and search the surrounding area.,1
+Descend to 40 meters and conduct a thorough inspection.,1
+Begin a reconnaissance mission over the designated area.,1
+Hover over the target and take a high-resolution photo.,1
+Fly to the designated location and begin data collection.,1
+Navigate to the designated site and prepare for a 5-minute reconnaissance.,1
+Begin a mapping exercise over the designated area.,1
+Hover over the identified target and take a high-quality photo.,1
+Fly to the location of the damaged bridge and inspect the damage.,1
+Fly to the designated site and conduct a thorough inspection.,1
+Hover over the target and take a low-light photo.,1
+Begin a 10-minute search pattern over the search area.,1
+Fly to the location of the missing person and search the surrounding area.,1
+Descend to 20 meters and conduct a thorough inspection.,1
+Begin a reconnaissance mission over the designated area.,1
+Hover over the target and take a wide-angle photo.,1
+Fly to the designated location and begin a 5-minute survey.,1
+Fly to the designated site and prepare for landing.,0
+Fly to the location of the damaged tower and inspect the damage.,1
+Begin a 20-minute search pattern over the search area.,1
+Hover over the identified target and take a high-resolution photo.,1
+Fly to the designated site and conduct a thorough inspection.,1
+Navigate to the designated location and begin data collection.,1
+Hover over the target and take a close-up photo.,1
+Fly to the location of the missing equipment and search the surrounding area.,1
+Begin a mapping exercise over the designated area.,1
+Descend to 30 meters and conduct a thorough inspection.,1
+Fly to the designated site and prepare for a 10-minute reconnaissance.,1
+Fly to the location of the damaged building and inspect the damage.,1
+Hover over the target and take a low-light photo.,1
+Begin a search pattern over the search area for 20 minutes.,1
+Fly to the location of the missing person and search the surrounding area.,1
+Begin a reconnaissance mission over the designated area.,1
+Hover over the target and take a wide-angle photo.,1
+Fly to the designated location and begin data collection.,1
+Fly to the designated site and conduct a thorough inspection.,1
+Hover over the identified target and take a high-quality photo.,1
+Fly to the location of the damaged bridge and inspect the damage.,1
+Navigate to the designated site and prepare for landing.,0
+Begin a 15-minute search pattern over the search area.,1
+Fly to the designated location and begin a 5-minute survey.,1
+Hover over the target and take a close-up photo.,1
+Fly to the location of the missing equipment and search the surrounding area.,1
+Descend to 10 meters and conduct a thorough inspection.,1
+Fly to the designated site and prepare for a 10-minute reconnaissance.,1
+Fly to the location of the damaged tower and inspect the damage.,1
+Hover over the target and take a high-resolution photo.,1
+Begin a mapping exercise over the designated area.,1
+"Takeoff at coordinates (37.7749, -122.4194) with a height of 100 meters",0
+"Fly to location with GPS coordinates (38.8977, -77.0365) and hover for 10 seconds",1
+Follow the subject moving at a speed of 10 meters per second for 30 seconds,1
+Obtain a 3D scan of the area at 45 degrees with a resolution of 1024x1024 pixels,1
+Hover at an altitude of 50 meters and rotate 180 degrees clockwise,0
+Detect and track a moving vehicle with a speed of 50 kilometers per hour,1
+Capture a 360-degree panoramic image with a resolution of 2048x2048 pixels,1
+"Fly to a location with GPS coordinates (40.7128, -74.0060) and perform a 3D mapping of the area",1
+Maintain a distance of 10 meters from the subject and track it for 5 minutes,1
+Take a photo of the area with a resolution of 800x600 pixels and save it to the memory card,1
+Fly at a speed of 20 meters per second for 2 minutes and change direction by 90 degrees,0
+Obtain a thermal image of the area with a resolution of 1024x1024 pixels,1
+"Fly to a location with GPS coordinates (34.0522, -118.2437) and scan the area for any obstacles",1
+Hover at an altitude of 20 meters and maintain a distance of 5 meters from the subject,0
+Capture a video of the area with a resolution of 1920x1080 pixels for 10 minutes,1
+"Fly to a location with GPS coordinates (41.8781, -87.6298) and perform a 3D scan of the area",1
+Detect and track a pedestrian moving at a speed of 5 meters per second,1
+Obtain a high-resolution image of the area with a resolution of 4096x4096 pixels,1
+Fly at a speed of 15 meters per second for 3 minutes and change direction by 180 degrees,0
+Maintain a distance of 15 meters from the subject and track it for 10 minutes,1
+Take a panoramic photo of the area with a resolution of 2048x2048 pixels and save it to the memory card,1
+"Fly to a location with GPS coordinates (29.7604, -95.3698) and scan the area for any obstacles",1
+Hover at an altitude of 30 meters and maintain a distance of 10 meters from the subject,0
+Capture a video of the area with a resolution of 2560x1440 pixels for 15 minutes,1
+"Fly to a location with GPS coordinates (51.5074, -0.1278) and perform a 3D mapping of the area",1
+Detect and track a bicycle moving at a speed of 20 kilometers per hour,1
+Obtain a thermal image of the area with a resolution of 2048x2048 pixels,1
+Fly at a speed of 25 meters per second for 4 minutes and change direction by 90 degrees,0
+Maintain a distance of 20 meters from the subject and track it for 12 minutes,1
+Take a photo of the area with a resolution of 1600x1200 pixels and save it to the memory card,1
+"Fly to a location with GPS coordinates (43.6532, -79.3832) and scan the area for any obstacles",1
+Hover at an altitude of 40 meters and maintain a distance of 15 meters from the subject,0
+Capture a video of the area with a resolution of 3840x2160 pixels for 20 minutes,1
+"Fly to a location with GPS coordinates (45.5236, -122.6750) and perform a 3D scan of the area",1
+Detect and track a skateboard moving at a speed of 30 kilometers per hour,1
+Obtain a high-resolution image of the area with a resolution of 4096x4096 pixels,1
+Fly at a speed of 30 meters per second for 5 minutes and change direction by 180 degrees,0
+Maintain a distance of 25 meters from the subject and track it for 15 minutes,1
+Take a panoramic photo of the area with a resolution of 4096x4096 pixels and save it to the memory card,1
+"Fly to a location with GPS coordinates (37.7749, -122.4194) and scan the area for any obstacles",1
+Hover at an altitude of 50 meters and maintain a distance of 20 meters from the subject,0
+Capture a video of the area with a resolution of 5120x2880 pixels for 25 minutes,1
+"Fly to a location with GPS coordinates (52.5200, 13.4050) and perform a 3D mapping of the area",1
+Detect and track a motorcycle moving at a speed of 40 kilometers per hour,1
+Obtain a thermal image of the area with a resolution of 4096x4096 pixels,1
+Fly at a speed of 35 meters per second for 6 minutes and change direction by 90 degrees,0
+Maintain a distance of 30 meters from the subject and track it for 18 minutes,1
+Take a photo of the area with a resolution of 2560x1600 pixels and save it to the memory card,1
+"Fly to a location with GPS coordinates (48.8567, 2.2945) and scan the area for any obstacles",1
+Hover at an altitude of 60 meters and maintain a distance of 25 meters from the subject,0
+Capture a video of the area with a resolution of 5760x3240 pixels for 30 minutes,1
+"Fly to a location with GPS coordinates (35.6895, 139.7670) and perform a 3D scan of the area",1
+Detect and track a car moving at a speed of 50 kilometers per hour,1
+Obtain a high-resolution image of the area with a resolution of 8192x8192 pixels,1
+Fly at a speed of 40 meters per second for 7 minutes and change direction by 180 degrees,0
+Maintain a distance of 35 meters from the subject and track it for 20 minutes,1
+Take a panoramic photo of the area with a resolution of 8192x8192 pixels and save it to the memory card,1
+"Fly to a location with GPS coordinates (12.5293, 61.1331) and scan the area for any obstacles",1
+Hover at an altitude of 70 meters and maintain a distance of 30 meters from the subject,0
+Capture a video of the area with a resolution of 7680x4320 pixels for 35 minutes,1
+"Fly to a location with GPS coordinates (31.2304, 121.4737) and perform a 3D mapping of the area",1
+Detect and track a bus moving at a speed of 60 kilometers per hour,1
+Obtain a thermal image of the area with a resolution of 8192x8192 pixels,1
+Takeoff and hover at an altitude of 50 meters for 5 minutes.,0
+"Fly to location 37.7749, -122.4194 and take a photo.",1
+Perform a 360-degree turn at the current location.,0
+Hover for 2 minutes and record a 4K video.,1
+Land and return to base.,0
+Scan for obstacles within a 50-meter radius and adjust flight path accordingly.,0
+Fly over the Eiffel Tower and take 10 photos at 10-second intervals.,1
+Maintain a safe distance from other aircraft and follow them if possible.,1
+Follow the subject and record a 10-minute video.,1
+Navigate through a narrow canyon and avoid any obstacles.,0
+Hover at the Grand Canyon and take a panoramic photo.,1
+Return to base and perform a systems check.,0
+Fly over the Great Barrier Reef and take 20 photos at 5-second intervals.,1
+Maintain a steady altitude and speed during the flight.,0
+Scan for any potential hazards in the flight path.,0
+Fly over the Great Wall of China and take 15 photos at 10-second intervals.,1
+Hover at the top of the Burj Khalifa and take a photo.,1
+Navigate through a crowded city and avoid any obstacles.,0
+Follow the subject and record a 15-minute video.,1
+Maintain a safe distance from any buildings and structures.,0
+Fly over the Taj Mahal and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 10%.,0
+Hover at the top of the Eiffel Tower and take a panoramic photo.,1
+Scan for any potential hazards in the flight path.,0
+Fly over the Golden Gate Bridge and take 15 photos at 10-second intervals.,1
+Maintain a steady altitude and speed during the flight.,0
+Follow the subject and record a 12-minute video.,1
+Navigate through a narrow canyon and avoid any obstacles.,0
+Fly over the Sydney Opera House and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 5%.,0
+Hover at the top of the Empire State Building and take a photo.,1
+Maintain a safe distance from other aircraft and follow them if possible.,1
+Scan for any potential hazards in the flight path.,0
+Fly over the London Eye and take 15 photos at 10-second intervals.,1
+Follow the subject and record a 18-minute video.,1
+Navigate through a crowded city and avoid any obstacles.,0
+Fly over the Great Pyramid of Giza and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 15%.,0
+Hover at the top of the CN Tower and take a panoramic photo.,1
+Maintain a steady altitude and speed during the flight.,0
+Scan for obstacles within a 50-meter radius and adjust flight path accordingly.,0
+Fly over the Christ the Redeemer statue and take 15 photos at 10-second intervals.,1
+Follow the subject and record a 20-minute video.,1
+Navigate through a narrow canyon and avoid any obstacles.,0
+Fly over the Acropolis and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 20%.,0
+Hover at the top of the Statue of Liberty and take a photo.,1
+Maintain a safe distance from other aircraft and follow them if possible.,1
+Scan for any potential hazards in the flight path.,0
+Fly over the Big Ben and take 15 photos at 10-second intervals.,1
+Follow the subject and record a 22-minute video.,1
+Navigate through a crowded city and avoid any obstacles.,0
+Fly over the Leaning Tower of Pisa and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 25%.,0
+Hover at the top of the Burj Khalifa and take a panoramic photo.,1
+Maintain a steady altitude and speed during the flight.,0
+Scan for obstacles within a 50-meter radius and adjust flight path accordingly.,0
+Fly over the Eiffel Tower and take 15 photos at 10-second intervals.,1
+Follow the subject and record a 25-minute video.,1
+Navigate through a narrow canyon and avoid any obstacles.,0
+Fly over the Sydney Opera House and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 30%.,0
+Hover at the top of the Great Pyramid of Giza and take a photo.,1
+Maintain a safe distance from other aircraft and follow them if possible.,1
+Scan for any potential hazards in the flight path.,0
+Fly over the Golden Gate Bridge and take 15 photos at 10-second intervals.,1
+Follow the subject and record a 28-minute video.,1
+Navigate through a crowded city and avoid any obstacles.,0
+Fly over the Taj Mahal and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 35%.,0
+Hover at the top of the CN Tower and take a panoramic photo.,1
+Maintain a steady altitude and speed during the flight.,0
+Scan for obstacles within a 50-meter radius and adjust flight path accordingly.,0
+Fly over the Christ the Redeemer statue and take 15 photos at 10-second intervals.,1
+Follow the subject and record a 30-minute video.,1
+Navigate through a narrow canyon and avoid any obstacles.,0
+Fly over the Acropolis and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 40%.,0
+Hover at the top of the Statue of Liberty and take a photo.,1
+Maintain a safe distance from other aircraft and follow them if possible.,1
+Scan for any potential hazards in the flight path.,0
+Fly over the Big Ben and take 15 photos at 10-second intervals.,1
+Follow the subject and record a 32-minute video.,1
+Navigate through a crowded city and avoid any obstacles.,0
+Fly over the Leaning Tower of Pisa and take 20 photos at 5-second intervals.,1
+Perform an emergency landing if the UAV's battery level falls below 45%.,0
+"Navigate to coordinates (43.6532, -79.3832)",0
+Hover at an altitude of 100 meters,0
+Follow the subject in the frame,1
+Capture a 360-degree panoramic image,1
+Record a 10-second video,1
+Return to base and land,0
+Maintain a distance of 5 meters from the subject,1
+Obtain a high-resolution image of the subject's face,1
+Fly in a figure-eight pattern around the subject,1
+Scan the surrounding area for potential hazards,0
+Provide a real-time video feed to the operator,1
+Adjust the camera zoom to 2x,1
+Follow the subject as it moves through the scene,1
+Take a series of 10 images at 1-second intervals,1
+Maintain a speed of 5 meters per second,0
+Provide a live audio feed to the operator,0
+Obtain a high-resolution image of the surrounding environment,1
+Fly in a circular pattern around the subject,1
+Scan the surrounding area for potential obstacles,0
+Provide a real-time location update to the operator,0
+Adjust the camera focus to infinity,1
+Follow the subject as it moves through the scene,1
+Take a series of 5 images at 0.5-second intervals,1
+Maintain a height of 20 meters above the ground,0
+Provide a live video feed to the operator,1
+Obtain a high-resolution image of the subject's hands,1
+Fly in a zigzag pattern around the subject,1
+Scan the surrounding area for potential hazards,0
+Provide a real-time location update to the operator,0
+Adjust the camera exposure to compensate for low light,1
+Follow the subject as it moves through the scene,1
+Take a series of 10 images at 2-second intervals,1
+Maintain a distance of 10 meters from the subject,1
+Provide a live audio feed to the operator,0
+Obtain a high-resolution image of the surrounding environment,1
+Fly in a circular pattern around the subject,1
+Scan the surrounding area for potential obstacles,0
+Provide a real-time location update to the operator,0
+Adjust the camera zoom to 4x,1
+Follow the subject as it moves through the scene,1
+Take a series of 5 images at 1-second intervals,1
+Maintain a height of 15 meters above the ground,0
+Provide a live video feed to the operator,1
+Obtain a high-resolution image of the subject's face,1
+Fly in a zigzag pattern around the subject,1
+Scan the surrounding area for potential hazards,0
+Provide a real-time location update to the operator,0
+Adjust the camera focus to 1 meter,1
+Follow the subject as it moves through the scene,1
+Take a series of 10 images at 0.5-second intervals,1
+Maintain a distance of 5 meters from the subject,1
+Provide a live audio feed to the operator,0
+Obtain a high-resolution image of the surrounding environment,1
+Fly in a circular pattern around the subject,1
+Scan the surrounding area for potential obstacles,0
+Provide a real-time location update to the operator,0
+Adjust the camera exposure to compensate for high light,1
+Follow the subject as it moves through the scene,1
+Take a series of 5 images at 2-second intervals,1
+Maintain a height of 10 meters above the ground,0
+Provide a live video feed to the operator,1
+Obtain a high-resolution image of the subject's hands,1
+Fly in a zigzag pattern around the subject,1
+Scan the surrounding area for potential hazards,0
+Provide a real-time location update to the operator,0
+Adjust the camera zoom to 3x,1
+Follow the subject as it moves through the scene,1
+Take a series of 10 images at 1-second intervals,1
+Maintain a distance of 10 meters from the subject,1
+Provide a live audio feed to the operator,0
+Obtain a high-resolution image of the surrounding environment,1
+Fly in a circular pattern around the subject,1
+Scan the surrounding area for potential obstacles,0
+Provide a real-time location update to the operator,0
+Adjust the camera focus to 2 meters,1
+Follow the subject as it moves through the scene,1
+Take a series of 5 images at 0.5-second intervals,1
+Maintain a height of 20 meters above the ground,0
+Provide a live video feed to the operator,1
+Obtain a high-resolution image of the subject's face,1
+Fly in a zigzag pattern around the subject,1
+Scan the surrounding area for potential hazards,0
+Provide a real-time location update to the operator,0
+Adjust the camera exposure to compensate for low light,1
+Follow the subject as it moves through the scene,1
+Take a series of 10 images at 2-second intervals,1
+Maintain a distance of 15 meters from the subject,1
+Provide a live audio feed to the operator,0
+Obtain a high-resolution image of the surrounding environment,1
+Fly in a circular pattern around the subject,1
+Scan the surrounding area for potential obstacles,0
+Provide a real-time location update to the operator,0
+Adjust the camera zoom to 5x,1
+Follow the subject as it moves through the scene,1
+Take a series of 5 images at 1-second intervals,1
+Maintain a height of 25 meters above the ground,0
+Provide a live video feed to the operator,1
+Obtain a high-resolution image of the subject's hands,1
+Fly in a zigzag pattern around the subject,1
+Scan the surrounding area for potential hazards,0
+Provide a real-time location update to the operator,0
+"Fly to the north and inspect the construction site at 43.6532, -79.3832",1
+Hover at 20 meters for 5 seconds,0
+Follow the object with the ID 1234,1
+Land at the designated spot near the helipad,0
+"Take a 360-degree photo of the warehouse at 37.7749, -122.4194",1
+Maintain a distance of 10 meters from the obstacle,0
+"Inspect the damage at the site with the coordinates 48.8566, 2.3522",1
+Ascend to 50 meters in 10 seconds,0
+Track the person with the ID 5678 for 10 seconds,1
+Wait for the signal from the ground control station,0
+"Fly to coordinates 43.6532, -79.3832 and take a photo of the CN Tower",1
+Change altitude to 500 meters,0
+Follow the subject for 10 seconds,1
+"Navigate to location 40.7128, -74.0060 and hover for 30 seconds",0
+Obtain 360-degree view of the surrounding area,1
+"Fly to location 35.6895, 139.7670 and take a photo of the Tokyo Tower",1
+Adjust course by 30 degrees to the left,0
+Record 10 seconds of video of the city below,1
+"Land at location 37.7749, -122.4194",0
+Follow the subject for 20 seconds and obtain a thermal image,1
+Change to manual mode and follow the user's commands,0
+Take off and hover at 30 meters,0
+"Fly to location (37.7749, -122.4194) and capture photo",1
+"Capture 360-degree panorama at location (34.0522, -118.2437)",1
+Land safely and recharge,0
+"Navigate to location (40.7128, -74.0060) and inspect damage",1
+Hover at 10 meters and inspect cargo,0
+"Fly to location (51.5074, -0.1278) and provide live feed",1
+Descend to 5 meters and perform obstacle avoidance,0
+"Fly to location (28.6139, 77.2090) and capture video",1
+Maintain altitude and provide status update,0
+"Fly to location (43.6532, -79.3832) and inspect construction site",1
+Hover at 20 meters and perform thermal scan,0
+Takeoff at the designated coordinates,0
+Fly to the location where the maintenance crew is waiting,1
+Capture image of the construction site,1
+Land at the designated coordinates,0
+Inspect the bridge for damage,1
+Provide real-time video feed of the fire,1
+Hover at 50 meters above the crowd,0
+Search for survivors in the rubble,1
+Provide a 360-degree view of the stadium,1
+Follow the ambulance to the hospital,1
+Scan the area for any potential hazards,1
+Return to the base station,0
+Monitor the weather conditions,1
+Hover at 20 meters above the water,0
+Capture image of the wildlife sanctuary,1
+Follow the fire truck to the scene,1
+Provide real-time video feed of the parade,1
+Search for the missing person in the forest,1
+Fly to the location of the downed aircraft,1
+Hover at 10 meters above the stage,0
+Scan the area for any potential threats,1
+Return to the base station for refueling,0
+Provide a 360-degree view of the festival,1
+Follow the police car to the crime scene,1
+Monitor the air traffic control system,1
+Hover at 30 meters above the park,0
+Capture image of the historical landmark,1
+Follow the paramedics to the emergency,1
+Search for the lost child in the mall,1
+Fly to the location of the missing hiker,1
+Hover at 15 meters above the construction site,0
+Scan the area for any potential hazards,1
+Return to the base station for maintenance,0
+Provide real-time video feed of the concert,1
+Follow the fire department to the blaze,1
+Monitor the weather radar system,1
+Hover at 25 meters above the stadium,0
+Capture image of the scenic view,1
+Follow the ambulance to the hospital,1
+Search for the missing person in the desert,1
+Fly to the location of the downed helicopter,1
+Hover at 20 meters above the lake,0
+Scan the area for any potential threats,1
+Return to the base station for refueling,0
+Provide a 360-degree view of the city,1
+Follow the police car to the crime scene,1
+Monitor the air traffic control system,1
+Hover at 35 meters above the park,0
+Capture image of the wildlife,1
+Follow the paramedics to the emergency,1
+Search for the lost child in the woods,1
+Fly to the location of the missing climber,1
+Hover at 18 meters above the construction site,0
+Scan the area for any potential hazards,1
+Return to the base station for maintenance,0
+Provide real-time video feed of the parade,1
+Follow the fire department to the blaze,1
+Monitor the weather radar system,1
+Hover at 22 meters above the stadium,0
+Capture image of the scenic view,1
+Follow the ambulance to the hospital,1
+Search for the missing person in the jungle,1
+Fly to the location of the downed aircraft,1
+Hover at 28 meters above the lake,0
+Scan the area for any potential threats,1
+Return to the base station for refueling,0
+Provide a 360-degree view of the city,1
+Follow the police car to the crime scene,1
+Monitor the air traffic control system,1
+Hover at 32 meters above the park,0
+Capture image of the wildlife,1
+Follow the paramedics to the emergency,1
+Search for the lost child in the forest,1
+Fly to the location of the missing hiker,1
+Hover at 19 meters above the construction site,0
+Scan the area for any potential hazards,1
+Return to the base station for maintenance,0
+Provide real-time video feed of the concert,1
+Follow the fire department to the blaze,1
+Monitor the weather radar system,1
+Hover at 23 meters above the stadium,0
+Capture image of the scenic view,1
+Follow the ambulance to the hospital,1
+Search for the missing person in the desert,1
+Fly to the location of the downed helicopter,1
+Hover at 29 meters above the lake,0
+Scan the area for any potential threats,1
+Return to the base station for refueling,0
+Provide a 360-degree view of the city,1
+Follow the police car to the crime scene,1
+Monitor the air traffic control system,1
+Hover at 33 meters above the park,0
+Capture image of the wildlife,1
+Follow the paramedics to the emergency,1
+Search for the lost child in the woods,1
+Fly to the location of the missing climber,1
+Hover at 20 meters above the construction site,0
+Scan the area for any potential hazards,1
+Return to the base station for maintenance,0
+Provide real-time video feed of the parade,1
+Follow the fire department to the blaze,1
+Monitor the weather radar system,1
+Hover at 24 meters above the stadium,0
+Capture image of the scenic view,1
+Follow the ambulance to the hospital,1
+Search for the missing person in the jungle,1
+Fly to the location of the downed aircraft,1
+Hover at 30 meters above the lake,0
+Scan the area for any potential threats,1
+Return to the base station for refueling,0
+Provide a 360-degree view of the city,1
+"Fly to the location where the fire is burning, and capture a photo of the incident with the camera.",1
+"Hover at 30 meters for 5 seconds, then take off and land at the designated landing site.",0
+Follow the person in the red jacket and maintain a distance of 5 meters.,1
+"Scan the area with the lidar sensor to detect any obstacles, then move forward at a speed of 2 meters per second.",0
+Fly over the city and capture a panoramic photo of the skyline at sunset.,1
+"Follow the GPS coordinates 43.6532, -79.3832 and maintain an altitude of 100 meters.",0
+Detect and track the moving object with the camera and follow it for 10 seconds.,1
+Fly in a circular motion around the building at a height of 20 meters.,0
+"Scan the area with the thermal sensor to detect any heat signatures, then move towards the source.",0
+Follow the person in the blue shirt and maintain a distance of 3 meters.,1
+Fly over the lake and capture a photo of the water surface with the camera.,1
+Navigate to the target location and take a 360-degree photo of the surroundings.,1
+Begin orbiting the target location at an altitude of 100 meters.,0
+Capture a high-resolution photo of the target location's entrance.,1
+Follow the subject at a safe distance of 50 meters.,1
+Record a video of the subject's movement pattern for 5 minutes.,1
+Return to the base station for refueling.,0
+Inspect the target location's roof for any damage or debris.,1
+Monitor the surrounding area for any signs of wildlife.,0
+Capture a low-light photo of the target location at night.,1
+Obtain a 3D map of the target location using lidar technology.,0
+Take a photo of the subject's license plate.,1
+Fly over the target location to assess the damage from the recent storm.,0
+Record a video of the subject's daily routine for 2 hours.,1
+Provide a real-time video feed of the target location's surroundings.,1
+Inspect the target location's electrical infrastructure for any damage or malfunctions.,1
+Capture a thermal image of the target location's roof.,1
+Begin a search and rescue operation for a missing person.,0
+Obtain a high-resolution photo of the subject's face.,1
+Fly over the target location at a speed of 50 knots.,0
+Record a video of the subject's movement pattern for 10 minutes.,1
+Monitor the surrounding area for any signs of wildfires.,0
+Capture a photo of the target location's entrance at night.,1
+Provide a real-time feed of the target location's surroundings using multiple cameras.,1
+Obtain a 3D map of the target location using lidar technology and cameras.,1
+Fly over the target location at a height of 200 meters.,0
+Record a video of the subject's daily routine for 1 hour.,1
+Inspect the target location's plumbing infrastructure for any leaks or malfunctions.,1
+Begin a perimeter patrol of the target location.,0
+Capture a high-resolution photo of the subject's vehicle.,1
+Obtain a thermal image of the target location's roof and surroundings.,1
+Fly over the target location at a speed of 75 knots.,0
+Record a video of the subject's movement pattern for 15 minutes.,1
+Monitor the surrounding area for any signs of flooding.,0
+Capture a photo of the target location's entrance.,1
+Provide a real-time feed of the target location's surroundings using a single camera.,1
+Obtain a 3D map of the target location using lidar technology.,0
+Fly over the target location at a height of 150 meters.,0
+Record a video of the subject's daily routine for 30 minutes.,1
+Inspect the target location's electrical infrastructure for any damage or malfunctions.,1
+Begin a search and rescue operation for a missing person.,0
+Capture a thermal image of the target location's roof and surroundings.,1
+Fly over the target location at a speed of 50 knots.,0
+Record a video of the subject's movement pattern for 5 minutes.,1
+Monitor the surrounding area for any signs of wildfires.,0
+Capture a photo of the target location's entrance at night.,1
+Provide a real-time feed of the target location's surroundings using multiple cameras.,1
+Obtain a 3D map of the target location using lidar technology and cameras.,1
+Fly over the target location at a height of 200 meters.,0
+Record a video of the subject's daily routine for 1 hour.,1
+Inspect the target location's plumbing infrastructure for any leaks or malfunctions.,1
+Begin a perimeter patrol of the target location.,0
+Capture a high-resolution photo of the subject's vehicle.,1
+Obtain a thermal image of the target location's roof and surroundings.,1
+Fly over the target location at a speed of 75 knots.,0
+Record a video of the subject's movement pattern for 15 minutes.,1
+Monitor the surrounding area for any signs of flooding.,0
+Capture a photo of the target location's entrance.,1
+Provide a real-time feed of the target location's surroundings using a single camera.,1
+Obtain a 3D map of the target location using lidar technology.,0
+Fly over the target location at a height of 150 meters.,0
+Record a video of the subject's daily routine for 30 minutes.,1
+Inspect the target location's electrical infrastructure for any damage or malfunctions.,1
+Begin a search and rescue operation for a missing person.,0
+Capture a thermal image of the target location's roof and surroundings.,1
+Fly over the target location at a speed of 50 knots.,0
+Record a video of the subject's movement pattern for 5 minutes.,1
+Monitor the surrounding area for any signs of wildfires.,0
+Capture a photo of the target location's entrance at night.,1
+Provide a real-time feed of the target location's surroundings using multiple cameras.,1
+Obtain a 3D map of the target location using lidar technology and cameras.,1
+Fly over the target location at a height of 200 meters.,0
+Record a video of the subject's daily routine for 1 hour.,1
+Inspect the target location's plumbing infrastructure for any leaks or malfunctions.,1
+Begin a perimeter patrol of the target location.,0
+Capture a high-resolution photo of the subject's vehicle.,1
+Obtain a thermal image of the target location's roof and surroundings.,1
+Fly over the target location at a speed of 75 knots.,0
+Record a video of the subject's movement pattern for 15 minutes.,1
+Monitor the surrounding area for any signs of flooding.,0
+Capture a photo of the target location's entrance.,1
+Provide a real-time feed of the target location's surroundings using a single camera.,1
+Obtain a 3D map of the target location using lidar technology.,0
+Fly over the target location at a height of 150 meters.,0
+Record a video of the subject's daily routine for 30 minutes.,1
+Inspect the target location's electrical infrastructure for any damage or malfunctions.,1
+Begin a search and rescue operation for a missing person.,0
+Capture a thermal image of the target location's roof and surroundings.,1
+Fly over the target location at a speed of 50 knots.,0
+Record a video of the subject's movement pattern for 5 minutes.,1
+Take off and hover at an altitude of 50 meters,0
+Follow the subject and maintain a distance of 5 meters,1
+"Fly over the coordinates (37.7749, -122.4194) and take a photo",1
+Return to base and land safely,0
+"Hover at the location (48.8567, 2.2945) and record a 5-minute video",1
+Follow the subject for 2 minutes and track its movement,1
+"Hover at the location (40.7128, -74.0060) and provide a live feed for 10 minutes",1
+Fly over the area and detect any obstacles,1
+"Land at the designated spot (51.5074, -0.1278) and perform a systems check",0
+Follow the subject and maintain a distance of 10 meters for 3 minutes,1
+Fly over the area and record a 360-degree video,1
+Return to base and perform a software update,0
+"Hover at the location (43.6532, -79.3832) and provide a live feed for 5 minutes",1
+Follow the subject and maintain a distance of 5 meters for 5 minutes,1
+Fly over the area and detect any people or animals,1
+"Land at the designated spot (34.0522, -118.2437) and perform a systems check",0
+Follow the subject for 5 minutes and track its movement,1
+"Hover at the location (39.7392, -104.9903) and record a 10-minute video",1
+Fly over the area and provide a live feed for 10 minutes,1
+Return to base and land safely,0
+"Hover at the location (51.5074, -0.1278) and provide a live feed for 5 minutes",1
+Follow the subject and maintain a distance of 10 meters for 2 minutes,1
+Fly over the area and record a 360-degree video,1
+"Land at the designated spot (48.8567, 2.2945) and perform a systems check",0
+Follow the subject and maintain a distance of 5 meters for 2 minutes,1
+"Hover at the location (40.7128, -74.0060) and record a 5-minute video",1
+Fly over the area and detect any obstacles,1
+Return to base and perform a software update,0
+"Hover at the location (43.6532, -79.3832) and provide a live feed for 5 minutes",1
+Follow the subject for 5 minutes and track its movement,1
+Fly over the area and provide a live feed for 10 minutes,1
+"Land at the designated spot (37.7749, -122.4194) and perform a systems check",0
+"Hover at the location (39.7392, -104.9903) and record a 10-minute video",1
+Follow the subject and maintain a distance of 10 meters for 3 minutes,1
+Fly over the area and record a 360-degree video,1
+Return to base and land safely,0
+"Hover at the location (51.5074, -0.1278) and provide a live feed for 5 minutes",1
+Follow the subject and maintain a distance of 5 meters for 5 minutes,1
+Fly over the area and detect any people or animals,1
+"Land at the designated spot (34.0522, -118.2437) and perform a systems check",0
+"Hover at the location (48.8567, 2.2945) and record a 5-minute video",1
+Follow the subject for 2 minutes and track its movement,1
+Fly over the area and provide a live feed for 10 minutes,1
+Return to base and perform a software update,0
+"Hover at the location (40.7128, -74.0060) and provide a live feed for 5 minutes",1
+Follow the subject and maintain a distance of 10 meters for 2 minutes,1
+Fly over the area and record a 360-degree video,1
+"Land at the designated spot (43.6532, -79.3832) and perform a systems check",0
+"Hover at the location (39.7392, -104.9903) and record a 10-minute video",1
+Follow the subject and maintain a distance of 5 meters for 2 minutes,1
+Fly over the area and detect any obstacles,1
+Return to base and land safely,0
+"Hover at the location (37.7749, -122.4194) and provide a live feed for 5 minutes",1
+Follow the subject and maintain a distance of 10 meters for 3 minutes,1
+Fly over the area and record a 360-degree video,1
+"Land at the designated spot (51.5074, -0.1278) and perform a systems check",0
+"Hover at the location (43.6532, -79.3832) and provide a live feed for 5 minutes",1
+Follow the subject for 5 minutes and track its movement,1
+Fly over the area and provide a live feed for 10 minutes,1
+Return to base and perform a software update,0
+"Hover at the location (48.8567, 2.2945) and record a 5-minute video",1
+Follow the subject and maintain a distance of 5 meters for 5 minutes,1
+Fly over the area and detect any people or animals,1
+"Land at the designated spot (40.7128, -74.0060) and perform a systems check",0
+"Hover at the location (39.7392, -104.9903) and record a 10-minute video",1
+Follow the subject for 2 minutes and track its movement,1
+Fly over the area and provide a live feed for 10 minutes,1
+Return to base and land safely,0
+"Hover at the location (34.0522, -118.2437) and provide a live feed for 5 minutes",1
+Follow the subject and maintain a distance of 10 meters for 2 minutes,1
+Fly over the area and record a 360-degree video,1
+"Land at the designated spot (51.5074, -0.1278) and perform a systems check",0
+"Hover at the location (40.7128, -74.0060) and record a 5-minute video",1
+Follow the subject for 5 minutes and track its movement,1
+Fly over the area and provide a live feed for 10 minutes,1
+Return to base and perform a software update,0
+Take off and navigate to the target location.,0
+Hover at 50 meters and provide a 360-degree view of the surroundings.,1
+Fly in a square pattern over the field and capture images every 10 seconds.,1
+Landing and stabilize the platform.,0
+Follow the person in the blue shirt and track their movement.,1
+Scan the area for any obstacles or hazards.,1
+Return to the base station and perform a systems check.,0
+Observe the wildlife in the nature reserve and capture images of the different species.,1
+Assist in search and rescue operations by providing aerial support and imagery.,1
+Fly over the construction site and capture images of the progress.,1
+Follow the road and track the traffic flow.,1
+Scan the area for any signs of fire or smoke.,1
+Assist in agricultural survey and monitoring.,1
+Fly over the city and capture images of the architecture and landmarks.,1
+Provide surveillance and monitoring services for a high-security facility.,1
+Fly over the coastline and capture images of the marine life.,1
+Assist in environmental monitoring and conservation efforts.,1
+Fly over the stadium and capture images of the event.,1
+Provide aerial support for a music festival.,1
+Fly over the disaster area and provide critical information to first responders.,1
+Assist in historical site survey and documentation.,1
+Fly over the theme park and capture images of the attractions.,1
+Provide real-time data for a live event.,1
+Fly over the city and track the movement of people and vehicles.,1
+Assist in urban planning and development projects.,1
+Fly over the national park and capture images of the wildlife.,1
+Assist in infrastructure inspection and maintenance.,1
+Fly over the river and capture images of the water quality.,1
+Provide aerial support for a film shoot.,1
+Fly over the forest and track the movement of wildlife.,1
+Assist in geological survey and mapping.,1
+Fly over the city and track the traffic flow and congestion.,1
+Assist in archaeology and historical site excavation.,1
+Fly over the ocean and capture images of the marine life.,1
+Provide aerial support for a sporting event.,1
+Fly over the desert and capture images of the unique landscape.,1
+Assist in environmental impact assessment and monitoring.,1
+Fly over the mountain and capture images of the terrain.,1
+Assist in search and rescue operations in a remote area.,1
+Fly over the city and track the movement of emergency services.,1
+Assist in wildlife conservation and research efforts.,1
+Fly over the coastline and capture images of the beach activities.,1
+Provide aerial support for a news broadcast.,1
+Fly over the field and track the movement of the crops.,1
+Assist in environmental monitoring and conservation efforts in a national park.,1
+Fly over the city and track the movement of people and vehicles during rush hour.,1
+Assist in historical site preservation and restoration.,1
+Fly over the river and capture images of the water quality and flow.,1
+Provide real-time data for a live event and track the audience movement.,1
+Fly over the stadium and capture images of the event.,1
+Assist in urban planning and development projects in a rapidly growing city.,1
+Fly over the national park and track the movement of wildlife.,1
+Assist in environmental monitoring and conservation efforts in a protected area.,1
+Fly over the city and track the movement of emergency services during an emergency.,1
+Assist in historical site excavation and documentation.,1
+Fly over the theme park and capture images of the attractions and crowd.,1
+Provide aerial support for a film shoot and track the movement of the actors.,1
+Fly over the forest and capture images of the wildlife and their habitats.,1
+Assist in search and rescue operations in a remote and rugged terrain.,1
+Fly over the ocean and capture images of the marine life and their habitats.,1
+Assist in environmental impact assessment and monitoring in a sensitive ecosystem.,1
+Fly over the mountain and capture images of the terrain and the movement of the wildlife.,1
+Assist in wildlife conservation and research efforts in a protected area.,1
+Fly over the field and track the movement of the crops and the soil health.,1
+Provide real-time data for a live event and track the audience movement and engagement.,1
+Fly over the city and track the movement of people and vehicles during a parade.,1
+Assist in urban planning and development projects in a coastal area.,1
+Fly over the national park and capture images of the wildlife and their habitats.,1
+Assist in environmental monitoring and conservation efforts in a freshwater ecosystem.,1
+Fly over the river and capture images of the water quality and flow.,1
+Provide aerial support for a sporting event and track the movement of the athletes.,1
+Fly over the desert and capture images of the unique landscape and the movement of the wildlife.,1
+Assist in historical site preservation and restoration in a cultural heritage site.,1
+Fly over the theme park and capture images of the attractions and the crowd.,1
+Provide real-time data for a live event and track the audience movement and engagement.,1
+Fly over the ocean and capture images of the marine life and their habitats.,1
+Assist in search and rescue operations in a disaster area.,1
+Fly over the field and track the movement of the crops and the soil health.,1
+Assist in wildlife conservation and research efforts in a protected area.,1
+Fly over the city and track the movement of people and vehicles during a festival.,1
+Assist in environmental monitoring and conservation efforts in a sensitive ecosystem.,1
+Fly over the mountain and capture images of the terrain and the movement of the wildlife.,1
+Provide aerial support for a news broadcast and track the movement of the news crew.,1
+Fly over the river and capture images of the water quality and flow.,1
+Assist in urban planning and development projects in a rapidly growing city.,1
+Fly over the national park and capture images of the wildlife and their habitats.,1
+Assist in historical site excavation and documentation in a cultural heritage site.,1
+Fly over the theme park and capture images of the attractions and the crowd.,1
+Provide real-time data for a live event and track the audience movement and engagement.,1
+Fly over the ocean and capture images of the marine life and their habitats.,1
+Fly to the designated location and hover at 10 meters,0
+Take a 360-degree photo of the surrounding area,1
+Perform a 90-degree turn to the left and descend to 5 meters,0
+Scan for obstacles in the area and provide a 3D model,1
+Return to the starting point and wait for further instructions,0
+Capture a photo of the unique geological formation,1
+Fly at a speed of 20 meters per second for 30 seconds,0
+Observe and document the wildlife in the area,1
+Adjust altitude to 15 meters and fly in a zigzag pattern,0
+Provide a thermal map of the area and detect any heat sources,1
+Fly over the coastline and take a photo of the sunset,1
+Increase speed to 25 meters per second and maintain course,0
+Take off and ascend to 100 meters,0
+Hover at 50 meters and provide a 3D map of the surrounding area,1
+Move forward 10 meters and follow the path of the sun,1
+Descend to 20 meters and perform a 360-degree scan of the area,1
+Land at the designated coordinates,0
+Fly at a speed of 20 knots and navigate through the forest,0
+Capture a high-resolution image of the nearby waterfall,1
+Return to base and update the flight log,0
+Provide a real-time video feed of the surrounding area,1
+"Fly to the coordinates (37.7749, -122.4194).",0
+Return to the launch point at a speed of 22 m/s.,0
+Increase your altitude by 55 meters.,0
+Descend to an altitude of 22 meters.,0
+Rotate 110 degrees to the left.,0
+Rotate 190 degrees to the right.,0
+Change your direction to South.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 6 minutes.,0
+Increase your speed to 32 m/s.,0
+Decrease your speed by 12 m/s.,0
+Maintain your current altitude for 11 seconds.,0
+"Adjust your position to (51.5074, -0.1278).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 10 meters.,0
+"Fly over the coordinates (40.7128, -74.0060).",0
+Descend to an altitude of 12 meters.,0
+Rotate 50 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 22 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (35.6895, 139.7670).",0
+Increase your speed to 28 m/s.,0
+Decrease your speed by 18 m/s.,0
+Maintain your current altitude for 16 seconds.,0
+"Adjust your position to (29.7604, -95.3698).",0
+Return to the launch point at a speed of 18 m/s.,0
+Increase your altitude by 18 meters.,0
+"Fly over the coordinates (48.8566, 2.3522).",0
+Descend to an altitude of 28 meters.,0
+Rotate 80 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 9 minutes.,0
+Increase your speed to 38 m/s.,0
+Decrease your speed by 22 m/s.,0
+Maintain your current altitude for 22 seconds.,0
+"Adjust your position to (55.7558, 37.6173).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 32 meters.,0
+"Fly over the coordinates (12.5749, 41.8719).",0
+Descend to an altitude of 32 meters.,0
+Rotate 60 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 40 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (52.5200, 13.4050).",0
+Increase your speed to 45 m/s.,0
+Decrease your speed by 30 m/s.,0
+Maintain your current altitude for 30 seconds.,0
+"Adjust your position to (38.8977, -77.0365).",0
+Return to the launch point at a speed of 20 m/s.,0
+Increase your altitude by 45 meters.,0
+"Fly over the coordinates (43.6532, -79.3832).",0
+Descend to an altitude of 35 meters.,0
+Rotate 70 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 8 minutes.,0
+Increase your speed to 42 m/s.,0
+Decrease your speed by 28 m/s.,0
+Maintain your current altitude for 28 seconds.,0
+"Adjust your position to (60.1701, 24.9354).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 48 meters.,0
+"Fly over the coordinates (41.8781, -87.6298).",0
+Descend to an altitude of 40 meters.,0
+Rotate 80 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 50 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (47.6067, 9.4484).",0
+Increase your speed to 48 m/s.,0
+Decrease your speed by 32 m/s.,0
+Maintain your current altitude for 32 seconds.,0
+"Adjust your position to (51.5074, -0.1278).",0
+Return to the launch point at a speed of 25 m/s.,0
+Increase your altitude by 52 meters.,0
+"Fly over the coordinates (30.2672, -97.7431).",0
+Descend to an altitude of 45 meters.,0
+Rotate 90 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 7 minutes.,0
+Increase your speed to 50 m/s.,0
+Decrease your speed by 35 m/s.,0
+Maintain your current altitude for 35 seconds.,0
+"Adjust your position to (39.7392, -104.9903).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 55 meters.,0
+"Fly over the coordinates (25.7617, -80.1918).",0
+Descend to an altitude of 50 meters.,0
+Rotate 100 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 60 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (53.5511, 9.9937).",0
+Increase your speed to 52 m/s.,0
+Decrease your speed by 38 m/s.,0
+Maintain your current altitude for 38 seconds.,0
+"Adjust your position to (40.7128, -74.0060).",0
+Return to the launch point at a speed of 28 m/s.,0
+Increase your altitude by 65 meters.,0
+"Fly over the coordinates (34.0522, -118.2437).",0
+Descend to an altitude of 55 meters.,0
+Rotate 110 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 10 minutes.,0
+Increase your speed to 55 m/s.,0
+Decrease your speed by 42 m/s.,0
+Maintain your current altitude for 42 seconds.,0
+"Adjust your position to (28.6138, -81.3495).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 70 meters.,0
+"Fly over the coordinates (19.4326, -99.1332).",0
+Descend to an altitude of 60 meters.,0
+Rotate 120 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 75 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (49.9041, 8.3862).",0
+Increase your speed to 58 m/s.,0
+Decrease your speed by 45 m/s.,0
+Maintain your current altitude for 45 seconds.,0
+"Adjust your position to (43.6532, -79.3832).",0
+Return to the launch point at a speed of 32 m/s.,0
+Increase your altitude by 80 meters.,0
+"Fly over the coordinates (22.5736, -83.2857).",0
+Descend to an altitude of 65 meters.,0
+Rotate 130 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 12 minutes.,0
+Increase your speed to 60 m/s.,0
+Decrease your speed by 48 m/s.,0
+Maintain your current altitude for 48 seconds.,0
+"Adjust your position to (17.9292, -92.3561).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 85 meters.,0
+"Fly over the coordinates (35.6895, 139.7670).",0
+Descend to an altitude of 70 meters.,0
+Rotate 140 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 90 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (41.8781, -87.6298).",0
+"Adjust your position to (51.5074, -0.1278).",0
+Return to the launch point at a speed of 30 m/s.,0
+Increase your altitude by 53 meters.,0
+"Fly over the coordinates (30.2672, -97.7431).",0
+Descend to an altitude of 47 meters.,0
+Rotate 92 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 8 minutes.,0
+Increase your speed to 51 m/s.,0
+Decrease your speed by 36 m/s.,0
+Maintain your current altitude for 36 seconds.,0
+"Adjust your position to (39.7392, -104.9903).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 58 meters.,0
+"Fly over the coordinates (25.7617, -80.1918).",0
+Descend to an altitude of 52 meters.,0
+Rotate 105 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 62 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (53.5511, 9.9937).",0
+Increase your speed to 53 m/s.,0
+Decrease your speed by 39 m/s.,0
+Maintain your current altitude for 39 seconds.,0
+"Adjust your position to (40.7128, -74.0060).",0
+Return to the launch point at a speed of 29 m/s.,0
+Increase your altitude by 66 meters.,0
+"Fly over the coordinates (34.0522, -118.2437).",0
+Descend to an altitude of 54 meters.,0
+Rotate 115 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 11 minutes.,0
+Increase your speed to 54 m/s.,0
+Decrease your speed by 41 m/s.,0
+Maintain your current altitude for 41 seconds.,0
+"Adjust your position to (28.6138, -81.3495).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 69 meters.,0
+"Fly over the coordinates (19.4326, -99.1332).",0
+Descend to an altitude of 56 meters.,0
+Rotate 125 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 73 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (49.9041, 8.3862).",0
+Increase your speed to 56 m/s.,0
+Decrease your speed by 44 m/s.,0
+Maintain your current altitude for 44 seconds.,0
+"Adjust your position to (43.6532, -79.3832).",0
+Return to the launch point at a speed of 31 m/s.,0
+Increase your altitude by 77 meters.,0
+"Fly over the coordinates (22.5736, -83.2857).",0
+Descend to an altitude of 57 meters.,0
+Rotate 135 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 13 minutes.,0
+Increase your speed to 57 m/s.,0
+Decrease your speed by 46 m/s.,0
+Maintain your current altitude for 46 seconds.,0
+"Adjust your position to (17.9292, -92.3561).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 81 meters.,0
+"Fly over the coordinates (35.6895, 139.7670).",0
+Descend to an altitude of 58 meters.,0
+Rotate 145 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 85 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (41.8781, -87.6298).",0
+Increase your speed to 59 m/s.,0
+Decrease your speed by 47 m/s.,0
+Maintain your current altitude for 47 seconds.,0
+"Adjust your position to (36.1695, -86.7832).",0
+Return to the launch point at a speed of 33 m/s.,0
+Increase your altitude by 82 meters.,0
+"Fly over the coordinates (10.8499, -74.8233).",0
+Descend to an altitude of 59 meters.,0
+Rotate 150 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 14 minutes.,0
+Increase your speed to 58 m/s.,0
+Decrease your speed by 48 m/s.,0
+Maintain your current altitude for 48 seconds.,0
+"Adjust your position to (18.0203, -77.8623).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 83 meters.,0
+"Fly over the coordinates (48.8566, 2.3522).",0
+Descend to an altitude of 60 meters.,0
+Rotate 155 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 87 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (38.5816, -9.1393).",0
+Increase your speed to 60 m/s.,0
+Decrease your speed by 49 m/s.,0
+Maintain your current altitude for 49 seconds.,0
+"Adjust your position to (32.7157, -97.1372).",0
+Return to the launch point at a speed of 34 m/s.,0
+Increase your altitude by 84 meters.,0
+"Fly over the coordinates (45.5236, -122.6750).",0
+Descend to an altitude of 61 meters.,0
+Rotate 160 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 15 minutes.,0
+Increase your speed to 61 m/s.,0
+Decrease your speed by 50 m/s.,0
+Maintain your current altitude for 50 seconds.,0
+"Adjust your position to (20.5937, 78.9629).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 85 meters.,0
+"Fly over the coordinates (12.5323, 101.6890).",0
+Descend to an altitude of 62 meters.,0
+Rotate 165 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 88 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (51.5074, -0.1278).",0
+Increase your speed to 62 m/s.,0
+Decrease your speed by 51 m/s.,0
+Maintain your current altitude for 51 seconds.,0
+"Adjust your position to (39.7392, -104.9903).",0
+Return to the launch point at a speed of 35 m/s.,0
+Increase your altitude by 86 meters.,0
+"Fly over the coordinates (25.7617, -80.1918).",0
+Descend to an altitude of 63 meters.,0
+Rotate 170 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 16 minutes.,0
+Increase your speed to 63 m/s.,0
+Decrease your speed by 52 m/s.,0
+Maintain your current altitude for 52 seconds.,0
+"Adjust your position to (28.6138, -81.3495).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 87 meters.,0
+"Fly over the coordinates (19.4326, -99.1332).",0
+Descend to an altitude of 64 meters.,0
+Rotate 175 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 90 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (49.9041, 8.3862).",0
+Increase your speed to 64 m/s.,0
+Decrease your speed by 53 m/s.,0
+"Fly over the coordinates (3.0023, 101.6000).",0
+Rotate 180 degrees to the left.,0
+Maintain your current altitude for 53 seconds.,0
+"Adjust your position to (14.5733, -171.1535).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 89 meters.,0
+"Fly over the coordinates (37.7749, -122.4194).",0
+Descend to an altitude of 65 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 17 minutes.,0
+Increase your speed to 65 m/s.,0
+Decrease your speed by 54 m/s.,0
+Maintain your current altitude for 54 seconds.,0
+"Adjust your position to (45.5236, -122.6750).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 91 meters.,0
+"Fly over the coordinates (26.0642, -80.1766).",0
+Descend to an altitude of 66 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 92 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (47.6067, -122.3321).",0
+Increase your speed to 66 m/s.,0
+Decrease your speed by 55 m/s.,0
+Maintain your current altitude for 55 seconds.,0
+"Adjust your position to (30.5757, -96.3309).",0
+Return to the launch point at a speed of 36 m/s.,0
+Increase your altitude by 93 meters.,0
+"Fly over the coordinates (9.1689, 78.5080).",0
+Descend to an altitude of 67 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 18 minutes.,0
+Increase your speed to 67 m/s.,0
+Decrease your speed by 56 m/s.,0
+Maintain your current altitude for 56 seconds.,0
+"Adjust your position to (40.7128, -74.0060).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 94 meters.,0
+"Fly over the coordinates (15.8694, -87.1623).",0
+Descend to an altitude of 68 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 95 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (52.5200, 13.4050).",0
+Increase your speed to 68 m/s.,0
+Decrease your speed by 57 m/s.,0
+Maintain your current altitude for 57 seconds.,0
+"Adjust your position to (23.1225, -103.2589).",0
+Return to the launch point at a speed of 37 m/s.,0
+Increase your altitude by 96 meters.,0
+"Fly over the coordinates (22.1897, 114.1595).",0
+Descend to an altitude of 69 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 19 minutes.,0
+Increase your speed to 69 m/s.,0
+Decrease your speed by 58 m/s.,0
+Maintain your current altitude for 58 seconds.,0
+"Adjust your position to (35.6895, 139.7670).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 97 meters.,0
+"Fly over the coordinates (27.6178, -82.4419).",0
+Descend to an altitude of 70 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 98 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (41.8781, -87.6298).",0
+Increase your speed to 70 m/s.,0
+Decrease your speed by 59 m/s.,0
+Maintain your current altitude for 59 seconds.,0
+"Adjust your position to (8.4867, 116.1264).",0
+Return to the launch point at a speed of 38 m/s.,0
+Increase your altitude by 99 meters.,0
+"Fly over the coordinates (43.6532, -79.3832).",0
+Descend to an altitude of 71 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 20 minutes.,0
+Increase your speed to 71 m/s.,0
+Decrease your speed by 60 m/s.,0
+Maintain your current altitude for 60 seconds.,0
+"Adjust your position to (37.7749, -122.4194).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 100 meters.,0
+"Fly over the coordinates (16.3934, -94.6009).",0
+Descend to an altitude of 72 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 101 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (51.5074, -0.1278).",0
+Increase your speed to 72 m/s.,0
+Decrease your speed by 61 m/s.,0
+Maintain your current altitude for 61 seconds.,0
+"Adjust your position to (13.3875, -104.8290).",0
+Return to the launch point at a speed of 39 m/s.,0
+Increase your altitude by 102 meters.,0
+"Fly over the coordinates (4.6597, 74.3541).",0
+Descend to an altitude of 73 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 21 minutes.,0
+Increase your speed to 73 m/s.,0
+Decrease your speed by 62 m/s.,0
+Maintain your current altitude for 62 seconds.,0
+"Adjust your position to (29.7604, -95.3698).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 103 meters.,0
+"Fly over the coordinates (21.2958, -157.8583).",0
+Descend to an altitude of 74 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 104 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (38.5816, -9.1393).",0
+Increase your speed to 74 m/s.,0
+Decrease your speed by 63 m/s.,0
+Maintain your current altitude for 63 seconds.,0
+"Adjust your position to (17.3783, -88.2211).",0
+Return to the launch point at a speed of 40 m/s.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 21 minutes.,0
+Increase your speed to 74 m/s.,0
+Decrease your speed by 64 m/s.,0
+Maintain your current altitude for 64 seconds.,0
+"Adjust your position to (30.2672, -97.7431).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 105 meters.,0
+"Fly over the coordinates (25.7617, -80.1918).",0
+Descend to an altitude of 75 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 22 minutes.,0
+Increase your speed to 75 m/s.,0
+Decrease your speed by 65 m/s.,0
+Maintain your current altitude for 65 seconds.,0
+"Adjust your position to (40.7128, -74.0060).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 106 meters.,0
+"Fly over the coordinates (32.7157, -96.7969).",0
+Descend to an altitude of 76 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 107 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (41.8781, -87.6298).",0
+Increase your speed to 76 m/s.,0
+Decrease your speed by 66 m/s.,0
+Maintain your current altitude for 66 seconds.,0
+"Adjust your position to (19.4326, -99.1332).",0
+Return to the launch point at a speed of 41 m/s.,0
+Increase your altitude by 108 meters.,0
+"Fly over the coordinates (37.7749, -122.4194).",0
+Descend to an altitude of 77 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 23 minutes.,0
+Increase your speed to 77 m/s.,0
+Decrease your speed by 67 m/s.,0
+Maintain your current altitude for 67 seconds.,0
+"Adjust your position to (29.7604, -95.3698).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 109 meters.,0
+"Fly over the coordinates (24.9667, -70.3833).",0
+Descend to an altitude of 78 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 110 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (43.6532, -79.3832).",0
+Increase your speed to 78 m/s.,0
+Decrease your speed by 68 m/s.,0
+Maintain your current altitude for 68 seconds.,0
+"Adjust your position to (20.5937, 78.9629).",0
+Return to the launch point at a speed of 42 m/s.,0
+Increase your altitude by 111 meters.,0
+"Fly over the coordinates (31.2304, 121.4737).",0
+Descend to an altitude of 79 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 24 minutes.,0
+Increase your speed to 79 m/s.,0
+Decrease your speed by 69 m/s.,0
+Maintain your current altitude for 69 seconds.,0
+"Adjust your position to (21.2919, -157.8583).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 112 meters.,0
+"Fly over the coordinates (22.2857, -114.0264).",0
+Descend to an altitude of 80 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 113 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (48.8566, 2.3522).",0
+Increase your speed to 80 m/s.,0
+Decrease your speed by 70 m/s.,0
+Maintain your current altitude for 70 seconds.,0
+"Adjust your position to (18.1235, -78.0143).",0
+Return to the launch point at a speed of 43 m/s.,0
+Increase your altitude by 114 meters.,0
+"Fly over the coordinates (35.6895, 139.7670).",0
+Descend to an altitude of 81 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 25 minutes.,0
+Increase your speed to 81 m/s.,0
+Decrease your speed by 71 m/s.,0
+Maintain your current altitude for 71 seconds.,0
+"Adjust your position to (39.9042, -74.5774).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 115 meters.,0
+"Fly over the coordinates (26.2097, -80.1292).",0
+Descend to an altitude of 82 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 116 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (45.5236, -73.5527).",0
+Increase your speed to 82 m/s.,0
+Decrease your speed by 72 m/s.,0
+Maintain your current altitude for 72 seconds.,0
+"Adjust your position to (25.7617, -80.1918).",0
+Return to the launch point at a speed of 44 m/s.,0
+Increase your altitude by 117 meters.,0
+"Fly over the coordinates (32.7763, -96.7969).",0
+Descend to an altitude of 83 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 26 minutes.,0
+Increase your speed to 83 m/s.,0
+Decrease your speed by 73 m/s.,0
+Maintain your current altitude for 73 seconds.,0
+"Adjust your position to (34.0522, -118.2437).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 118 meters.,0
+"Fly over the coordinates (28.6619, -81.3663).",0
+Descend to an altitude of 84 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 119 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (51.5074, -0.1278).",0
+Increase your speed to 84 m/s.,0
+Decrease your speed by 74 m/s.,0
+Maintain your current altitude for 74 seconds.,0
+"Adjust your position to (15.7597, -61.2454).",0
+Return to the launch point at a speed of 45 m/s.,0
+Increase your altitude by 120 meters.,0
+"Fly over the coordinates (18.1235, -78.0143).",0
+Increase your speed to 85 m/s.,0
+Decrease your speed by 75 m/s.,0
+Maintain your current altitude for 75 seconds.,0
+"Adjust your position to (22.9035, -103.2579).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 121 meters.,0
+"Fly over the coordinates (38.5819, -121.4755).",0
+Descend to an altitude of 86 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 27 minutes.,0
+Increase your speed to 86 m/s.,0
+Decrease your speed by 76 m/s.,0
+Maintain your current altitude for 76 seconds.,0
+"Adjust your position to (28.3052, -81.6224).",0
+Return to the launch point at a speed of 46 m/s.,0
+Increase your altitude by 122 meters.,0
+"Fly over the coordinates (40.7128, -74.0060).",0
+Descend to an altitude of 87 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 123 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (17.3854, -62.5158).",0
+Increase your speed to 87 m/s.,0
+Decrease your speed by 77 m/s.,0
+Maintain your current altitude for 77 seconds.,0
+"Adjust your position to (43.6532, -79.3832).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 124 meters.,0
+"Fly over the coordinates (16.7463, -96.1046).",0
+Descend to an altitude of 88 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 28 minutes.,0
+Increase your speed to 88 m/s.,0
+Decrease your speed by 78 m/s.,0
+Maintain your current altitude for 78 seconds.,0
+"Adjust your position to (25.7251, -80.1235).",0
+Return to the launch point at a speed of 47 m/s.,0
+Increase your altitude by 125 meters.,0
+"Fly over the coordinates (35.6895, 139.7670).",0
+Descend to an altitude of 89 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 126 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (47.6067, 9.5256).",0
+Increase your speed to 89 m/s.,0
+Decrease your speed by 79 m/s.,0
+Maintain your current altitude for 79 seconds.,0
+"Adjust your position to (36.1685, -115.1398).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 127 meters.,0
+"Fly over the coordinates (29.7604, -95.3698).",0
+Descend to an altitude of 90 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 29 minutes.,0
+Increase your speed to 90 m/s.,0
+Decrease your speed by 80 m/s.,0
+Maintain your current altitude for 80 seconds.,0
+"Adjust your position to (34.0522, -118.2437).",0
+Return to the launch point at a speed of 48 m/s.,0
+Increase your altitude by 128 meters.,0
+"Fly over the coordinates (51.5074, -0.1278).",0
+Descend to an altitude of 91 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 129 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (19.4326, -99.1332).",0
+Increase your speed to 91 m/s.,0
+Decrease your speed by 81 m/s.,0
+Maintain your current altitude for 81 seconds.,0
+"Adjust your position to (37.7749, -122.4194).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 130 meters.,0
+"Fly over the coordinates (20.5937, 78.9629).",0
+Descend to an altitude of 92 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 30 minutes.,0
+Increase your speed to 92 m/s.,0
+Decrease your speed by 82 m/s.,0
+Maintain your current altitude for 82 seconds.,0
+"Adjust your position to (26.9021, -81.7826).",0
+Return to the launch point at a speed of 49 m/s.,0
+Increase your altitude by 131 meters.,0
+"Fly over the coordinates (23.5333, -104.4167).",0
+Descend to an altitude of 93 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 132 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (43.6532, -79.3832).",0
+Increase your speed to 93 m/s.,0
+Decrease your speed by 83 m/s.,0
+Maintain your current altitude for 83 seconds.,0
+"Adjust your position to (18.1235, -78.0143).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 133 meters.,0
+"Fly over the coordinates (27.9667, -82.2833).",0
+Descend to an altitude of 94 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 31 minutes.,0
+Increase your speed to 94 m/s.,0
+Decrease your speed by 84 m/s.,0
+Maintain your current altitude for 84 seconds.,0
+"Adjust your position to (30.4572, -90.0702).",0
+Return to the launch point at a speed of 50 m/s.,0
+Increase your altitude by 134 meters.,0
+"Fly over the coordinates (21.2908, -157.8583).",0
+Descend to an altitude of 95 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 135 meters.,0
+Change your direction to North.,0
+"Fly to the coordinates (38.5819, -121.4755).",0
+Increase your speed to 95 m/s.,0
+Decrease your speed by 85 m/s.,0
+Maintain your current altitude for 85 seconds.,0
+"Adjust your position to (31.2333, -114.1333).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 136 meters.,0
+"Fly over the coordinates (24.7833, -104.9667).",0
+Descend to an altitude of 96 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 32 minutes.,0
+Increase your speed to 96 m/s.,0
+Decrease your speed by 86 m/s.,0
+Maintain your current altitude for 86 seconds.,0
+"Adjust your position to (33.7495, -84.3881).",0
+Return to the launch point at a speed of 51 m/s.,0
+Increase your altitude by 137 meters.,0
+"Fly over the coordinates (25.7617, -80.1918).",0
+Descend to an altitude of 97 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+"Adjust your position to (34.0522, -118.2437).",0
+Increase your altitude by 138 meters.,0
+"Fly over the coordinates (22.3964, -114.1056).",0
+Descend to an altitude of 98 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 33 minutes.,0
+Increase your speed to 98 m/s.,0
+Decrease your speed by 87 m/s.,0
+Maintain your current altitude for 87 seconds.,0
+"Adjust your position to (35.6895, -105.9378).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 139 meters.,0
+"Fly over the coordinates (19.4326, -99.1332).",0
+Descend to an altitude of 99 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 140 meters.,0
+Change your direction to South.,0
+"Fly to the coordinates (39.7392, -104.9903).",0
+Increase your speed to 99 m/s.,0
+Decrease your speed by 88 m/s.,0
+Maintain your current altitude for 88 seconds.,0
+"Adjust your position to (36.2048, -115.2222).",0
+Return to the launch point at a speed of 52 m/s.,0
+Increase your altitude by 141 meters.,0
+"Fly over the coordinates (16.4333, -98.2167).",0
+Descend to an altitude of 100 meters.,0
+Rotate 180 degrees to the left.,0
+Follow the GPS signal.,0
+Enter autonomous mode for 34 minutes.,0
+Increase your speed to 100 m/s.,0
+Decrease your speed by 89 m/s.,0
+Maintain your current altitude for 89 seconds.,0
+"Adjust your position to (37.7749, -122.4194).",0
+Return to the launch point via the most efficient route.,0
+Increase your altitude by 142 meters.,0
+"Fly over the coordinates (13.4074, -89.5697).",0
+Descend to an altitude of 101 meters.,0
+Rotate 180 degrees to the right.,0
+Follow the terrain.,0
+Increase your altitude by 143 meters.,0
+Change your direction to East.,0
+"Fly to the coordinates (40.7128, -74.0060).",0
+Increase your speed to 101 m/s.,0
+Decrease your speed by 90 m/s.,0
+Maintain your current altitude for 90 seconds.,0
+"Adjust your position to (38.5819, -121.4755).",0
+Return to the launch point at a speed of 53 m/s.,0
+Increase your altitude by 144 meters.,0
+"Fly over the coordinates (10.6839, -71.5928).",0

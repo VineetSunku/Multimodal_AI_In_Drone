@@ -1,0 +1,757 @@
+,Command,Camera
+20,"Fly to the coordinates (37.7749, -122.4194).",0
+21,Return to the launch point.,0
+22,Increase your altitude by 10 meters.,0
+23,Rotate 90 degrees to the left.,0
+24,Hover at your current position.,0
+25,Move forward 20 meters.,0
+26,Perform a 360-degree spin.,0
+27,Descend to 5 meters altitude.,0
+28,Send telemetry data to the control station.,0
+29,Fly in a circle with a 10-meter radius.,0
+30,Change to offboard mode.,0
+31,Set speed to 5 m/s.,0
+32,Return to base.,0
+33,Increase speed by 2 m/s.,0
+34,Change the flight mode to autonomous.,0
+35,Pause the current mission.,0
+36,Hover for 30 seconds.,0
+37,Land immediately.,0
+38,Move up by 20 meters,0
+59,Fly to the waypoint at 50 meters altitude.,0
+60,Maintain your current altitude and circle the area.,0
+61,Ascend by 20 meters and hold position.,0
+62,Fly west for 100 meters.,0
+63,Descend to 2 meters altitude.,0
+64,Perform a hover for 60 seconds.,0
+65,Move backward 10 meters.,0
+66,Activate landing sequence.,0
+67,Change your heading by 45 degrees clockwise.,0
+68,Fly to the next mission waypoint.,0
+69,Return to home position and prepare for landing.,0
+70,Reduce speed to 3 m/s.,0
+71,Turn off the external lights.,0
+72,Perform a figure-eight maneuver.,0
+73,Fly in a straight line for 30 meters.,0
+74,Begin auto-pilot mode.,0
+75,Pause the current flight.,0
+76,Ascend to 100 meters and switch to offboard mode.,0
+77,Set your maximum altitude to 150 meters.,0
+78,Move diagonally 20 meters to the northeast.,0
+95,Capture a photo,0
+99,Fly to the specified altitude of 150 meters.,0
+100,Return to your takeoff location immediately.,0
+101,Move left by 15 meters.,0
+102,Ascend to 20 meters and hold position.,0
+103,Rotate 180 degrees and hover.,0
+104,Decrease speed by 2 m/s.,0
+105,Start a return-to-home procedure.,0
+106,Hold your position for 5 minutes.,0
+107,Turn off the motors.,0
+108,Fly in a straight line towards the waypoint.,0
+109,Circle the launch point at a radius of 10 meters.,0
+110,Descend and prepare for landing.,0
+111,Rotate the drone by 90 degrees counterclockwise.,0
+112,Switch to manual control mode.,0
+113,Increase your altitude by 50 meters.,0
+114,Begin the pre-programmed flight path.,0
+115,Pause the mission and hover.,0
+116,Fly forward at 3 m/s for 100 meters.,0
+117,Ascend to 500 meters and loiter.,0
+118,Turn off the external camera feed.,0
+121,Takeoff from the palm of my hand,0
+122,Takeoff from my hand,0
+123,Takeoff to 2.5 meters,0
+130,Do a backflip,0
+131,Do a frontflip,0
+132,Perform a backflip,0
+133,Move the drone forward by 10 meters,0
+134,Survey a square land of area of 100 meters squared,0
+135,Move in an equilateral triangle of side length 20 meters,0
+136,Roll the drone by 10 degrees for 10 seconds,0
+137,Change the pitch of the drone to 15 degrees for 30 seconds,0
+138,Increase the yaw of the drone by 20 degrees,0
+157,Can you move 10 meteres to the right?,0
+158,Please do a backflip,0
+159,Please move forward by 2000cm,0
+161,Orbit in a circle 5 times,0
+162,Stop the drone immediately,0
+163,Where are you?,0
+164,Where are you right now?,0
+168,Look around and tell me what you see,0
+171,Move right by 30 meters,0
+175,Adjust the throttle of the drone to 0.6,0
+176,Increase the throttle of the UAV by 0.1,0
+177,What flight mode are you in?,0
+178,Please takeoff the UAV to a height of 10 meters,0
+179,Turn left,0
+180,"Go front 25 meters, then left by 10 meters",0
+183,Form a circle of radius 10 meters,0
+184,Turn right,0
+185,Fly to the location marked by the mission control team.,0
+187,Hover for 10 seconds to stabilize the platform.,0
+189,"Change the altitude to 500 feet and head towards the coordinates 37.7749, -122.4194.",0
+192,Return to the home location and land safely.,0
+193,Observe the area and wait for further instructions from the mission control team.,0
+196,Stay at the current location and wait for the next command from the ground station.,0
+197,"Fly to coordinates 43.6532, -79.3832 at an altitude of 100 meters",0
+201,Hover at the current position for 10 seconds,0
+205,Change altitude to 200 meters,0
+207,Return to base station,0
+209,Fly at a speed of 50 km/h,0
+211,Navigate through the narrow passage,0
+213,Follow the GPS route,0
+215,Change direction to 270 degrees,0
+217,Fly at a height of 500 meters,0
+219,Navigate to the designated checkpoint,0
+221,Hover at the current position for 15 seconds,0
+223,Change altitude to 300 meters,0
+225,Fly to the next waypoint,0
+227,Follow the GPS route,0
+230,Hover at the current position for 20 seconds,0
+232,Fly at a speed of 75 km/h,0
+234,Navigate to the designated landing site,0
+245,Change altitude to 500 feet and hover in place for 5 minutes.,0
+249,Land at the designated landing site and await further instructions.,0
+254,Takeoff at 10:00 AM and fly to the north for 5 kilometers,0
+256,Land at the designated helipad and prepare for maintenance,0
+262,Return to the starting point and perform a pre-programmed aerial dance routine,0
+264,Land safely and shut down the engines,0
+271,Land at the designated landing pad and prepare for takeoff again,0
+277,Return to the starting point and perform a pre-programmed aerial stunt routine,0
+279,Land safely and shut down the engines,0
+286,Land at the designated landing pad and prepare for takeoff again,0
+292,Return to the starting point and perform a pre-programmed aerial dance routine,0
+294,Land safely and shut down the engines,0
+302,Land at the designated landing pad and prepare for takeoff again,0
+306,Return to the starting point and perform a pre-programmed aerial stunt routine,0
+308,Land safely and shut down the engines,0
+315,Land at the designated landing pad and prepare for takeoff again,0
+321,Return to the starting point and perform a pre-programmed aerial dance routine,0
+323,Land safely and shut down the engines,0
+331,Land at the designated landing pad and prepare for takeoff again,0
+335,Return to the starting point and perform a pre-programmed aerial stunt routine,0
+337,Land safely and shut down the engines,0
+344,Land at the designated landing pad and prepare for takeoff again,0
+346,Takeoff at 10:00 AM on 2023-03-15 and ascend to 100 meters,0
+350,Land at 12:00 PM on 2023-03-15,0
+354,Return to the starting point and takeoff again at 3:00 PM on 2023-03-16,0
+357,"Takeoff at location 43.6532, -79.3832",0
+358,"Fly to location 34.0522, -118.2437 at 100 feet",0
+360,"Land at location 51.5074, -0.1278",0
+363,"Return to base at location 38.8977, -77.0365",0
+366,"Fly to location 41.8781, -87.6298 at 50 feet",0
+369,"Land at location 38.8977, -77.0365",0
+371,"Fly to location 40.7128, -74.0060 at 200 feet",0
+374,"Return to base at location 29.7604, -95.3698",0
+376,"Takeoff at location 34.0522, -118.2437",0
+377,"Fly to location 41.8781, -87.6298 at 300 feet",0
+381,"Fly to location 38.8977, -77.0365 at 150 feet",0
+383,"Return to base at location 51.5074, 0.1278",0
+386,"Takeoff at location 34.0522, -118.2437",0
+387,"Fly to location 41.8781, -87.6298 at 250 feet",0
+389,"Land at location 51.5074, -0.1278",0
+392,"Return to base at location 29.7604, -95.3698",0
+394,"Fly to location 51.5074, 0.1278 at 200 feet",0
+398,"Land at location 41.8781, -87.6298",0
+399,"Fly to location 51.5074, -0.1278 at 100 feet",0
+401,"Return to base at location 40.7128, -74.0060",0
+405,"Fly to location 43.6532, -79.3832 at 300 feet",0
+407,"Takeoff at location 40.7128, -74.0060",0
+410,"Land at location 29.7604, -95.3698",0
+411,"Fly to location 51.5074, -0.1278 at 250 feet",0
+413,"Return to base at location 40.7128, -74.0060",0
+417,"Fly to location 29.7604, -95.3698 at 200 feet",0
+419,"Takeoff at location 34.0522, -118.2437",0
+422,"Return to base at location 38.8977, -77.0365",0
+423,"Fly to location 41.8781, -87.6298 at 300 feet",0
+425,"Land at location 51.5074, 0.1278",0
+427,"Fly to coordinates 43.6532,-79.3832",0
+429,Ascend to 500 meters,0
+430,Hover at 200 meters for 10 seconds,0
+432,Return to base and land safely,0
+434,Fly at 50 km/h for 2 minutes,0
+437,Descend to 100 meters,0
+439,Fly to the location of the nearest hospital,0
+441,Fly at 30 km/h for 5 minutes,0
+443,Return to base,0
+444,Hover at 150 meters for 15 seconds,0
+447,Fly at 40 km/h for 3 minutes,0
+449,Descend to 50 meters,0
+451,Fly to the location of the nearest police station,0
+453,Fly at 20 km/h for 10 minutes,0
+455,Return to base and land,0
+456,Hover at 200 meters for 20 seconds,0
+459,Fly at 60 km/h for 4 minutes,0
+461,Descend to 200 meters,0
+463,Fly to the location of the nearest park,0
+465,Fly at 10 km/h for 15 minutes,0
+467,Return to base,0
+468,Hover at 100 meters for 25 seconds,0
+471,Fly at 80 km/h for 5 minutes,0
+473,Descend to 300 meters,0
+475,Fly to the location of the nearest school,0
+477,Fly at 5 km/h for 20 minutes,0
+479,Return to base and land safely,0
+480,Hover at 250 meters for 30 seconds,0
+483,Fly at 90 km/h for 6 minutes,0
+485,Descend to 400 meters,0
+487,Fly to the location of the nearest library,0
+489,Fly at 15 km/h for 18 minutes,0
+491,Return to base,0
+492,Hover at 150 meters for 35 seconds,0
+495,Fly at 70 km/h for 7 minutes,0
+497,Descend to 500 meters,0
+499,Fly to the location of the nearest hospital,0
+501,Fly at 25 km/h for 22 minutes,0
+503,Return to base and land safely,0
+504,Hover at 200 meters for 40 seconds,0
+507,Fly at 85 km/h for 8 minutes,0
+509,Descend to 600 meters,0
+511,Fly to the location of the nearest police station,0
+513,Fly at 10 km/h for 24 minutes,0
+515,Return to base,0
+516,Hover at 250 meters for 45 seconds,0
+519,Fly at 95 km/h for 9 minutes,0
+521,Descend to 700 meters,0
+523,Fly to the location of the nearest fire station,0
+525,Fly at 20 km/h for 26 minutes,0
+527,Return to base and land safely,0
+528,Hover at 300 meters for 50 seconds,0
+531,Fly at 100 km/h for 10 minutes,0
+533,Descend to 800 meters,0
+535,Fly to the location of the nearest school,0
+537,Fly at 30 km/h for 28 minutes,0
+539,Return to base,0
+540,Hover at 350 meters for 55 seconds,0
+543,Fly at 105 km/h for 11 minutes,0
+544,Takeoff at the north gate of the facility.,0
+546,Hover at an altitude of 20 meters for 30 seconds.,0
+548,Land at the designated helipad on the rooftop.,0
+551,Hover at 10 meters above the water's surface for 1 minute.,0
+554,Return to base and prepare for recharging.,0
+556,Fly to the designated coordinates and drop a payload at the specified location.,0
+558,Hover at 5 meters above the ground for 30 seconds.,0
+561,Land on the designated pad and shut down systems.,0
+564,Hover at 10 meters above the ground for 1 minute.,0
+567,Return to base and perform routine maintenance checks.,0
+570,Hover at 5 meters above the water's surface for 1 minute.,0
+574,Land on the designated pad and perform system checks.,0
+577,Hover at 10 meters above the ground for 2 minutes.,0
+580,Return to base and prepare for recharging.,0
+582,Fly to the designated coordinates and drop a payload at the specified location.,0
+585,Hover at 5 meters above the water's surface for 2 minutes.,0
+587,Land on the designated pad and shut down systems.,0
+590,Hover at 10 meters above the ground for 3 minutes.,0
+593,Return to base and perform routine maintenance checks.,0
+596,Hover at 5 meters above the ground for 1 minute.,0
+600,Land on the designated pad and perform system checks.,0
+603,Hover at 10 meters above the ground for 4 minutes.,0
+606,Return to base and prepare for recharging.,0
+608,Fly to the designated coordinates and drop a payload at the specified location.,0
+611,Hover at 5 meters above the water's surface for 3 minutes.,0
+613,Land on the designated pad and shut down systems.,0
+616,Hover at 10 meters above the ground for 5 minutes.,0
+619,Return to base and perform routine maintenance checks.,0
+622,Hover at 5 meters above the ground for 2 minutes.,0
+626,Land on the designated pad and perform system checks.,0
+629,Hover at 10 meters above the ground for 6 minutes.,0
+630,Land at the designated location.,0
+632,Hover at an altitude of 100 meters.,0
+634,"Fly to the coordinates 43.213, -5.083.",0
+637,Change altitude to 50 meters.,0
+639,Fly at a speed of 20 knots.,0
+641,"Take off and navigate to the location of the fire at 123 Main St, USA.",0
+644,"Descend and land at the designated landing site near the stadium in Sydney, Australia.",0
+649,"Descend and land at the designated landing site near the hospital in Cairo, Egypt.",0
+654,"Descend and land at the designated landing site near the school in Nairobi, Kenya.",0
+659,Descend and land at the designated landing site near the university in Singapore.,0
+664,"Descend and land at the designated landing site near the temple in Bangkok, Thailand.",0
+669,"Descend and land at the designated landing site near the stadium in Moscow, Russia.",0
+674,"Descend and land at the designated landing site near the library in Abu Dhabi, UAE.",0
+679,"Descend and land at the designated landing site near the museum in Berlin, Germany.",0
+684,"Descend and land at the designated landing site near the hospital in Dubai, UAE.",0
+689,Descend and land at the designated landing site near the school in Singapore.,0
+694,"Descend and land at the designated landing site near the temple in Beijing, China.",0
+699,"Descend and land at the designated landing site near the university in Moscow, Russia.",0
+704,"Descend and land at the designated landing site near the museum in Dubai, UAE.",0
+709,"Descend and land at the designated landing site near the library in Abu Dhabi, UAE.",0
+712,Increase altitude by 50 meters and adjust heading to 270 degrees.,0
+714,Descend to 100 meters and hover above the designated landing site.,0
+717,Return to the base station and prepare for recharging.,0
+721,Land safely at the designated site and shut down the engines.,0
+722,Takeoff and ascend to 100 meters,0
+723,Hover at 50 meters for 5 minutes,0
+725,Fly at 20 meters above the terrain,0
+727,Return to the home location and land,0
+729,"Fly to the location with GPS coordinates 43.6532, 79.3832",0
+731,Fly at a speed of 10 meters per second for 2 minutes,0
+734,Fly in a square pattern over the area,0
+736,Return to the home location,0
+737,Fly at 30 meters above the terrain,0
+739,"Fly to the location with GPS coordinates 40.7128, 74.0060",0
+741,Fly at a speed of 20 meters per second for 3 minutes,0
+744,Fly in a circular pattern over the area,0
+746,"Fly to the location with GPS coordinates 34.0522, 118.2437",0
+748,Fly at 40 meters above the terrain,0
+751,Fly in a zigzag pattern over the area,0
+753,"Fly to the location with GPS coordinates 51.5074, 0.1278",0
+755,Fly at a speed of 15 meters per second for 2 minutes,0
+758,Fly in a figure-eight pattern over the area,0
+760,"Fly to the location with GPS coordinates 37.7749, 122.4194",0
+762,Fly at 50 meters above the terrain,0
+765,Fly in a rectangular pattern over the area,0
+767,"Fly to the location with GPS coordinates 43.6532, 79.3832",0
+769,Fly at a speed of 18 meters per second for 3 minutes,0
+772,Fly in a spiral pattern over the area,0
+774,"Fly to the location with GPS coordinates 40.7128, 74.0060",0
+776,Fly at 60 meters above the terrain,0
+779,Fly in a square pattern over the area,0
+781,"Fly to the location with GPS coordinates 34.0522, 118.2437",0
+783,Fly at a speed of 22 meters per second for 4 minutes,0
+786,Fly in a zigzag pattern over the area,0
+788,"Fly to the location with GPS coordinates 51.5074, 0.1278",0
+790,Fly at a speed of 25 meters per second for 5 minutes,0
+793,Fly in a figure-eight pattern over the area,0
+795,"Fly to the location with GPS coordinates 37.7749, 122.4194",0
+797,Fly at 70 meters above the terrain,0
+800,Fly in a rectangular pattern over the area,0
+802,"Fly to the location with GPS coordinates 43.6532, 79.3832",0
+804,Fly at a speed of 30 meters per second for 6 minutes,0
+807,Fly in a spiral pattern over the area,0
+809,"Fly to the location with GPS coordinates 40.7128, 74.0060",0
+811,Fly at 80 meters above the terrain,0
+814,Navigate to the designated landing site.,0
+817,Maintain current altitude and position.,0
+820,"Navigate to the coordinates 43.6532, -79.3832.",0
+822,Begin descent and prepare for landing.,0
+823,Monitor the weather conditions for any changes.,0
+825,"Takeoff and navigate to the designated landing site at 43.6532° N, 79.3832° W.",0
+827,Hover at an altitude of 50 meters and provide real-time feedback on the drone's battery life.,0
+830,Land safely at the designated location and perform a system shutdown.,0
+835,Provide an update on the drone's battery life and navigate to the designated recharging station.,0
+836,Takeoff and ascend to 50 meters,0
+837,Hover at current position for 10 seconds,0
+839,Land safely and switch to backup power source,0
+841,Return to base and recharge for 20 minutes,0
+844,Navigate to the location with the highest elevation in the area,0
+847,Fly to the location with the highest temperature reading in the area,0
+849,Take off and ascend to an altitude of 100 meters.,0
+851,Descend to 50 meters above ground level and hover for 10 seconds.,0
+854,Return to the home location and land safely.,0
+856,Hover at 20 meters above the ground for 30 seconds and scan for any obstacles.,0
+859,Land safely and shut down the engines.,0
+860,"Fly to location 43.6532, -79.3832",0
+862,Fly at an altitude of 100 meters,0
+864,Maintain a speed of 50 km/h,0
+868,Fly to the Eiffel Tower at a speed of 20 m/s,0
+870,Maintain a distance of 10 meters from the subject,0
+872,Fly at a height of 500 feet,0
+876,Maintain a speed of 30 knots,0
+878,Fly to the Pyramids of Giza,0
+880,Maintain a distance of 20 meters from the subject,0
+884,Fly to the Christ the Redeemer statue,0
+886,Maintain a speed of 60 km/h,0
+888,Fly at a height of 1000 feet,0
+892,Maintain a distance of 15 meters from the subject,0
+894,Fly to the Burj Khalifa,0
+896,Maintain a speed of 40 knots,0
+900,Fly to the Great Blue Hole,0
+902,Maintain a speed of 50 knots,0
+904,Fly at a height of 2000 feet,0
+908,Maintain a distance of 25 meters from the subject,0
+910,Fly to the Angel of the North,0
+912,Maintain a speed of 35 knots,0
+916,Fly to the Monument Valley,0
+918,Maintain a speed of 45 knots,0
+920,Fly at a height of 3000 feet,0
+924,Maintain a distance of 20 meters from the subject,0
+926,Fly to the Christ the Redeemer statue at night,0
+928,Maintain a speed of 55 knots,0
+932,Fly to the Empire State Building,0
+934,Maintain a speed of 60 knots,0
+936,Fly at a height of 4000 feet,0
+940,Maintain a distance of 30 meters from the subject,0
+942,Fly to the Great Blue Hole,0
+944,Maintain a speed of 65 knots,0
+948,Fly to the Eiffel Tower,0
+950,Maintain a speed of 70 knots,0
+952,Fly at a height of 5000 feet,0
+956,Maintain a distance of 35 meters from the subject,0
+958,Fly to the Big Ben,0
+960,Maintain a speed of 75 knots,0
+963,Take off and hover at an altitude of 50 meters,0
+965,"Fly to the location of the object at 34.0569° N, 118.2436° W",0
+967,Land at the designated landing site,0
+969,Adjust the flight path to avoid the incoming storm,0
+971,Fly over the ocean at a speed of 50 km/h,0
+973,Land at the designated emergency landing site,0
+975,"Fly to the location of the person at 38.8951° N, 77.0365° W",0
+977,Adjust the flight altitude to 20 meters,0
+979,Fly over the mountain range at a speed of 80 km/h,0
+981,Land at the designated landing site,0
+983,"Fly to the location of the object at 40.7128° N, 74.0060° W",0
+985,Adjust the flight path to avoid the incoming weather,0
+987,Fly over the lake at a speed of 60 km/h,0
+989,Land at the designated emergency landing site,0
+991,"Fly to the location of the person at 34.0522° N, 118.2437° W",0
+993,Adjust the flight altitude to 30 meters,0
+995,Fly over the mountain range at a speed of 90 km/h,0
+997,Land at the designated landing site,0
+999,"Fly to the location of the object at 35.6895° N, 139.7679° E",0
+1001,Adjust the flight path to avoid the incoming weather,0
+1003,Fly over the lake at a speed of 70 km/h,0
+1005,Land at the designated emergency landing site,0
+1007,"Fly to the location of the person at 38.8951° N, 77.0365° W",0
+1009,Adjust the flight altitude to 20 meters,0
+1011,Fly over the mountain range at a speed of 80 km/h,0
+1013,Land at the designated landing site,0
+1015,"Fly to the location of the object at 40.7128° N, 74.0060° W",0
+1017,Adjust the flight path to avoid the incoming weather,0
+1019,Fly over the lake at a speed of 60 km/h,0
+1021,Land at the designated emergency landing site,0
+1023,"Fly to the location of the person at 35.6895° N, 139.7679° E",0
+1025,Adjust the flight altitude to 30 meters,0
+1027,Fly over the mountain range at a speed of 90 km/h,0
+1029,Land at the designated landing site,0
+1031,"Fly to the location of the object at 40.7128° N, 74.0060° W",0
+1033,Adjust the flight path to avoid the incoming weather,0
+1035,Fly over the lake at a speed of 70 km/h,0
+1037,Land at the designated emergency landing site,0
+1039,"Fly to the location of the person at 35.6895° N, 139.7679° E",0
+1041,Adjust the flight altitude to 20 meters,0
+1043,Fly over the mountain range at a speed of 80 km/h,0
+1045,Land at the designated landing site,0
+1047,"Fly to the location of the object at 40.7128° N, 74.0060° W",0
+1049,Adjust the flight path to avoid the incoming weather,0
+1051,Fly over the lake at a speed of 60 km/h,0
+1053,Takeoff and ascend to 100 meters,0
+1055,Descend to 20 meters and maintain a steady hover,0
+1059,Turn left 90 degrees and ascend to 150 meters,0
+1063,Descend to 50 meters and land safely,0
+1065,Hover at 20 meters and recharge,0
+1066,Takeoff and ascend to 200 meters,0
+1072,Descend to 100 meters and land safely,0
+1074,Hover at 50 meters and recharge,0
+1075,Takeoff and ascend to 300 meters,0
+1081,Descend to 150 meters and land safely,0
+1083,Hover at 75 meters and recharge,0
+1084,Takeoff and ascend to 400 meters,0
+1090,Descend to 200 meters and land safely,0
+1092,Hover at 100 meters and recharge,0
+1093,Takeoff and ascend to 500 meters,0
+1095,Move forward 50 meters and follow the path,0
+1099,Descend to 250 meters and land safely,0
+1101,Hover at 125 meters and recharge,0
+1102,Takeoff and ascend to 600 meters,0
+1108,Descend to 300 meters and land safely,0
+1110,Hover at 150 meters and recharge,0
+1111,Takeoff and ascend to 700 meters,0
+1117,Descend to 350 meters and land safely,0
+1119,Hover at 175 meters and recharge,0
+1120,Takeoff and ascend to 800 meters,0
+1126,Descend to 400 meters and land safely,0
+1128,Hover at 200 meters and recharge,0
+1129,Takeoff and ascend to 900 meters,0
+1135,Descend to 450 meters and land safely,0
+1137,Hover at 225 meters and recharge,0
+1138,Takeoff and ascend to 1000 meters,0
+1144,Descend to 500 meters and land safely,0
+1146,Hover at 250 meters and recharge,0
+1147,Takeoff and ascend to 1100 meters,0
+1149,Move forward 110 meters and follow the path,0
+1153,Descend to 550 meters and land safely,0
+1155,Hover at 275 meters and recharge,0
+1156,Takeoff and ascend to 1200 meters,0
+1158,"Take off at 12:00 PM on the designated helipad, ascending to an altitude of 500 feet.",0
+1160,"Land on the designated helipad at 3:00 PM, with the main propellers folding in for safe shutdown.",0
+1163,"Scan the area for any signs of debris or hazards, then return to base at 5:00 PM.",0
+1165,"Navigate through the forest at a speed of 15 knots, maintaining a safe distance from obstacles.",0
+1168,"Land safely at the designated helipad at 8:00 AM, with the camera powering down for the day.",0
+1169,"Fly to coordinates 43.6532,-79.3832",0
+1171,Descend to 100 feet and prepare for landing,0
+1174,Return to base and perform a system check,0
+1176,Climb to 500 feet and maintain altitude,0
+1180,Land at the designated coordinates and shut down systems,0
+1184,Return to base and perform a system check,0
+1189,Descend to 100 feet and prepare for landing,0
+1192,Return to base and perform a system check,0
+1198,Return to base and perform a system check,0
+1203,Descend to 200 feet and prepare for landing,0
+1206,Return to base and perform a system check,0
+1212,Return to base and perform a system check,0
+1217,Descend to 300 feet and prepare for landing,0
+1220,Return to base and perform a system check,0
+1226,Return to base and perform a system check,0
+1231,Descend to 400 feet and prepare for landing,0
+1234,Return to base and perform a system check,0
+1240,Return to base and perform a system check,0
+1245,Descend to 500 feet and prepare for landing,0
+1248,Return to base and perform a system check,0
+1254,Return to base and perform a system check,0
+1259,Descend to 600 feet and prepare for landing,0
+1262,Return to base and perform a system check,0
+1264,Take off and fly to the location of the fire.,0
+1265,Hover at 100 feet for 5 minutes.,0
+1268,Land safely and recharge batteries.,0
+1269,Scan the area for any potential hazards.,0
+1272,Return to base and refuel.,0
+1275,Fly at 50 feet and maintain a steady pace.,0
+1277,Land near the emergency responders.,0
+1280,Hover and wait for further instructions.,0
+1284,Return to the command center and report in.,0
+1286,Fly at 200 feet and maintain a steady pace.,0
+1289,Land safely and await further instructions.,0
+1293,Hover and wait for further instructions.,0
+1303,Hover and wait for further instructions.,0
+1304,Fly at 100 feet and maintain a steady pace.,0
+1318,Hover and wait for further instructions.,0
+1319,Fly at 50 feet and maintain a steady pace.,0
+1333,Hover and wait for further instructions.,0
+1334,Fly at 200 feet and maintain a steady pace.,0
+1348,Hover and wait for further instructions.,0
+1349,Fly at 100 feet and maintain a steady pace.,0
+1363,Hover and wait for further instructions.,0
+1364,Fly at 50 feet and maintain a steady pace.,0
+1373,Ascend to an altitude of 500 meters.,0
+1375,"Navigate to the coordinates 37.7749, -122.4194.",0
+1380,Land safely and recharge the batteries.,0
+1383,Change the battery to the fully charged one.,0
+1385,Hover in place and stabilize for 15 seconds.,0
+1387,"Navigate to the specified GPS coordinates 48.8567, 2.2945.",0
+1388,Take off and ascend to the designated altitude.,0
+1392,Fly at a speed of 50 km/h and maintain course.,0
+1394,Maintain the current position and altitude for 10 minutes.,0
+1395,"Navigate to the coordinates 51.5074, -0.1278.",0
+1402,Fly at a speed of 80 km/h and maintain course.,0
+1407,"Navigate to the coordinates 40.7128, -74.0060.",0
+1411,Maintain the current position and altitude for 5 minutes.,0
+1412,Fly at a speed of 60 km/h and maintain course.,0
+1414,Hover in place and stabilize for 10 seconds.,0
+1419,Ascend to an altitude of 800 meters.,0
+1425,Fly at a speed of 70 km/h and maintain course.,0
+1430,Maintain the current position and altitude for 10 minutes.,0
+1435,Take off and ascend to the designated altitude.,0
+1438,Fly at a speed of 90 km/h and maintain course.,0
+1444,Maintain the current position and altitude for 5 minutes.,0
+1447,Fly at a speed of 80 km/h and maintain course.,0
+1452,Ascend to an altitude of 600 meters.,0
+1455,Hover in place and stabilize for 12 seconds.,0
+1457,Fly at a speed of 60 km/h and maintain course.,0
+1464,Maintain the current position and altitude for 10 minutes.,0
+1467,Fly at a speed of 70 km/h and maintain course.,0
+1469,Fly to the location marked on the map and hover for 5 seconds.,0
+1473,Navigate to the designated landing site and prepare for landing.,0
+1477,Land at the designated site and conduct a thorough inspection.,0
+1487,Navigate to the designated site and prepare for landing.,0
+1501,Navigate to the designated site and prepare for landing.,0
+1514,Fly to the designated site and prepare for landing.,0
+1532,Fly to the designated site and prepare for landing.,0
+1553,Navigate to the designated site and prepare for landing.,0
+1563,"Takeoff at coordinates (37.7749, -122.4194) with a height of 100 meters",0
+1567,Hover at an altitude of 50 meters and rotate 180 degrees clockwise,0
+1573,Fly at a speed of 20 meters per second for 2 minutes and change direction by 90 degrees,0
+1576,Hover at an altitude of 20 meters and maintain a distance of 5 meters from the subject,0
+1581,Fly at a speed of 15 meters per second for 3 minutes and change direction by 180 degrees,0
+1585,Hover at an altitude of 30 meters and maintain a distance of 10 meters from the subject,0
+1590,Fly at a speed of 25 meters per second for 4 minutes and change direction by 90 degrees,0
+1594,Hover at an altitude of 40 meters and maintain a distance of 15 meters from the subject,0
+1599,Fly at a speed of 30 meters per second for 5 minutes and change direction by 180 degrees,0
+1603,Hover at an altitude of 50 meters and maintain a distance of 20 meters from the subject,0
+1608,Fly at a speed of 35 meters per second for 6 minutes and change direction by 90 degrees,0
+1612,Hover at an altitude of 60 meters and maintain a distance of 25 meters from the subject,0
+1617,Fly at a speed of 40 meters per second for 7 minutes and change direction by 180 degrees,0
+1621,Hover at an altitude of 70 meters and maintain a distance of 30 meters from the subject,0
+1626,Takeoff and hover at an altitude of 50 meters for 5 minutes.,0
+1628,Perform a 360-degree turn at the current location.,0
+1630,Land and return to base.,0
+1631,Scan for obstacles within a 50-meter radius and adjust flight path accordingly.,0
+1635,Navigate through a narrow canyon and avoid any obstacles.,0
+1637,Return to base and perform a systems check.,0
+1639,Maintain a steady altitude and speed during the flight.,0
+1640,Scan for any potential hazards in the flight path.,0
+1643,Navigate through a crowded city and avoid any obstacles.,0
+1645,Maintain a safe distance from any buildings and structures.,0
+1647,Perform an emergency landing if the UAV's battery level falls below 10%.,0
+1649,Scan for any potential hazards in the flight path.,0
+1651,Maintain a steady altitude and speed during the flight.,0
+1653,Navigate through a narrow canyon and avoid any obstacles.,0
+1655,Perform an emergency landing if the UAV's battery level falls below 5%.,0
+1658,Scan for any potential hazards in the flight path.,0
+1661,Navigate through a crowded city and avoid any obstacles.,0
+1663,Perform an emergency landing if the UAV's battery level falls below 15%.,0
+1665,Maintain a steady altitude and speed during the flight.,0
+1666,Scan for obstacles within a 50-meter radius and adjust flight path accordingly.,0
+1669,Navigate through a narrow canyon and avoid any obstacles.,0
+1671,Perform an emergency landing if the UAV's battery level falls below 20%.,0
+1674,Scan for any potential hazards in the flight path.,0
+1677,Navigate through a crowded city and avoid any obstacles.,0
+1679,Perform an emergency landing if the UAV's battery level falls below 25%.,0
+1681,Maintain a steady altitude and speed during the flight.,0
+1682,Scan for obstacles within a 50-meter radius and adjust flight path accordingly.,0
+1685,Navigate through a narrow canyon and avoid any obstacles.,0
+1687,Perform an emergency landing if the UAV's battery level falls below 30%.,0
+1690,Scan for any potential hazards in the flight path.,0
+1693,Navigate through a crowded city and avoid any obstacles.,0
+1695,Perform an emergency landing if the UAV's battery level falls below 35%.,0
+1697,Maintain a steady altitude and speed during the flight.,0
+1698,Scan for obstacles within a 50-meter radius and adjust flight path accordingly.,0
+1701,Navigate through a narrow canyon and avoid any obstacles.,0
+1703,Perform an emergency landing if the UAV's battery level falls below 40%.,0
+1706,Scan for any potential hazards in the flight path.,0
+1709,Navigate through a crowded city and avoid any obstacles.,0
+1711,Perform an emergency landing if the UAV's battery level falls below 45%.,0
+1712,"Navigate to coordinates (43.6532, -79.3832)",0
+1713,Hover at an altitude of 100 meters,0
+1717,Return to base and land,0
+1721,Scan the surrounding area for potential hazards,0
+1726,Maintain a speed of 5 meters per second,0
+1727,Provide a live audio feed to the operator,0
+1730,Scan the surrounding area for potential obstacles,0
+1731,Provide a real-time location update to the operator,0
+1735,Maintain a height of 20 meters above the ground,0
+1739,Scan the surrounding area for potential hazards,0
+1740,Provide a real-time location update to the operator,0
+1745,Provide a live audio feed to the operator,0
+1748,Scan the surrounding area for potential obstacles,0
+1749,Provide a real-time location update to the operator,0
+1753,Maintain a height of 15 meters above the ground,0
+1757,Scan the surrounding area for potential hazards,0
+1758,Provide a real-time location update to the operator,0
+1763,Provide a live audio feed to the operator,0
+1766,Scan the surrounding area for potential obstacles,0
+1767,Provide a real-time location update to the operator,0
+1771,Maintain a height of 10 meters above the ground,0
+1775,Scan the surrounding area for potential hazards,0
+1776,Provide a real-time location update to the operator,0
+1781,Provide a live audio feed to the operator,0
+1784,Scan the surrounding area for potential obstacles,0
+1785,Provide a real-time location update to the operator,0
+1789,Maintain a height of 20 meters above the ground,0
+1793,Scan the surrounding area for potential hazards,0
+1794,Provide a real-time location update to the operator,0
+1799,Provide a live audio feed to the operator,0
+1802,Scan the surrounding area for potential obstacles,0
+1803,Provide a real-time location update to the operator,0
+1807,Maintain a height of 25 meters above the ground,0
+1811,Scan the surrounding area for potential hazards,0
+1812,Provide a real-time location update to the operator,0
+1814,Hover at 20 meters for 5 seconds,0
+1816,Land at the designated spot near the helipad,0
+1818,Maintain a distance of 10 meters from the obstacle,0
+1820,Ascend to 50 meters in 10 seconds,0
+1822,Wait for the signal from the ground control station,0
+1824,Change altitude to 500 meters,0
+1826,"Navigate to location 40.7128, -74.0060 and hover for 30 seconds",0
+1829,Adjust course by 30 degrees to the left,0
+1831,"Land at location 37.7749, -122.4194",0
+1833,Change to manual mode and follow the user's commands,0
+1834,Take off and hover at 30 meters,0
+1837,Land safely and recharge,0
+1839,Hover at 10 meters and inspect cargo,0
+1841,Descend to 5 meters and perform obstacle avoidance,0
+1843,Maintain altitude and provide status update,0
+1845,Hover at 20 meters and perform thermal scan,0
+1846,Takeoff at the designated coordinates,0
+1849,Land at the designated coordinates,0
+1852,Hover at 50 meters above the crowd,0
+1857,Return to the base station,0
+1859,Hover at 20 meters above the water,0
+1865,Hover at 10 meters above the stage,0
+1867,Return to the base station for refueling,0
+1871,Hover at 30 meters above the park,0
+1876,Hover at 15 meters above the construction site,0
+1878,Return to the base station for maintenance,0
+1882,Hover at 25 meters above the stadium,0
+1887,Hover at 20 meters above the lake,0
+1889,Return to the base station for refueling,0
+1893,Hover at 35 meters above the park,0
+1898,Hover at 18 meters above the construction site,0
+1900,Return to the base station for maintenance,0
+1904,Hover at 22 meters above the stadium,0
+1909,Hover at 28 meters above the lake,0
+1911,Return to the base station for refueling,0
+1915,Hover at 32 meters above the park,0
+1920,Hover at 19 meters above the construction site,0
+1922,Return to the base station for maintenance,0
+1926,Hover at 23 meters above the stadium,0
+1931,Hover at 29 meters above the lake,0
+1933,Return to the base station for refueling,0
+1937,Hover at 33 meters above the park,0
+1942,Hover at 20 meters above the construction site,0
+1944,Return to the base station for maintenance,0
+1948,Hover at 24 meters above the stadium,0
+1953,Hover at 30 meters above the lake,0
+1955,Return to the base station for refueling,0
+1958,"Hover at 30 meters for 5 seconds, then take off and land at the designated landing site.",0
+1960,"Scan the area with the lidar sensor to detect any obstacles, then move forward at a speed of 2 meters per second.",0
+1962,"Follow the GPS coordinates 43.6532, -79.3832 and maintain an altitude of 100 meters.",0
+1964,Fly in a circular motion around the building at a height of 20 meters.,0
+1965,"Scan the area with the thermal sensor to detect any heat signatures, then move towards the source.",0
+1969,Begin orbiting the target location at an altitude of 100 meters.,0
+1973,Return to the base station for refueling.,0
+1975,Monitor the surrounding area for any signs of wildlife.,0
+1977,Obtain a 3D map of the target location using lidar technology.,0
+1979,Fly over the target location to assess the damage from the recent storm.,0
+1984,Begin a search and rescue operation for a missing person.,0
+1986,Fly over the target location at a speed of 50 knots.,0
+1988,Monitor the surrounding area for any signs of wildfires.,0
+1992,Fly over the target location at a height of 200 meters.,0
+1995,Begin a perimeter patrol of the target location.,0
+1998,Fly over the target location at a speed of 75 knots.,0
+2000,Monitor the surrounding area for any signs of flooding.,0
+2003,Obtain a 3D map of the target location using lidar technology.,0
+2004,Fly over the target location at a height of 150 meters.,0
+2007,Begin a search and rescue operation for a missing person.,0
+2009,Fly over the target location at a speed of 50 knots.,0
+2011,Monitor the surrounding area for any signs of wildfires.,0
+2015,Fly over the target location at a height of 200 meters.,0
+2018,Begin a perimeter patrol of the target location.,0
+2021,Fly over the target location at a speed of 75 knots.,0
+2023,Monitor the surrounding area for any signs of flooding.,0
+2026,Obtain a 3D map of the target location using lidar technology.,0
+2027,Fly over the target location at a height of 150 meters.,0
+2030,Begin a search and rescue operation for a missing person.,0
+2032,Fly over the target location at a speed of 50 knots.,0
+2034,Monitor the surrounding area for any signs of wildfires.,0
+2038,Fly over the target location at a height of 200 meters.,0
+2041,Begin a perimeter patrol of the target location.,0
+2044,Fly over the target location at a speed of 75 knots.,0
+2046,Monitor the surrounding area for any signs of flooding.,0
+2049,Obtain a 3D map of the target location using lidar technology.,0
+2050,Fly over the target location at a height of 150 meters.,0
+2053,Begin a search and rescue operation for a missing person.,0
+2055,Fly over the target location at a speed of 50 knots.,0
+2057,Take off and hover at an altitude of 50 meters,0
+2060,Return to base and land safely,0
+2065,"Land at the designated spot (51.5074, -0.1278) and perform a systems check",0
+2068,Return to base and perform a software update,0
+2072,"Land at the designated spot (34.0522, -118.2437) and perform a systems check",0
+2076,Return to base and land safely,0
+2080,"Land at the designated spot (48.8567, 2.2945) and perform a systems check",0
+2084,Return to base and perform a software update,0
+2088,"Land at the designated spot (37.7749, -122.4194) and perform a systems check",0
+2092,Return to base and land safely,0
+2096,"Land at the designated spot (34.0522, -118.2437) and perform a systems check",0
+2100,Return to base and perform a software update,0
+2104,"Land at the designated spot (43.6532, -79.3832) and perform a systems check",0
+2108,Return to base and land safely,0
+2112,"Land at the designated spot (51.5074, -0.1278) and perform a systems check",0
+2116,Return to base and perform a software update,0
+2120,"Land at the designated spot (40.7128, -74.0060) and perform a systems check",0
+2124,Return to base and land safely,0
+2128,"Land at the designated spot (51.5074, -0.1278) and perform a systems check",0
+2132,Return to base and perform a software update,0
+2133,Take off and navigate to the target location.,0
+2136,Landing and stabilize the platform.,0
+2139,Return to the base station and perform a systems check.,0
+2223,Fly to the designated location and hover at 10 meters,0
+2225,Perform a 90-degree turn to the left and descend to 5 meters,0
+2227,Return to the starting point and wait for further instructions,0
+2229,Fly at a speed of 20 meters per second for 30 seconds,0
+2231,Adjust altitude to 15 meters and fly in a zigzag pattern,0
+2234,Increase speed to 25 meters per second and maintain course,0
+2235,Take off and ascend to 100 meters,0
+2239,Land at the designated coordinates,0
+2240,Fly at a speed of 20 knots and navigate through the forest,0
+2242,Return to base and update the flight log,0

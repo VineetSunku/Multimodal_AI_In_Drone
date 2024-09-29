@@ -12,3 +12,8 @@ tensorflow
 tensorflow_hub
 tensorflow_text
 scikit-learn
+nltk
+wordcloud
+babel
+transformers
+tabulate

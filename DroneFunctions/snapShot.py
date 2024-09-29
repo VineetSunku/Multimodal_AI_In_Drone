@@ -13,13 +13,11 @@ model = YOLO('yolov10n.pt')
 # Global variable to keep track of whether the image has been captured
 image_captured = False
 
-def callback(msg: gz_image_pb2.Image):
+def callback(msg: gz_image_pb2.Image): # type: ignore
     global image_captured
 
     if image_captured:
         return
-
-    print("Received image data")
     
     # Extract image dimensions from the protobuf message
     width = msg.width
