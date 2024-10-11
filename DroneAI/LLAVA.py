@@ -1,4 +1,4 @@
-import ollama # type: ignore
+import ollama
 import re, csv
 
 file_path = './DroneAI/Context/llava_prompt.txt'
@@ -21,20 +21,15 @@ def extract_python_code(content):
         return None
 
 def generate_response(ques):
-    messages=[{
-                'role': 'user',
-                'content': content,
-            }]
-    messages.append(
-            {
-                'role': 'user',
-                'content': ques,
-            }
-        )
+    messagelist=[
+                    ollama.Message(role='system',content=content), 
+                    ollama.Message(role='user',content=ques)
+                ]
+    
     # with open('images/baby.jpg', 'rb') as file:
     response = ollama.chat(
         model='llava',
-        messages=messages
+        messages=messagelist,
     )
     gen_code = extract_python_code(response['message']['content'])
 

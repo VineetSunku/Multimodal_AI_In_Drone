@@ -11,7 +11,7 @@ camera_frame = cv2.imread('DroneVideo/image.png')
 # Load the YOLOv10 model
 model = YOLO('models/yolov10n.pt')  # Replace with the correct model size (n, s, m, b, l, x)
 
-def callback(msg):
+def yoloCallback(msg):
     
     # Extract image dimensions from the protobuf message
     width = msg.width
@@ -45,6 +45,22 @@ def callback(msg):
         global camera_frame
         camera_frame = writable_image
 
+def defaultCallback(msg):
+     # Extract image dimensions from the protobuf message
+    width = msg.width
+    height = msg.height
+    channels = 3  # Assuming an RGB image
+    
+    # Convert the raw image data from protobuf to a numpy array
+    img_data = np.frombuffer(msg.data, dtype=np.uint8)
+    
+    # Reshape the data to match the image dimensions
+    image = img_data.reshape((height, width, channels))
+
+    # Update the global camera frame (no further processing)
+    global camera_frame
+    camera_frame = image
+
 def main():
     # Create a Gazebo Transport node
     node = Node()
@@ -53,7 +69,7 @@ def main():
     topic = "/camera"
 
     # Subscribe to the camera topic using the Image protobuf message
-    if node.subscribe(Image, topic, callback):
+    if node.subscribe(Image, topic, yoloCallback):
         print(f"Subscribing to type {Image} on topic [{topic}]")
     else:
         print(f"Error subscribing to topic [{topic}]")

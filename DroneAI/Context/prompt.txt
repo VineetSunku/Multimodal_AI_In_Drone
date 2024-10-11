@@ -40,4 +40,4 @@ Takeoff to an altitude of 2.5 metres by default to provide sufficient clearance 
 Do not takeoff or land the drone unless asked specifically.
 Don't import asyncio.
 
-Are you ready?
+The prompt is:
