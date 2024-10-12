@@ -69,7 +69,7 @@ def main():
     topic = "/camera"
 
     # Subscribe to the camera topic using the Image protobuf message
-    if node.subscribe(Image, topic, yoloCallback):
+    if node.subscribe(Image, topic, defaultCallback):
         print(f"Subscribing to type {Image} on topic [{topic}]")
     else:
         print(f"Error subscribing to topic [{topic}]")

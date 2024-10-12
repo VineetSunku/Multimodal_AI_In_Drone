@@ -15,13 +15,11 @@ isPressed = True
 ######### TELEMETRY DETAILS #########
 # Get Vehicle Co-ordinates
 async def get_coord(uav: System):
-    log.debug("Retrieving Co-ordinates...")
     async for position in uav.telemetry.position():
         latitude = position.latitude_deg
         longitude = position.longitude_deg
         altitude = position.relative_altitude_m
         break
-    log.info("Retrieved Coordinates: %s, %s, %s", latitude, longitude, altitude)
     return latitude, longitude, altitude
 
 async def isArmed(uav: System):
@@ -30,7 +28,7 @@ async def isArmed(uav: System):
         if armed:
             log.info("UAV is armed")
             return True
-        log.warn("UAV is not yet armed!")
+        log.warning("UAV is not yet armed!")
         return False
 
 async def get_position_ned(uav: System):
@@ -61,9 +59,9 @@ async def adjust_yaw(uav: System, dir):
     log.debug("adjusting yaw angle")
     try:
         roll, pitch, yaw = await get_attitude_body(uav)
-        log.info("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        log.debug("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
         await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.5))
-        log.info("Starting OFFBOARD MODE")
+        log.debug("Starting OFFBOARD MODE")
         await uav.offboard.start()
         count = 0
         global isPressed
@@ -93,7 +91,7 @@ async def adjust_yaw(uav: System, dir):
 #  Arm and Takeoff
 async def arm_and_takeoff(uav: System, alt: float):
     if not await isArmed(uav):
-        log.warn("UAV is not yet armed! Arming UAV...")
+        log.warning("UAV is not yet armed! Arming UAV...")
         await uav.action.arm()
     log.info("UAV is armed")
     log.debug("Setting Takeoff altitude")
@@ -114,10 +112,11 @@ async def adjust_throttle(uav: System, throttle):
         roll, pitch, yaw = await get_attitude_body(uav)
         log.info("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
         await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.5))
-        log.info("Starting OFFBOARD MODE")
+        log.debug("Starting OFFBOARD MODE")
         await uav.offboard.start()
         global isPressed
         isPressed = True
+        log.info("Adjusting Throttle")
         await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, throttle ))
         await asyncio.sleep(0.01)
     except Exception as e:
@@ -128,12 +127,13 @@ async def adjust_pitch(uav: System, pit):
     log.debug("adjusting pitch angle")
     try:
         roll, pitch, yaw = await get_attitude_body(uav)
-        log.info("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        log.debug("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
         await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.5))
-        log.info("Starting OFFBOARD MODE")
+        log.debug("Starting OFFBOARD MODE")
         await uav.offboard.start()
         global isPressed
         isPressed = True
+        log.info("Adjusting Pitch")
         await uav.offboard.set_attitude(Attitude(roll, pit, yaw, 0.74 ))
         await asyncio.sleep(0.01)
     except Exception as e:
@@ -144,12 +144,13 @@ async def adjust_roll(uav: System, rol):
     log.debug("adjusting roll angle")
     try:
         roll, pitch, yaw = await get_attitude_body(uav)
-        log.info("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        log.debug("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
         await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.5))
-        log.info("Starting OFFBOARD MODE")
+        log.debug("Starting OFFBOARD MODE")
         await uav.offboard.start()
         global isPressed
         isPressed = True
+        log.info("Adjusting Roll")
         await uav.offboard.set_attitude(Attitude(rol, pitch, yaw, 0.74 ))
         await asyncio.sleep(0.01)
     except Exception as e:
@@ -159,6 +160,7 @@ async def adjust_roll(uav: System, rol):
 async def stop_offboard(uav: System):
     global isPressed
     isPressed = False
+    log.debug("Stopping OFFBOARD mode")
     await uav.offboard.stop()
     
     

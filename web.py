@@ -10,13 +10,14 @@ from flask_socketio import SocketIO, emit
 from DroneAI.Gemini import model, genai, extract_python_code, generate_response as generate_gemini_response
 from DroneAI.LLAVA import generate_response as generate_llava_response
 from DroneVideo import videoFeed as vf
+from DroneLogger import log
+from datetime import datetime
 
 app = Flask(__name__)
 socketio = SocketIO(app)
 
 ######### UAV CONNECTIONS ######### 
 uav = System()
-loop = asyncio.get_event_loop()
 
 async def connect_to_uav():
     await uav.connect(system_address="udp://:14540")
@@ -25,11 +26,10 @@ async def connect_to_uav():
             print(f"Connected to UAV")
             break
 
-def run_in_loop(task):
-    asyncio.run_coroutine_threadsafe(task, loop)
+######### ASYNCIO AND THREADING #########
 
-# Start the UAV connection in the main thread's event loop
-loop.run_until_complete(connect_to_uav())
+def run_in_loop(task):
+    asyncio.run_coroutine_threadsafe(task, mainLoop)
 
 ######### READ CHATS #########
 
@@ -89,8 +89,9 @@ def sendMessage():
     emit_update('person')
     ques = data['message']
     gen_code = generate_gemini_response(ques) if data['VLM']=="true" else generate_llava_response(ques) or ""
-    emit_update('Gemini') if data['VLM']=="true" else emit_update('LLaVA') 
-    exec(gen_code)
+    emit_update('Gemini') if data['VLM']=="true" else emit_update('LLaVA')
+    if gen_code:
+        exec(gen_code)
     return jsonify({'response': gen_code})
         
 def emit_update(who):
@@ -108,7 +109,19 @@ def getVideo():
         yield(b'--frame\r\n'
               b'Content-Type: image/jpeg\r\n\r\n' + frames + b'\r\n')
 
-#For execution of prompts requiring the camera feed
+"""Saves a snapshot of the drone's camera feed."""
+@app.route('/capture', methods=['POST'])        
+def capture_img():
+    current_time = datetime.now()
+    formatted_time = current_time.strftime("%H:%M:%S-%d:%m:%Y")
+    os.chdir('./logs/images')
+    try:
+        cv2.imwrite(formatted_time + '.jpg', vf.camera_frame)
+        log.info("Captured camera snaphot.")
+    except Exception as e:
+        log.error("Couldn't capture camera snaphot.",e)
+    os.chdir('../../')
+    return jsonify({'response': True})
         
 def capture_image(ques):
     script_path = 'DroneFunctions/snapShot.py'
@@ -127,7 +140,8 @@ def capture_image(ques):
                         display_name=image_name)
     response = model.generate_content([sample_file,ques])
     gen_code = extract_python_code(response.text)
-    exec(gen_code)
+    if gen_code:
+        exec(gen_code)
     print("Generated Code")
     print(response.text)
     print(gen_code)
@@ -137,7 +151,19 @@ def capture_image(ques):
     emit_update('ai')  
     print('Capture Image function is being executed')
 
+######### TELEMETRY #########
+
+async def emit_coords(uav: System):
+    while True:
+        latitude, longitude, altitude = await get_coord(uav)
+        # Emit the coordinates to the frontend
+        socketio.emit('coordinates', {'lat': latitude, 'lon': longitude, 'alt': altitude})
+        await asyncio.sleep(1)
 
 if __name__ == '__main__':
-    threading.Thread(target=loop.run_forever).start()
+    mainLoop = asyncio.get_event_loop()
+    mainLoop.run_until_complete(connect_to_uav())
+    threading.Thread(target=mainLoop.run_forever).start()
+    run_in_loop(emit_coords(uav))
+    
     socketio.run(app)
