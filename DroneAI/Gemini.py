@@ -1,9 +1,11 @@
 import asyncio
 import google.generativeai as genai
+from google.generativeai import protos
 import re
 import os
 from DroneFunctions.basicMoves import *
 import csv
+from google.generativeai.types import file_types
 
 ######### PROVIDE CONTEXT #########
 
@@ -55,12 +57,13 @@ def extract_python_code(content):
     else:
         return None
 
-def generate_response(ques):
-    messages = [{
-            'role':'model',
-            'parts':[content]
-    }]
-    messages.append({'role':'user', 'parts':[ques]})
+def generate_response(ques: str, imagePath: str | None = None):
+    if imagePath:
+        ss = genai.upload_file(path=imagePath,
+                        display_name="ss.jpg")
+        messages = [content, ques, ss]
+    else:
+        messages = [content, ques]
     response = model.generate_content(messages)
     gen_code = extract_python_code(response.text)
     with open('./logs/chats.csv','a', newline='') as csvFile:

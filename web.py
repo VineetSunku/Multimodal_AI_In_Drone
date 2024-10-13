@@ -9,6 +9,7 @@ import cv2
 from flask_socketio import SocketIO, emit
 from DroneAI.Gemini import model, genai, extract_python_code, generate_response as generate_gemini_response
 from DroneAI.LLAVA import generate_response as generate_llava_response
+from DroneAI.VisionClassifier import visionClassifier as vc
 from DroneVideo import videoFeed as vf
 from DroneLogger import log
 from datetime import datetime
@@ -23,7 +24,7 @@ async def connect_to_uav():
     await uav.connect(system_address="udp://:14540")
     async for state in uav.core.connection_state():
         if state.is_connected:
-            print(f"Connected to UAV")
+            log.info("Connected to UAV")
             break
 
 ######### ASYNCIO AND THREADING #########
@@ -83,13 +84,30 @@ def keyPressed():
 @app.route('/send_message', methods=['POST'])
 def sendMessage():
     data = request.get_json()
+    ques = data['message']
+    
     with open('./logs/chats.csv','a', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow([data['who'], data['message']])
     emit_update('person')
-    ques = data['message']
-    gen_code = generate_gemini_response(ques) if data['VLM']=="true" else generate_llava_response(ques) or ""
-    emit_update('Gemini') if data['VLM']=="true" else emit_update('LLaVA')
+    
+    requires_image = vc(ques)
+    
+    if data['VLM']=="true":
+        if requires_image:
+            log.info("Prompt requires image. Capturing Screenshot")
+            gen_code = generate_gemini_response(ques, captureScreenshot())
+        else:
+            gen_code = generate_gemini_response(ques)
+        emit_update('Gemini')
+    else:
+        if requires_image:
+            log.info("Prompt requires image. Capturing Screenshot")
+            gen_code = generate_llava_response(ques, captureScreenshot())
+        else: 
+            gen_code = generate_llava_response(ques)
+        emit_update('LLaVA')
+
     if gen_code:
         exec(gen_code)
     return jsonify({'response': gen_code})
@@ -109,47 +127,16 @@ def getVideo():
         yield(b'--frame\r\n'
               b'Content-Type: image/jpeg\r\n\r\n' + frames + b'\r\n')
 
-"""Saves a snapshot of the drone's camera feed."""
-@app.route('/capture', methods=['POST'])        
-def capture_img():
+def captureScreenshot() -> str:
+    """Saves a snapshot of the drone's camera feed."""
     current_time = datetime.now()
     formatted_time = current_time.strftime("%H:%M:%S-%d:%m:%Y")
     os.chdir('./logs/images')
-    try:
-        cv2.imwrite(formatted_time + '.jpg', vf.camera_frame)
-        log.info("Captured camera snaphot.")
-    except Exception as e:
-        log.error("Couldn't capture camera snaphot.",e)
+    cv2.imwrite(formatted_time + '.jpg', vf.camera_frame)
+    log.info("Captured camera snaphot. View the image in logs.")
     os.chdir('../../')
-    return jsonify({'response': True})
+    return "./logs/images/"+ formatted_time + '.jpg'
         
-def capture_image(ques):
-    script_path = 'DroneFunctions/snapShot.py'
-
-    # Run the image capture script using subprocess
-    subprocess.run(['python3', script_path], check=True)
-
-    # Path where the image was saved (make sure this matches the path in the image capture script)
-    timestamp = datetime.now().strftime('%m%d_%H')
-    image_name = f"image_{timestamp}.jpg"
-
-    image_path = os.path.join(os.getcwd(), 'logs/public', image_name)
-
-    print(ques)
-    sample_file = genai.upload_file(path=image_path,
-                        display_name=image_name)
-    response = model.generate_content([sample_file,ques])
-    gen_code = extract_python_code(response.text)
-    if gen_code:
-        exec(gen_code)
-    print("Generated Code")
-    print(response.text)
-    print(gen_code)
-    with open('./logs/chats.csv', 'a', newline='') as csvFile:
-        writer = csv.writer(csvFile)
-        writer.writerow(['AI', response.text]) 
-    emit_update('ai')  
-    print('Capture Image function is being executed')
 
 ######### TELEMETRY #########
 

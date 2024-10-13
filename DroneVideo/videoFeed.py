@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 from ultralytics import YOLO 
 import time
+from DroneLogger import log
 
 global camera_frame
 camera_frame = cv2.imread('DroneVideo/image.png') 
@@ -70,12 +71,12 @@ def main():
 
     # Subscribe to the camera topic using the Image protobuf message
     if node.subscribe(Image, topic, defaultCallback):
-        print(f"Subscribing to type {Image} on topic [{topic}]")
+        log.info(f"Subscribing to type {Image} on topic [{topic}]")
     else:
-        print(f"Error subscribing to topic [{topic}]")
+        log.error(f"Error subscribing to topic [{topic}]")
         return
 
-    print("retrieving camera_frame")
+    log.info("retrieving camera_frame")
     global camera_frame
     # Keep the program alive to continue receiving data
     while True:

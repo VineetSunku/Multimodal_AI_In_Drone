@@ -20,13 +20,18 @@ def extract_python_code(content):
     else:
         return None
 
-def generate_response(ques):
-    messagelist=[
-                    ollama.Message(role='system',content=content), 
-                    ollama.Message(role='user',content=ques)
-                ]
-    
-    # with open('images/baby.jpg', 'rb') as file:
+def generate_response(ques, imagePath: str = ""):
+    if imagePath:
+        messagelist=[
+                        ollama.Message(role='system',content=content), 
+                        ollama.Message(role='user',content=ques)
+                    ]
+    else:
+        with open(imagePath, 'rb') as file:
+            messagelist=[
+                            ollama.Message(role='system',content=content), 
+                            ollama.Message(role='user',content=ques, images=file.read())
+                        ]
     response = ollama.chat(
         model='llava',
         messages=messagelist,

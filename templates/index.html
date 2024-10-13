@@ -13,7 +13,7 @@
 <body class="overflow-y-hidden">
     <nav class="w-full h-8 bg-red-800 flex items-center px-8">
         <h1 class="text-white">
-            AI Drone!
+            PromptPilot
         </h1>
     </nav>
     <div class="flex flex-row">
@@ -21,15 +21,10 @@
             <div class="w-[96%] mx-2 flex flex-col mt-6 border-2 border-black">
                 <img src="{{ url_for('video') }}" width="100%" height="100%" />
             </div>
-            <h1 class="text-center text-2xl font-bold">Drone Coordinates</h1>
-            <p class="font-bold text-lg mt-3">Latitude: <span id="lat" class="font-normal">Loading...</span></p>
-            <p class="font-bold text-lg">Longitude: <span id="lon" class="font-normal">Loading...</span></p>
-            <p class="font-bold text-lg">Altitude: <span id="alt" class="font-normal">Loading...</span></p>
-            <div id="capture"
-                class="flex absolute bottom-12 right-4 justify-center items-center w-12 h-8 text-white bg-violet-500 p-12 rounded-lg hover:cursor-pointer"
-                onclick="capture()">
-                Capture Image
-            </div>
+            <h1 class="text-center text-2xl font-bold mt-4">Drone Coordinates</h1>
+            <p class="font-bold text-lg mt-3 ml-3">Latitude: <span id="lat" class="font-normal">Loading...</span></p>
+            <p class="font-bold text-lg ml-3">Longitude: <span id="lon" class="font-normal">Loading...</span></p>
+            <p class="font-bold text-lg ml-3">Altitude: <span id="alt" class="font-normal">Loading...</span></p>
         </div>
         <div class="w-1 h-screen bg-gray-500"></div>
         <div class="w-full relative h-screen flex flex-col justify-start items-center">
@@ -475,18 +470,6 @@
             element.classList.add("hidden");
             $.ajax({
                 url: '/takeoff',
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify({ 'value': 'Taking Off' }),
-                error: function (error) {
-                    console.log(error);
-                }
-            });
-        }
-
-        function capture() {
-            $.ajax({
-                url: '/capture',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ 'value': 'Taking Off' }),
