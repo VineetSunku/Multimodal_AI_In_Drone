@@ -24,6 +24,15 @@ The system-wide package needs to be accessed from withiin the virtual environmen
 ln -s /usr/lib/python3/dist-packages/gz ~/venv/lib/python3.10/site-packages/ #Paths may change
 ```
 
+Install ollama and run
+
+```
+ollama pull llava
+sudo systemctl start ollama
+sudo systemctl status ollama # Verify that ollama is running through
+ollama create PromptPilot -f ./DroneAI/models/Modelfile
+```
+
 ### Clone the Repository
 
 ```
@@ -57,16 +66,17 @@ pip install -r requirements.txt
 python web.py
 ```
 
-In another terminal run
-
-```
-ollama serve
-```
-
 ### Development:
 
 In another terminal
 
 ```
 npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
+```
+
+To debug ollama response, run
+
+```
+sudo systemctl stop ollama
+ollama serve # this requires to be run at the start of every session.
 ```

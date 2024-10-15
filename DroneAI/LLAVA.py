@@ -22,18 +22,19 @@ def extract_python_code(content):
 
 def generate_response(ques, imagePath: str = ""):
     if imagePath:
-        messagelist=[
-                        ollama.Message(role='system',content=content), 
-                        ollama.Message(role='user',content=ques)
-                    ]
-    else:
         with open(imagePath, 'rb') as file:
             messagelist=[
                             ollama.Message(role='system',content=content), 
                             ollama.Message(role='user',content=ques, images=file.read())
                         ]
+    else:
+        messagelist=[
+                        ollama.Message(role='system',content=content), 
+                        ollama.Message(role='user',content=ques)
+                    ]
+        
     response = ollama.chat(
-        model='llava',
+        model='PromptPilot',
         messages=messagelist,
     )
     gen_code = extract_python_code(response['message']['content'])
