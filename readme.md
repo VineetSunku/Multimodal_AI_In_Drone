@@ -18,10 +18,22 @@ This repository requires Python-gz-transport13 and since at present as a pypi pa
 sudo apt install python3-gz-transport13
 ```
 
-The system-wide package needs to be accessed from withiin the virtual environment as well. For this, once the virtual environment is created,
+The system-wide package needs to be accessed from within the virtual environment as well. For this, once the virtual environment is created,
 
 ```
 ln -s /usr/lib/python3/dist-packages/gz ~/venv/lib/python3.10/site-packages/ #Paths may change
+```
+
+Environment variables required:
+
+- Gemini 1.5-Flash API_KEY. Set it is as `API_KEY`
+- IP address of Companion Computer (i.e., RaspberryPi 5 in our case). Set it as `RPi_IP`
+
+```
+sudo nano ~/.profile # or ~/.bashrc
+export API_KEY="<YOUR_API_KEY>"
+export RPi_IP="<YOUR_RPi_IP>"
+source ~/.profile
 ```
 
 Install ollama and run
@@ -74,9 +86,15 @@ In another terminal
 npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
 ```
 
-To debug ollama response, run
+To debug ollama-llava response, run
 
 ```
 sudo systemctl stop ollama
 ollama serve # this requires to be run at the start of every session.
+```
+
+### On Raspberrypi:
+
+```
+~/btp/tiziano/how_do_drones_work/myscripts $ python test_connect.py --connect "/dev/ttyAMA0"
 ```
