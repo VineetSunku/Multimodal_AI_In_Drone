@@ -1,7 +1,7 @@
 import logging
 
 ######### SETUP LOGGING #########
-formatter = logging.Formatter(fmt='[%(levelname)s]:%(asctime)s:%(message)s', datefmt='%d/%m/%Y %I:%M:%S %p')
+formatter = logging.Formatter(fmt='[%(levelname)s]: %(asctime)s:%(message)s', datefmt='%d/%m/%Y %I:%M:%S %p')
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
 

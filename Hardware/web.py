@@ -79,38 +79,49 @@ def sendMessage():
         SendToAir(SocketMessage(Sender.GROUND, GroundType.AI, gen_code))
     return jsonify({'response': gen_code})
 
-def emit_update(who):
-    data = read_csv('./logs/chats.csv')
-    socketio.emit(who, {'data': data[-1][1]})
-
 @app.route('/video_feed')
 def video_feed():
     """Video streaming route."""
     return Response(CameraFrame(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
+######### TELEMTRY #########
 def emit_coords():
     while True:
         latitude, longitude, altitude = receiveTelemetry()
         # Emit the coordinates to the frontend
         socketio.emit('coordinates', {'lat': latitude, 'lon': longitude, 'alt': altitude})
         time.sleep(1)
-        
+
+######### FLASK TO HTML CHAT SOCKET #########
+def emit_update(who):
+    data = read_csv('./logs/chats.csv')
+    socketio.emit(who, {'data': data[-1][1]})
+
 ######### LOG DRONE OUTPUTS #########
 def log_drone():
     while True:
-        drone_message = ReceiveFromAir()
-        if drone_message["level"] == "INFO":
-            log.info(drone_message["message"])
-        elif drone_message["level"] == "WARNING":
-            log.warning(drone_message["message"])
-        elif drone_message["level"] == "ERROR":
-            log.error(drone_message["message"])
-        elif drone_message["level"] == "DEBUG":
-            log.debug(drone_message["message"])
-            
+        try:
+            drone_message = ReceiveFromAir()
+            if drone_message["level"] == "INFO":
+                log.info(drone_message["message"])
+            elif drone_message["level"] == "WARNING":
+                log.warning(drone_message["message"])
+            elif drone_message["level"] == "ERROR":
+                log.error(drone_message["message"])
+            elif drone_message["level"] == "DEBUG":
+                log.debug(drone_message["message"])
+        except:
+            continue
+
+######### RUN FLASK APP #########
+def runApp():
+    socketio.run(app)
+    
 if __name__ == '__main__':
+    print("hello")
+    t1 = threading.Thread(target=runApp)
     t2 = threading.Thread(target=emit_coords)
     t3 = threading.Thread(target=log_drone)
+    t1.start()
     t2.start()
     t3.start()
-    socketio.run(app)

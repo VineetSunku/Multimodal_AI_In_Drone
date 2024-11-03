@@ -65,7 +65,8 @@ def SendToAir(message: SocketMessage):
     ground.send(str(message).encode())
 
 def ReceiveFromAir() -> dict:
-    return eval(ground.recv(1024).decode())
+    s = ground.recv(1024).decode()
+    return eval(s)
 
 ######### RECEIVE VIDEO #########
 def receiveExactBytes(sock: socket.socket, size):
@@ -102,12 +103,12 @@ def receive_frames():
             print(f"Error receiving frame: {e}")
             break
 
+threading.Thread(target=receive_frames, daemon=True).start()
+
 def CameraFrame():
     global camera_frame
     while True:
         yield camera_frame
-
-threading.Thread(target=receive_frames, daemon=True).start()
 
 def save_screenshot():
     """Saves a screenshot of the current camera frame with a timestamp-based filename."""
@@ -135,5 +136,6 @@ def save_screenshot():
 ######### RECEIVE TELEMETRY #########
 
 def receiveTelemetry():
-    tel = eval(ground_tel.recv(1024).decode())
-    return tel['lat'], tel['lon'], tel['alt']
+    tel = ground_tel.recv(24)
+    lat, lon, alt = struct.unpack('>ddd', tel)
+    return lat, lon, alt
