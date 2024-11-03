@@ -1,6 +1,8 @@
 # Ignore virtual environment folders
-.venv/
+.venv
 env/
+node_modules/
+logs/
 
 # Ignore Python bytecode files
 *.pyc
@@ -11,3 +13,4 @@ __pycache__/
 .idea/
 .vscode/
 *.log
+*.pt

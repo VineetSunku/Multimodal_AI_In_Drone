@@ -1,0 +1,245 @@
+﻿Command,Camera
+Follow the person in front of you.,1
+Detect any obstacles and avoid them.,1
+Scan the area for moving objects.,1
+Identify the red car below and hover above it.,1
+Track the object moving to the right.,1
+Record a video of the landscape.,0
+Capture an image of the building in front.,0
+Look for any signs of fire in the forest.,1
+Find a safe landing spot in the open field.,1
+Search for the marked target and move towards it.,1
+Monitor traffic and report congestion.,1
+Take pictures of the crowd at the event.,1
+Scan the area for any human activity.,1
+Locate the blue car in the parking lot.,1
+Check if there's a person at the door.,1
+Identify any animals in the open space.,1
+Detect and follow the cyclist ahead.,1
+Look for damage to the roof of the house.,1
+Track the boat in the water below.,1
+Record a video of the sunset.,1
+"Fly to the coordinates (37.7749, -122.4194).",0
+Return to the launch point.,0
+Increase your altitude by 10 meters.,0
+Rotate 90 degrees to the left.,0
+Hover at your current position.,0
+Move forward 20 meters.,0
+Perform a 360-degree spin.,0
+Descend to 5 meters altitude.,0
+Send telemetry data to the control station.,0
+Fly in a circle with a 10-meter radius.,0
+Change to offboard mode.,0
+Set speed to 5 m/s.,0
+Return to base.,0
+Increase speed by 2 m/s.,0
+Change the flight mode to autonomous.,0
+Pause the current mission.,0
+Hover for 30 seconds.,0
+Land immediately.,0
+Move up by 20 meters,0
+Capture a photo of the tree line to the east.,1
+Identify any animals near the riverbank.,1
+Follow the drone ahead of you.,1
+Locate the person wearing a blue jacket.,1
+Scan the horizon for any smoke.,1
+Track the group of hikers below.,1
+Look for any vehicles on the road.,1
+Record a time-lapse of the construction site.,1
+Find the tallest building in the area and hover near it.,1
+Check for any movement on the ground.,1
+Detect the nearest landing pad and land.,1
+Focus the camera on the street below.,1
+Search for the red flag and move toward it.,1
+Look for any boats in the lake.,1
+Capture a panoramic view of the landscape.,1
+Identify and track the runner in the race.,1
+Record video footage of the forest canopy.,1
+Locate the damaged power line.,1
+Find the car with a flat roof and follow it.,1
+Check if there’s anyone near the entrance of the building.,1
+Fly to the waypoint at 50 meters altitude.,0
+Maintain your current altitude and circle the area.,0
+Ascend by 20 meters and hold position.,0
+Fly west for 100 meters.,0
+Descend to 2 meters altitude.,0
+Perform a hover for 60 seconds.,0
+Move backward 10 meters.,0
+Activate landing sequence.,0
+Change your heading by 45 degrees clockwise.,0
+Fly to the next mission waypoint.,0
+Return to home position and prepare for landing.,0
+Reduce speed to 3 m/s.,0
+Turn off the external lights.,0
+Perform a figure-eight maneuver.,0
+Fly in a straight line for 30 meters.,0
+Begin auto-pilot mode.,0
+Pause the current flight.,0
+Ascend to 100 meters and switch to offboard mode.,0
+Set your maximum altitude to 150 meters.,0
+Move diagonally 20 meters to the northeast.,0
+Zoom in on the object directly below you.,1
+Capture a wide-angle photo of the cityscape.,1
+Look for the drone pad and prepare for landing.,1
+Track the cyclist in the bike lane.,1
+Identify the highest point in the field and hover over it.,1
+Check for any cars approaching the intersection.,1
+Search for any moving objects in the parking lot.,1
+Find the green boat on the river.,1
+Record a video of the ongoing soccer match.,1
+Locate the source of the smoke in the distance.,1
+Take a picture of the bridge.,1
+Identify the person wearing a yellow helmet.,1
+Scan the area for unusual activity.,1
+Follow the delivery van ahead.,1
+Look for the red marker and fly towards it.,1
+Track the movement of the person walking along the street.,1
+Capture a photo,0
+Monitor the activity at the construction site.,1
+Search for any wildlife near the lake.,1
+Focus the camera on the target and follow it.,1
+Fly to the specified altitude of 150 meters.,0
+Return to your takeoff location immediately.,0
+Move left by 15 meters.,0
+Ascend to 20 meters and hold position.,0
+Rotate 180 degrees and hover.,0
+Decrease speed by 2 m/s.,0
+Start a return-to-home procedure.,0
+Hold your position for 5 minutes.,0
+Turn off the motors.,0
+Fly in a straight line towards the waypoint.,0
+Circle the launch point at a radius of 10 meters.,0
+Descend and prepare for landing.,0
+Rotate the drone by 90 degrees counterclockwise.,0
+Switch to manual control mode.,0
+Increase your altitude by 50 meters.,0
+Begin the pre-programmed flight path.,0
+Pause the mission and hover.,0
+Fly forward at 3 m/s for 100 meters.,0
+Ascend to 500 meters and loiter.,0
+Turn off the external camera feed.,0
+Land on my hand,1
+Land on the palm of my hand,1
+Takeoff from the palm of my hand,0
+Takeoff from my hand,0
+Takeoff to 2.5 meters,0
+Follow the red car,1
+Move towards the edible object,1
+Scan the area for humans,1
+Scan the area for wildlife,1
+Count the number of people moving left to right,1
+Count the number of people in the scene,1
+Do a backflip,0
+Do a frontflip,0
+Perform a backflip,0
+Move the drone forward by 10 meters,0
+Survey a square land of area of 100 meters squared,0
+Move in an equilateral triangle of side length 20 meters,0
+Roll the drone by 10 degrees for 10 seconds,0
+Change the pitch of the drone to 15 degrees for 30 seconds,0
+Increase the yaw of the drone by 20 degrees,0
+Land on the helipad,1
+What do you see in front of you?,1
+follow me,1
+keep moving forward until you see a stop sign,1
+land on the brown package,1
+land on the green box,1
+How many fingers am I holding up?,1
+follow my hand,1
+Begin video recording,0
+Fly to the park,1
+Land on top of the moving car,1
+Find the red truck,1
+Inspect the area for signs of wildlife,1
+inspect the area for fire,1
+is there a fire in front of you?,1
+climb to the 10th floor and check for fire through the window,1
+land on top of the pink car,1
+can you tell me what is in front of you?,1
+Can you move 10 meteres to the right?,0
+Please do a backflip,0
+Please move forward by 2000cm,0
+Orbit around the red car 3 times,1
+Orbit in a circle 5 times,0
+Stop the drone immediately,0
+Where are you?,0
+Where are you right now?,0
+What do you see?,1
+Move towards the person in front of you and take a photo,1
+Move towards the pink truck,1
+Look around and tell me what you see,0
+Can you identify the object in front of you?,1
+Can you identify the object behind you?,1
+Move right by 30 meters,0
+What crop do you see in the field below you?,1
+Find the weed in the field and hover over it,1
+Follow the person with the red umbrella,1
+Adjust the throttle of the drone to 0.6,0
+Increase the throttle of the UAV by 0.1,0
+What flight mode are you in?,0
+Please takeoff the UAV to a height of 10 meters,0
+Turn left,0
+"Go front 25 meters, then left by 10 meters",0
+"Go front 25 meters, then left by 10 meters, then tell me what you see",1
+Circle around me 10 times clockwise,1
+Form a circle of radius 10 meters,0
+Turn right,0
+Fly to the location marked by the mission control team.,0
+Take a photo of the target and send it to the ground station.,1
+Hover for 10 seconds to stabilize the platform.,0
+Scan the area for any obstacles and update the navigation system.,1
+"Change the altitude to 500 feet and head towards the coordinates 37.7749, -122.4194.",0
+Take a 360-degree photo of the surroundings and transmit it to the control center.,1
+Maintain a safe distance of 100 meters from the object and track it for 5 minutes.,1
+Return to the home location and land safely.,0
+Observe the area and wait for further instructions from the mission control team.,0
+Inspect the area with a high-resolution camera and provide a detailed report.,1
+Adjust the gimbal to focus on the subject and capture a high-quality photo.,1
+Stay at the current location and wait for the next command from the ground station.,0
+"Fly to coordinates 43.6532, -79.3832 at an altitude of 100 meters",0
+Capture a photo of the surrounding environment,1
+Navigate to the next landing site,1
+Observe the terrain ahead for obstacles,1
+Hover at the current position for 10 seconds,0
+Provide a 360-degree view of the area,1
+Follow the leader at a distance of 50 meters,1
+Observe the crowd for any suspicious activity,1
+Change altitude to 200 meters,0
+Follow the subject for 5 minutes,1
+Return to base station,0
+Provide a close-up of the target,1
+Fly at a speed of 50 km/h,0
+Observe the traffic ahead for congestion,1
+Navigate through the narrow passage,0
+Provide a wide-angle view of the surroundings,1
+Follow the GPS route,0
+Observe the weather conditions,1
+Change direction to 270 degrees,0
+Follow the subject for 10 minutes,1
+Fly at a height of 500 meters,0
+Provide a high-resolution image of the target,1
+Navigate to the designated checkpoint,0
+Observe the surroundings for any potential threats,1
+Hover at the current position for 15 seconds,0
+Follow the subject at a distance of 20 meters,1
+Change altitude to 300 meters,0
+Provide a 3D scan of the environment,1
+Fly to the next waypoint,0
+Observe the crowd for any suspicious activity,1
+Follow the GPS route,0
+Navigate through the dense forest,1
+Observe the surroundings for any potential threats,1
+Hover at the current position for 20 seconds,0
+Provide a close-up of the target,1
+Fly at a speed of 75 km/h,0
+Follow the subject for 15 minutes,1
+Navigate to the designated landing site,0
+The red car's name is Jeffrey. Follow Jeffrey,1
+My dog responds to the name Jimmy. Follow him,1
+Make sure my cat is safe,1
+is my cat safe?,1
+is my baby in the cradle?,1
+that woman in the pink T shirt is my wife. Follow her,1
+Follow my wife,1
+Follow the speeding car,1
+What is the speed at which the yellow car is travelling?,1
