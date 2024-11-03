@@ -1,4 +1,5 @@
 # Ignore virtual environment folders
+venv
 .venv
 env/
 node_modules/
