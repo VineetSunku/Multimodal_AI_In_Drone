@@ -32,7 +32,9 @@ class SocketMessage(dict):
 
 ######### RPi CONNECTIONS #########
 
-RPI_IP = os.environ['RPI_IP2']
+# RPI_IP = os.environ['RPI_IP2']
+RPI_IP = "192.168.208.38"
+camera_frame = bytes(45)
 
 #Computer to RPi socket initialize
 ground = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -53,12 +55,12 @@ except (socket.timeout, ConnectionRefusedError, OSError) as e:
     log.error(f"Couldn't receive video from air: {e}")
 
 #Third Socket for Telemtry
-ground_tel = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-try:
-    ground_tel.connect((RPI_IP, 3441))
-    log.info(ground_tel.recv(1024).decode())
-except (socket.timeout, ConnectionRefusedError, OSError) as e:
-    log.error(f"Couldn't receive video from air: {e}")
+# ground_tel = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+# try:
+#     ground_tel.connect((RPI_IP, 3441))
+#     log.info(ground_tel.recv(1024).decode())
+# except (socket.timeout, ConnectionRefusedError, OSError) as e:
+#     log.error(f"Couldn't receive video from air: {e}")
 
 ######### PRIMARY CONNECTION FUNCTIONS #########        
 def SendToAir(message: SocketMessage):
@@ -82,11 +84,6 @@ def receive_frames():
     while True:
         try:
             frame_size_data = ground_video.recv(4)
-            
-            # TODO: Check if this if can be removed
-            if not frame_size_data:
-                print("breaking")
-                break
 
             frame_size = struct.unpack('>I', frame_size_data)[0]
             frame_data = receiveExactBytes(ground_video, frame_size)
@@ -136,6 +133,7 @@ def save_screenshot():
 ######### RECEIVE TELEMETRY #########
 
 def receiveTelemetry():
-    tel = ground_tel.recv(24)
-    lat, lon, alt = struct.unpack('>ddd', tel)
+    # tel = ground_tel.recv(24)
+    # lat, lon, alt = struct.unpack('>ddd', tel)
+    lat,lon,alt = 0,0,0
     return lat, lon, alt

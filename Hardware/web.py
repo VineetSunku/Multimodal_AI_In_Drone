@@ -102,14 +102,15 @@ def log_drone():
     while True:
         try:
             drone_message = ReceiveFromAir()
+            message = "RPI: "+ drone_message["message"]
             if drone_message["level"] == "INFO":
-                log.info(drone_message["message"])
+                log.info(message)
             elif drone_message["level"] == "WARNING":
-                log.warning(drone_message["message"])
+                log.warning(message)
             elif drone_message["level"] == "ERROR":
-                log.error(drone_message["message"])
+                log.error(message)
             elif drone_message["level"] == "DEBUG":
-                log.debug(drone_message["message"])
+                log.debug(message)
         except:
             continue
 
@@ -118,7 +119,6 @@ def runApp():
     socketio.run(app)
     
 if __name__ == '__main__':
-    print("hello")
     t1 = threading.Thread(target=runApp)
     t2 = threading.Thread(target=emit_coords)
     t3 = threading.Thread(target=log_drone)
