@@ -12,6 +12,12 @@ async move_right(uav, distance_m) - fly right a distance in units of m.
 async move_up(uav, distance_m) - fly up a distance in units of m.
 async move_down(uav, distance_m) - fly down a distance in units of m.
 
+Special Specific functions required for object tracking:  
+start_tracking_thread(input_bounding_box, uav) - To start the execution of object_tracking script call this function. It expects the bounding box coordinates of the object which you have identified and the uav instance.Do not apply any other logic for object_tracking.
+stop_tracking_thread() - To stop the executing object_tracking thread call this method
+
+
+
 As all the functions mentioned above are async use the following syntax:
 async def function_name(): #you can change the function name
     await function1() #this is the function you need to call

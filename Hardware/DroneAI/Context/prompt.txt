@@ -12,6 +12,12 @@ async move_right(uav, distance_in_metres) - fly right a distance in units of m.
 async move_up(uav, distance_in_metres) - fly up a distance in units of m.
 async move_down(uav, distance_in_metres) - fly down a distance in units of m.
 
+Special Specific functions required for object tracking:  
+start_tracking_thread(input_bounding_box, uav) - To start the execution of object_tracking script call this function. It expects the bounding box coordinates of the object which you have identified and the uav instance.Do not apply any other logic for object_tracking.
+stop_tracking_thread() - To stop the executing object_tracking thread call this method
+
+
+
 You also have access to some offboard functions:
 async adjust_yaw_ai(uav, ya) - Adjusts the yaw of the uav. yaw accepts a float value from -180 to 180.
 async adjust_throttle(uav, throttle) - Adjusts the throttle of the drone. throttle accepts a float value 0 to 1 (0.5 to hover). Can be used to move up or down
