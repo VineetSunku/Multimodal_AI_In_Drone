@@ -10,7 +10,11 @@ model = YOLO("yolov10n.pt")
 tracker = DeepSort(max_age=30, n_init=2, nn_budget=100)
 
 # Constants
-SAFE_DISTANCE = 2.0  # desired distance from the object in meters
+FLAG_OBJECT_TRACKING= True
+REFERENCE_OBJECT_SIZE= 200
+REFERENCE_OBJECT_TOLERANCE= 20
+DEFAULT_BACKWARD_MOVEMENT= -0.5
+DEFAULT_FORWARD_MOVEMENT= 0.5
 FRAME_CENTER_TOLERANCE = 20  # tolerance in pixels to consider as centered
 LOST_OBJECT_TIMEOUT = 4  # time in seconds to trigger drone rotation when object is not detected
 FRAME_PROCESS_INTERVAL = 1  # process frames at 1-second intervals
@@ -31,7 +35,6 @@ def detect_and_track_object(frame, input_bbox):
     """Runs YOLO on the frame and uses DeepSORT for tracking."""
     results = model(frame)
     max_iou = 0
-    best_bbox = None
     best_detection = None
     
     for result in results:
@@ -43,7 +46,6 @@ def detect_and_track_object(frame, input_bbox):
             iou = calculate_iou(input_bbox, detected_bbox)
             if iou > max_iou:
                 max_iou = iou
-                best_bbox = detected_bbox
                 best_detection = ([x1, y1, x2, y2], score, class_id)
 
     tracks = []
@@ -67,9 +69,14 @@ async def calculate_movement(frame, track, uav):
     offset_y = y_center - frame_center_y
 
     # Calculate distance adjustment
-    object_distance = 0.5 * (w + h)
-    distance_diff = SAFE_DISTANCE - object_distance
-
+    object_bb_size = (w + h)
+    if abs(object_bb_size-REFERENCE_OBJECT_SIZE)>REFERENCE_OBJECT_TOLERANCE:
+        if object_bb_size > REFERENCE_OBJECT_TOLERANCE:
+            distance_diff=DEFAULT_BACKWARD_MOVEMENT
+        else:
+            distance_diff=DEFAULT_FORWARD_MOVEMENT   
+    else:
+        distance_diff=0
     # Horizontal and vertical adjustments (left/right and up/down)
     if abs(offset_x) > FRAME_CENTER_TOLERANCE:
         if offset_x > 0:
@@ -96,13 +103,11 @@ async def calculate_movement(frame, track, uav):
     return  
 
 
-
-async def track_object_in_video( input_bbox, drone):
+async def start_object_tracking( input_bbox, drone):
     cap = cv2.VideoCapture(0)
     last_seen_time = time.time()
-    current_angle = 0
-
-    while cap.isOpened():
+    
+    while FLAG_OBJECT_TRACKING and cap.isOpened():
         ret, frame = cap.read()
         if not ret:
             break
@@ -115,18 +120,21 @@ async def track_object_in_video( input_bbox, drone):
 
         if any(track.is_confirmed() for track in tracks):
             last_seen_time = current_time
-            current_angle = 0
             for track in tracks:
                 if not track.is_confirmed() or track.time_since_update > 1:
                     continue
 
                 calculate_movement(frame, track, drone)
                 
-        cv2.imshow("Object Tracking", frame)
         
 
     cap.release()
     cv2.destroyAllWindows()
+
+def stop_tracking():
+  FLAG_OBJECT_TRACKING=False
+  print("Succesufully stoppe the tracking")
+
 
 # Usage example in another script
 # asyncio.run(track_object_in_video(0, [100, 200, 400, 500], None))
