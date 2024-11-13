@@ -574,10 +574,6 @@ video {
   right: 0px;
 }
 
-.right-12 {
-  right: 3rem;
-}
-
 .right-4 {
   right: 1rem;
 }
@@ -645,10 +641,6 @@ video {
 
 .hidden {
   display: none;
-}
-
-.h-12 {
-  height: 3rem;
 }
 
 .h-20 {
@@ -1037,11 +1029,6 @@ video {
 
 .ring-opacity-5 {
   --tw-ring-opacity: 0.05;
-}
-
-.hue-rotate-30 {
-  --tw-hue-rotate: hue-rotate(30deg);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .hover\:cursor-pointer:hover {
