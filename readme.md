@@ -12,7 +12,7 @@ Implementation of Multimodal AI in drone.
 
 ## Setup
 
-This repository requires Python-gz-transport13 and since at present as a pypi package, needs to be installed system-wide
+This repository requires Python-gz-transport13 to run the simulation and since at present as a pypi package, needs to be installed system-wide
 
 ```
 sudo apt install python3-gz-transport13
@@ -43,6 +43,22 @@ ollama pull llava
 sudo systemctl start ollama
 sudo systemctl status ollama # Verify that ollama is running through
 ollama create PromptPilot -f ./DroneAI/models/Modelfile
+```
+
+### PX4/ Gazebo and QGC Setup
+
+Refer to this [link](https://docs.px4.io/main/en/sim_gazebo_gz/) to get Gazebo running. Linux or Windows WSL is highly recommended
+
+```
+make px4_sitl gz_x500_mono_cam_lawn
+```
+
+In the simulator, subscribe to Image Display to view the camera feed in the simulator.
+
+Install QGC on WSL and run
+
+```
+./QGroundControl.AppImage
 ```
 
 ### Clone the Repository
@@ -80,7 +96,7 @@ python web.py
 
 ### Development:
 
-In another terminal
+In another terminal (For CSS changes)
 
 ```
 npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
@@ -91,10 +107,4 @@ To debug ollama-llava response, run
 ```
 sudo systemctl stop ollama
 ollama serve # this requires to be run at the start of every session.
-```
-
-### On Raspberrypi:
-
-```
-~/btp/tiziano/how_do_drones_work/myscripts $ python test_connect.py --connect "/dev/ttyAMA0"
 ```

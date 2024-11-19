@@ -133,7 +133,7 @@ async def start_object_tracking( input_bbox, drone):
 
 def stop_tracking():
   FLAG_OBJECT_TRACKING=False
-  print("Succesufully stoppe the tracking")
+  print("Succesufully stopped the tracking")
 
 
 # Usage example in another script
