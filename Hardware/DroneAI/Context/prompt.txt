@@ -35,7 +35,7 @@ As all the functions mentioned above are async use the following syntax:
 async def function_name(): #you can change the function name
     await function1() #this is the function you need to call
     await function2() #and so on
-run_in_loop(function_name())
+await function_name()
 
 Wait for 3 seconds between calling consecutive functions defined above for the UAV to stabilize. Use asyncio.sleep() method for the same. Do not use time.sleep() method
 Takeoff to an altitude of 2.5 metres by default to provide sufficient clearance for the UAV. 
