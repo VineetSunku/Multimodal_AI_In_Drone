@@ -11,10 +11,10 @@ tracker = DeepSort(max_age=30, n_init=2, nn_budget=100)
 
 # Constants
 FLAG_OBJECT_TRACKING= True
-REFERENCE_OBJECT_SIZE= 200
-REFERENCE_OBJECT_TOLERANCE= 20
-DEFAULT_BACKWARD_MOVEMENT= -0.5
-DEFAULT_FORWARD_MOVEMENT= 0.5
+REFERENCE_OBJECT_SIZE= 4000
+REFERENCE_OBJECT_TOLERANCE= 500
+DEFAULT_BACKWARD_MOVEMENT= -1
+DEFAULT_FORWARD_MOVEMENT= 1
 FRAME_CENTER_TOLERANCE = 20  # tolerance in pixels to consider as centered
 LOST_OBJECT_TIMEOUT = 4  # time in seconds to trigger drone rotation when object is not detected
 FRAME_PROCESS_INTERVAL = 1  # process frames at 1-second intervals
@@ -69,7 +69,7 @@ async def calculate_movement(frame, track, uav):
     offset_y = y_center - frame_center_y
 
     # Calculate distance adjustment
-    object_bb_size = (w + h)
+    object_bb_size = (w * h)
     if abs(object_bb_size-REFERENCE_OBJECT_SIZE)>REFERENCE_OBJECT_TOLERANCE:
         if object_bb_size > REFERENCE_OBJECT_TOLERANCE:
             distance_diff=DEFAULT_BACKWARD_MOVEMENT
@@ -80,15 +80,21 @@ async def calculate_movement(frame, track, uav):
     # Horizontal and vertical adjustments (left/right and up/down)
     if abs(offset_x) > FRAME_CENTER_TOLERANCE:
         if offset_x > 0:
-            await move_right(uav, abs(offset_x) / frame_width)  # Move right proportional to offset
+            # await move_right(uav, abs(offset_x) / frame_width)  # Move right proportional to offset
+            await move_right(uav, 1)  # Move right proportional to offset
+            
         else:
-            await move_left(uav, abs(offset_x) / frame_width)  # Move left proportional to offset
+            # await move_left(uav, abs(offset_x) / frame_width)  # Move left proportional to offset
+            await move_left(uav, 1)  # Move left proportional to offset
 
     if abs(offset_y) > FRAME_CENTER_TOLERANCE:
         if offset_y > 0:
-            await move_down(uav, abs(offset_y) / frame_height)  # Move down proportional to offset
+            # await move_down(uav, abs(offset_y) / frame_height)  # Move down proportional to offset
+            await move_down(uav, 1)  # Move down proportional to offset
+            
         else:
-            await move_up(uav, abs(offset_y) / frame_height)  # Move up proportional to offset
+            # await move_up(uav, abs(offset_y) / frame_height)  # Move up proportional to offset
+            await move_up(uav, 1)  # Move up proportional to offset
 
     # Forward/backward adjustment based on safe distance
     if distance_diff > 0:
@@ -106,7 +112,7 @@ async def calculate_movement(frame, track, uav):
 async def start_object_tracking( input_bbox, drone):
     cap = cv2.VideoCapture(0)
     last_seen_time = time.time()
-    
+    REFERENCE_OBJECT_SIZE= (input_bbox[2]-input_bbox[0])*(input_bbox[3]-input_bbox[1])
     while FLAG_OBJECT_TRACKING and cap.isOpened():
         ret, frame = cap.read()
         if not ret:

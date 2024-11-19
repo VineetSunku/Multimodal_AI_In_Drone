@@ -2,12 +2,11 @@ import asyncio
 from mavsdk.offboard import PositionNedYaw, Attitude
 from mavsdk import System
 import math
-from server import Logger
+from DroneLogger import log
 import random
 ######### GLOBAL CONSTANTS #########
 
 isPressed = True
-log = Logger()
 
 ######### TELEMETRY DETAILS #########
 # Get Vehicle Co-ordinates
@@ -63,7 +62,7 @@ async def adjust_yaw(uav: System, dir):
     log.debug("adjusting yaw angle")
     try:
         roll, pitch, yaw = await get_attitude_body(uav)
-        log.debug("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        log.debug(f"Recieved Attitude: Roll: {roll}  Pitch: {pitch}  Yaw: {yaw}", roll, pitch, yaw)
         await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.5))
         log.debug("Starting OFFBOARD MODE")
         await uav.offboard.start()
@@ -75,7 +74,7 @@ async def adjust_yaw(uav: System, dir):
                 yaw += 1
                 if yaw>180:
                     yaw-=360
-                await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.72 ))
+                await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.5 ))
                 await asyncio.sleep(0.01)
                 count += 1
         else:
@@ -83,7 +82,7 @@ async def adjust_yaw(uav: System, dir):
                 yaw -=1
                 if yaw<-180:
                     yaw+=360
-                await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.72 ))
+                await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.5 ))
                 await asyncio.sleep(0.01)
                 count += 1
     except Exception as e:
@@ -95,20 +94,24 @@ async def adjust_yaw(uav: System, dir):
 #  Arm and Takeoff
 async def arm_and_takeoff(uav: System, alt: float):
     log.info("in arm and takeoff")
-    # async for health in uav.telemetry.health():
-    #     if not health.is_armable:
-    log.warning("Disabling Preflight checks")
+    log.info("Disabling Preflight checks")
     await uav.param.set_param_int("ARMING_CHECK", 0)
     await asyncio.sleep(1)
     log.info("Arming")
     await uav.action.arm()
-    log.info("UAV is armed")
-    log.debug("Setting Takeoff altitude")
-    await uav.action.set_takeoff_altitude(altitude=alt)
+    await asyncio.sleep(5)
+    print("UAV is armed")
+    print("Setting Takeoff altitude")
+    north, east, down = await get_position_ned(uav)
+    log.info(f"Noth: {north}, East: {east}, Down: {down}")
+    await uav.action.set_takeoff_altitude(alt)
     await asyncio.sleep(3)  # Wait for 5 seconds to stabilize
-    log.info("Taking Off")
-    await uav.action.takeoff()
-    await asyncio.sleep(5)  # Wait for 5 seconds to stabilize
+    print("Taking Off")
+    try:
+        await uav.action.takeoff()
+        await asyncio.sleep(5)  # Wait for 5 seconds to stabilize
+    except Exception as e:
+        print("takeoff failed?", e)
 
 # Land UAV
 async def land_uav(uav: System):
@@ -126,7 +129,7 @@ async def adjust_throttle(uav: System, throttle):
     log.debug("adjusting throttle angle")
     try:
         roll, pitch, yaw = await get_attitude_body(uav)
-        log.info("Recieved Attitude: Roll: %s  Pitch: %s  Yaw: %s", roll, pitch, yaw)
+        log.info(f"Recieved Attitude: Roll: {roll}  Pitch: {pitch}  Yaw: {yaw}")
         await uav.offboard.set_attitude(Attitude(roll, pitch, yaw, 0.5))
         log.debug("Starting OFFBOARD MODE")
         await uav.offboard.start()
@@ -140,7 +143,6 @@ async def adjust_throttle(uav: System, throttle):
 
 # Adjust Pitch 
 async def adjust_pitch(uav: System, pit):
-    print("in here")
     log.debug("adjusting pitch angle")
     try:
         roll, pitch, yaw = await get_attitude_body(uav)
@@ -151,7 +153,7 @@ async def adjust_pitch(uav: System, pit):
         global isPressed
         isPressed = True
         log.info("Adjusting Pitch")
-        await uav.offboard.set_attitude(Attitude(roll, pit, yaw, 0.74 ))
+        await uav.offboard.set_attitude(Attitude(roll, pit, yaw, 0.5 ))
         await asyncio.sleep(0.01)
     except Exception as e:
         log.error(e)    
@@ -168,7 +170,7 @@ async def adjust_roll(uav: System, rol):
         global isPressed
         isPressed = True
         log.info("Adjusting Roll")
-        await uav.offboard.set_attitude(Attitude(rol, pitch, yaw, 0.74 ))
+        await uav.offboard.set_attitude(Attitude(rol, pitch, yaw, 0.5 ))
         await asyncio.sleep(0.01)
     except Exception as e:
         log.error(e)    
@@ -178,7 +180,10 @@ async def stop_offboard(uav: System):
     global isPressed
     isPressed = False
     log.debug("Stopping OFFBOARD mode")
-    await uav.offboard.stop()
+    try:
+        await uav.offboard.stop()
+    except Exception as e:
+        log.error(e)
     
     
 ######### AI ONLY MOVEMENTS #########
@@ -311,7 +316,7 @@ async def adjust_yaw_ai(uav: System, ya):
         await uav.offboard.start()
         global isPressed
         isPressed = True
-        await uav.offboard.set_attitude(Attitude(roll, pitch, (ya+yaw +180)%360-180, 0.72 ))
+        await uav.offboard.set_attitude(Attitude(roll, pitch, (ya+yaw +180)%360-180, 0.5 ))
         await asyncio.sleep(3)
         await stop_offboard(uav)
     except Exception as e:
