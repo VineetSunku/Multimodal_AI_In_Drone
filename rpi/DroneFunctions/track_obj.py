@@ -3,8 +3,7 @@ import asyncio
 from ultralytics import YOLO
 from deep_sort_realtime.deepsort_tracker import DeepSort
 import time
-from __init__ import *
-
+from DroneFunctions import *
 
 model = YOLO("yolov10n.pt")
 tracker = DeepSort(max_age=30, n_init=2, nn_budget=100)
@@ -109,12 +108,16 @@ async def calculate_movement(frame, track, uav):
     return  
 
 
-async def start_object_tracking( input_bbox, drone):
-    cap = cv2.VideoCapture(0)
+async def start_object_tracking( input_bbox, drone: System):
+    input_bbox = [input_bbox[1],input_bbox[0],input_bbox[3],input_bbox[2]]
+    input_bbox = [i/1000*640 if i%2==0 else i/1000*480 for i in input_bbox]
     last_seen_time = time.time()
+    global REFERENCE_OBJECT_SIZE, FLAG_OBJECT_TRACKING
     REFERENCE_OBJECT_SIZE= (input_bbox[2]-input_bbox[0])*(input_bbox[3]-input_bbox[1])
-    while FLAG_OBJECT_TRACKING and cap.isOpened():
-        ret, frame = cap.read()
+    frame = cv2.imread("./logs/drone_feed.jpg")
+    ret = frame is not None
+    while FLAG_OBJECT_TRACKING and ret:
+        log.info("trying to track")
         if not ret:
             break
 
@@ -130,16 +133,16 @@ async def start_object_tracking( input_bbox, drone):
                 if not track.is_confirmed() or track.time_since_update > 1:
                     continue
 
-                calculate_movement(frame, track, drone)
+                await calculate_movement(frame, track, drone)
                 
         
 
-    cap.release()
     cv2.destroyAllWindows()
 
 def stop_tracking():
-  FLAG_OBJECT_TRACKING=False
-  print("Succesufully stopped the tracking")
+    global FLAG_OBJECT_TRACKING
+    FLAG_OBJECT_TRACKING=False
+    log.info("Sent command to stop tracking")
 
 
 # Usage example in another script

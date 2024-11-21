@@ -40,8 +40,11 @@ async def run():
     
     await asyncio.sleep(5)
 
+    north, east, down = await get_position_ned(uav)
+    print(f"Noth: {north}, East: {east}, Down: {down}")
+    
     try:
-        await uav.action.set_takeoff_altitude(1.5)
+        await uav.action.set_takeoff_altitude(3)
     except:
         print("altitude didnt work")
     
@@ -51,13 +54,14 @@ async def run():
     except Exception as e:
         print("Takeoff didnt work", e)
     
-    print("here?")
-    await asyncio.sleep(3)
+    await asyncio.sleep(5)
+    _ = input("Press enter to move:")
     print("now moving forward")
-    await move_forward(uav, 2)
+    await move_forward(uav, 10)
     print("moved forward")
     
-    await asyncio.sleep(3)
+    await asyncio.sleep(5)
+    _ = input("Press enter to land:")
     print("Landing")
     await uav.action.land()
     

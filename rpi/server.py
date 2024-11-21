@@ -4,6 +4,7 @@ from picamera2 import Picamera2
 import cv2
 import asyncio
 from DroneFunctions import *
+from DroneFunctions.track_obj import detect_and_track_object, start_object_tracking, stop_tracking
 from DroneLogger import log
 ######### UAV CONNECTIONS ######### 
 
@@ -51,8 +52,13 @@ async def receive():
                 else:
                     await stop_offboard(uav)
             elif d["messageType"] == "AI":
+                print(d)
                 gen_code = d["message"]
-                exec(gen_code)     
+                log.debug(gen_code) 
+                exec_context = globals().copy()
+                exec(gen_code, exec_context)
+                ai_function = exec_context["ai_function"]
+                await ai_function()
         except Exception as e:
             print("Main Socket Connection Closed", e)
             break
@@ -64,6 +70,8 @@ def videoStream():
             frame = camera.capture_array()
             _, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
+            with open("./logs/drone_feed.jpg", "wb") as file:
+                file.write(frame)
             ground_video.sendall(len(frame).to_bytes(4, 'big'))
             ground_video.sendall(frame)
     except Exception as e:
@@ -71,8 +79,8 @@ def videoStream():
 
 async def main():
     global uav, log, ground, ground_video, camera, RPI_IP
-
-    uav = System()
+    log.info("RPi is available to connect")
+    uav = "System()"
     RPI_IP = "192.168.208.38"
     rpi = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     rpi.bind((RPI_IP, 4682))
@@ -97,9 +105,10 @@ async def main():
     t1.start()
     await receive()
 
-def run_in_loop(task):
+async def run_in_loop(fn):
     mainLoop = asyncio.get_event_loop()
-    asyncio.run_coroutine_threadsafe(task, mainLoop)
+    task = mainLoop.create_task(fn)
+    await task
     
 if __name__ == "__main__":
     asyncio.run(main())
