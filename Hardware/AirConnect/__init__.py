@@ -90,6 +90,7 @@ def receive_frames():
             np_array = np.frombuffer(frame_data, np.uint8)
             frame = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
             corrected_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            cv2.imwrite('received_frame.jpg', corrected_frame)
             _,buffer=cv2.imencode('.jpg',corrected_frame)
             frame_data = buffer.tobytes()
             global camera_frame
@@ -109,7 +110,8 @@ def CameraFrame():
 
 def save_screenshot():
     """Saves a screenshot of the current camera frame with a timestamp-based filename."""
-    global camera_frame
+    img = cv2.imread("received_frame.jpg")
+
 
     # Extract the JPEG-encoded image data from the camera frame
     frame_data = camera_frame.split(b'\r\n\r\n', 1)[1].split(b'\r\n', 1)[0]

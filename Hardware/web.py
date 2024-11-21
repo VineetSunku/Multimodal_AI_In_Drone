@@ -65,6 +65,7 @@ def sendMessage():
             log.info("Prompt requires image. Capturing Screenshot")
             gen_code = generate_gemini_response(ques, save_screenshot())
         else:
+            log.debug("generating response")
             gen_code = generate_gemini_response(ques)
         emit_update('Gemini')
     else:
@@ -76,6 +77,7 @@ def sendMessage():
         emit_update('LLaVA')
 
     if gen_code:
+        print(gen_code)
         SendToAir(SocketMessage(Sender.GROUND, GroundType.AI, gen_code))
     return jsonify({'response': gen_code})
 

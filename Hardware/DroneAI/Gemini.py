@@ -1,6 +1,6 @@
 import google.generativeai as genai
 import re, os, csv
-
+from DroneLogger import log
 ######### PROVIDE CONTEXT #########
 
 # Specify the file path
@@ -35,7 +35,9 @@ safety_settings = [
     },
 ]
 
-model = genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings)
+
+
+model = genai.GenerativeModel('gemini-1.5-pro-002',safety_settings=safety_settings)
 
 code_block_regex = re.compile(r"```(.*?)```", re.DOTALL)
 
@@ -60,13 +62,23 @@ def generate_response(ques: str, imagePath: str | None = None):
     else:
         messages = [content, ques]
     response = model.generate_content(messages)
+#     response_text = """```python
+# import asyncio
+# async def gemini_function():
+#     print("hello")
+#     await asyncio.sleep(2)
+#     print("hello")
+# ```
+
+# This code snippet uses the `arm_and_takeoff` function to command the UAV to take off to a height of 2.5 meters.  The `uav` variable presumably represents an object representing your drone instance in the Gazebo simulation.
+# """
     gen_code = extract_python_code(response.text)
+    log.debug("received response from Gemini. Sending to RPi")
     with open('./logs/chats.csv','a', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow(['Gemini', response.text])
 
     return gen_code
-
 
 
         
