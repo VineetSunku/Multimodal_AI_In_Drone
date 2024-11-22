@@ -17,6 +17,9 @@ DEFAULT_FORWARD_MOVEMENT= 1
 FRAME_CENTER_TOLERANCE = 20  # tolerance in pixels to consider as centered
 LOST_OBJECT_TIMEOUT = 4  # time in seconds to trigger drone rotation when object is not detected
 FRAME_PROCESS_INTERVAL = 1  # process frames at 1-second intervals
+PARENT_CLASS_NAME=""
+LOCKED_TRACK_ID=None
+
 
 def calculate_iou(boxA, boxB):
     """Calculate the Intersection over Union (IoU) of two bounding boxes."""
@@ -30,27 +33,40 @@ def calculate_iou(boxA, boxB):
     iou = interArea / float(boxAArea + boxBArea - interArea)
     return iou
 
-def detect_and_track_object(frame, input_bbox):
-    """Runs YOLO on the frame and uses DeepSORT for tracking."""
+def detect_object_with_max_iou(frame, input_bbox):
+    """Detect the object with the maximum IoU."""
     results = model(frame)
     max_iou = 0
     best_detection = None
-    
+
     for result in results:
         for box in result.boxes:
             x1, y1, x2, y2 = map(int, box.xyxy[0])
             detected_bbox = [x1, y1, x2, y2]
             score = float(box.conf[0])
             class_id = int(box.cls[0])
-            iou = calculate_iou(input_bbox, detected_bbox)
-            if iou > max_iou:
-                max_iou = iou
-                best_detection = ([x1, y1, x2, y2], score, class_id)
+            class_name = model.names[int(box.cls[0])]  
 
-    tracks = []
-    if best_detection:
-        tracks = tracker.update_tracks([best_detection], frame=frame)
-    return tracks
+            if PARENT_CLASS_NAME == class_name:
+                iou = calculate_iou(input_bbox, detected_bbox)
+                if iou > max_iou:
+                    max_iou = iou
+                    best_detection = ([x1, y1, x2, y2], score, class_id)
+
+    return best_detection
+
+
+def track_specific_object(frame, locked_track_id):
+    """Track the specific object based on the locked track ID."""
+    results = model(frame)
+    tracks = tracker.update_tracks(results, frame=frame)
+
+    for track in tracks:
+        if track.track_id == locked_track_id:
+            return track
+
+    return None
+
 
 async def calculate_movement(frame, track, uav):
     """Calculate movement commands based on the object's position and command the drone accordingly."""
@@ -108,16 +124,24 @@ async def calculate_movement(frame, track, uav):
     return  
 
 
-async def start_object_tracking( input_bbox, drone: System):
-    input_bbox = [input_bbox[1],input_bbox[0],input_bbox[3],input_bbox[2]]
-    input_bbox = [i/1000*640 if i%2==0 else i/1000*480 for i in input_bbox]
+async def start_object_tracking(input_bbox, drone: System, class_Name):
+    input_bbox = [input_bbox[1], input_bbox[0], input_bbox[3], input_bbox[2]]
+    input_bbox = [i / 1000 * 640 if i % 2 == 0 else i / 1000 * 480 for i in input_bbox]
     last_seen_time = time.time()
-    global REFERENCE_OBJECT_SIZE, FLAG_OBJECT_TRACKING
-    REFERENCE_OBJECT_SIZE= (input_bbox[2]-input_bbox[0])*(input_bbox[3]-input_bbox[1])
+    global REFERENCE_OBJECT_SIZE, FLAG_OBJECT_TRACKING, PARENT_CLASS_NAME, LOCKED_TRACK_ID
+
+    PARENT_CLASS_NAME = class_Name.lower()
+    REFERENCE_OBJECT_SIZE = (input_bbox[2] - input_bbox[0]) * (input_bbox[3] - input_bbox[1])
+
     frame = cv2.imread("./logs/drone_feed.jpg")
     ret = frame is not None
+
+    # Find the initial object with maximum IoU
+    best_detection = detect_object_with_max_iou(frame, input_bbox)
+    if best_detection:
+        locked_track_id = tracker.update_tracks([best_detection], frame=frame)[0].track_id
+
     while FLAG_OBJECT_TRACKING and ret:
-        log.info("trying to track")
         if not ret:
             break
 
@@ -125,19 +149,13 @@ async def start_object_tracking( input_bbox, drone: System):
         if current_time - last_seen_time < FRAME_PROCESS_INTERVAL:
             continue
 
-        tracks = detect_and_track_object(frame, input_bbox)
-
-        if any(track.is_confirmed() for track in tracks):
+        track = track_specific_object(frame, locked_track_id)
+        if track:
             last_seen_time = current_time
-            for track in tracks:
-                if not track.is_confirmed() or track.time_since_update > 1:
-                    continue
-
-                await calculate_movement(frame, track, drone)
-                
-        
+            await calculate_movement(frame, track, drone)
 
     cv2.destroyAllWindows()
+
 
 def stop_tracking():
     global FLAG_OBJECT_TRACKING
@@ -147,3 +165,85 @@ def stop_tracking():
 
 # Usage example in another script
 # asyncio.run(track_object_in_video(0, [100, 200, 400, 500], None))
+# list of valid object_names
+# {0: 'person',
+#  1: 'bicycle',
+#  2: 'car',
+#  3: 'motorcycle',
+#  4: 'airplane',
+#  5: 'bus',
+#  6: 'train',
+#  7: 'truck',
+#  8: 'boat',
+#  9: 'traffic light',
+#  10: 'fire hydrant',
+#  11: 'stop sign',
+#  12: 'parking meter',
+#  13: 'bench',
+#  14: 'bird',
+#  15: 'cat',
+#  16: 'dog',
+#  17: 'horse',
+#  18: 'sheep',
+#  19: 'cow',
+#  20: 'elephant',
+#  21: 'bear',
+#  22: 'zebra',
+#  23: 'giraffe',
+#  24: 'backpack',
+#  25: 'umbrella',
+#  26: 'handbag',
+#  27: 'tie',
+#  28: 'suitcase',
+#  29: 'frisbee',
+#  30: 'skis',
+#  31: 'snowboard',
+#  32: 'sports ball',
+#  33: 'kite',
+#  34: 'baseball bat',
+#  35: 'baseball glove',
+#  36: 'skateboard',
+#  37: 'surfboard',
+#  38: 'tennis racket',
+#  39: 'bottle',
+#  40: 'wine glass',
+#  41: 'cup',
+#  42: 'fork',
+#  43: 'knife',
+#  44: 'spoon',
+#  45: 'bowl',
+#  46: 'banana',
+#  47: 'apple',
+#  48: 'sandwich',
+#  49: 'orange',
+#  50: 'broccoli',
+#  51: 'carrot',
+#  52: 'hot dog',
+#  53: 'pizza',
+#  54: 'donut',
+#  55: 'cake',
+#  56: 'chair',
+#  57: 'couch',
+#  58: 'potted plant',
+#  59: 'bed',
+#  60: 'dining table',
+#  61: 'toilet',
+#  62: 'tv',
+#  63: 'laptop',
+#  64: 'mouse',
+#  65: 'remote',
+#  66: 'keyboard',
+#  67: 'cell phone',
+#  68: 'microwave',
+#  69: 'oven',
+#  70: 'toaster',
+#  71: 'sink',
+#  72: 'refrigerator',
+#  73: 'book',
+#  74: 'clock',
+#  75: 'vase',
+#  76: 'scissors',
+#  77: 'teddy bear',
+#  78: 'hair drier',
+#  79: 'toothbrush'}
+
