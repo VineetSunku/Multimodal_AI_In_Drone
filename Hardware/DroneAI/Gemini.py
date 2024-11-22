@@ -1,14 +1,6 @@
 import google.generativeai as genai
 import re, os, csv
 from DroneLogger import log
-######### PROVIDE CONTEXT #########
-
-# Specify the file path
-file_path = './DroneAI/Context/prompt.txt'
-
-# Open and read the file
-with open(file_path, 'r') as file:
-    content = file.read()
 
 ######### GEN-AI CONFIGURATION #########
 genai.configure(api_key=os.environ['API_KEY'])
@@ -35,8 +27,6 @@ safety_settings = [
     },
 ]
 
-
-
 model = genai.GenerativeModel('gemini-1.5-pro-002',safety_settings=safety_settings)
 
 code_block_regex = re.compile(r"```(.*?)```", re.DOTALL)
@@ -56,10 +46,16 @@ def extract_python_code(content):
 
 def generate_response(ques: str, imagePath: str | None = None):
     if imagePath:
+        file_path = './DroneAI/Context/image_prompt.txt'
+        with open(file_path, 'r') as file:
+            content = file.read()
         ss = genai.upload_file(path=imagePath,
                         display_name="ss.jpg")
         messages = [content, ques, ss]
     else:
+        file_path = './DroneAI/Context/text_prompt.txt'
+        with open(file_path, 'r') as file:
+            content = file.read()
         messages = [content, ques]
     response = model.generate_content(messages)
 #     response_text = """```python

@@ -80,7 +80,7 @@ def videoStream():
 async def main():
     global uav, log, ground, ground_video, camera, RPI_IP
     log.info("RPi is available to connect")
-    uav = "System()"
+    uav = System()
     RPI_IP = "192.168.208.38"
     rpi = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     rpi.bind((RPI_IP, 4682))

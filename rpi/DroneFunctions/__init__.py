@@ -92,7 +92,7 @@ async def adjust_yaw(uav: System, dir):
 ######### CONTROLLER AND AI MOVEMENTS #########
 
 #  Arm and Takeoff
-async def arm_and_takeoff(uav, alt: float):
+async def arm_and_takeoff(uav: System, alt: float):
     log.info("in arm and takeoff")
     log.info("Disabling Preflight checks")
     await uav.param.set_param_int("ARMING_CHECK", 0)
