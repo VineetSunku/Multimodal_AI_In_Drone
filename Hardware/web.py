@@ -7,7 +7,7 @@ from DroneAI.Gemini import generate_response as generate_gemini_response
 from DroneAI.LLAVA import generate_response as generate_llava_response
 from DroneAI.VisionClassifier import visionClassifier as vc
 from DroneLogger import log
-from AirConnect import SendToAir, SocketMessage, Sender, GroundType, CameraFrame, receiveTelemetry, ReceiveFromAir, save_screenshot
+from AirConnect import SendToAir, SocketMessage, Sender, GroundType, CameraFrame, save_screenshot
 
 """This is the main event loop that receives input from the web console and 
 sends the results to the companion Computer. Not added explicitly in a seperate thread."""
@@ -86,35 +86,10 @@ def video_feed():
     """Video streaming route."""
     return Response(CameraFrame(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-######### TELEMTRY #########
-def emit_coords():
-    while True:
-        latitude, longitude, altitude = receiveTelemetry()
-        # Emit the coordinates to the frontend
-        socketio.emit('coordinates', {'lat': latitude, 'lon': longitude, 'alt': altitude})
-        time.sleep(1)
-
 ######### FLASK TO HTML CHAT SOCKET #########
 def emit_update(who):
     data = read_csv('./logs/chats.csv')
     socketio.emit(who, {'data': data[-1][1]})
-
-######### LOG DRONE OUTPUTS #########
-def log_drone():
-    while True:
-        try:
-            drone_message = ReceiveFromAir()
-            message = "RPI: "+ drone_message["message"]
-            if drone_message["level"] == "INFO":
-                log.info(message)
-            elif drone_message["level"] == "WARNING":
-                log.warning(message)
-            elif drone_message["level"] == "ERROR":
-                log.error(message)
-            elif drone_message["level"] == "DEBUG":
-                log.debug(message)
-        except:
-            continue
 
 ######### RUN FLASK APP #########
 def runApp():
@@ -122,8 +97,4 @@ def runApp():
     
 if __name__ == '__main__':
     t1 = threading.Thread(target=runApp)
-    t2 = threading.Thread(target=emit_coords)
-    t3 = threading.Thread(target=log_drone)
     t1.start()
-    t2.start()
-    t3.start()

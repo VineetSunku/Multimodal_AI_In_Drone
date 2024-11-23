@@ -6,11 +6,13 @@ import threading
 import struct, cv2, numpy as np
 from datetime import datetime
 
+######### GLOBAL VARIABLES #########
+corrected_frame = cv2.imread("./static/received_frame.jpg")
+
 ######### SOCKET MESSAGE CLASS #########
 # Define Sender and Type enums
 class Sender(Enum):
     GROUND = "Ground"
-    AIR = "Air"
 
 class GroundType(Enum):
     CONTROLLER = "Controller"
@@ -54,21 +56,9 @@ try:
 except (socket.timeout, ConnectionRefusedError, OSError) as e:
     log.error(f"Couldn't receive video from air: {e}")
 
-#Third Socket for Telemtry
-# ground_tel = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-# try:
-#     ground_tel.connect((RPI_IP, 3441))
-#     log.info(ground_tel.recv(1024).decode())
-# except (socket.timeout, ConnectionRefusedError, OSError) as e:
-#     log.error(f"Couldn't receive video from air: {e}")
-
 ######### PRIMARY CONNECTION FUNCTIONS #########        
 def SendToAir(message: SocketMessage):
     ground.send(str(message).encode())
-
-def ReceiveFromAir() -> dict:
-    s = ground.recv(1024).decode()
-    return eval(s)
 
 ######### RECEIVE VIDEO #########
 def receiveExactBytes(sock: socket.socket, size):
@@ -81,6 +71,7 @@ def receiveExactBytes(sock: socket.socket, size):
 
 def receive_frames():
     """Generator that receives frames and yields them as JPEG data."""
+    global corrected_frame
     while True:
         try:
             frame_size_data = ground_video.recv(4)
@@ -90,8 +81,6 @@ def receive_frames():
             np_array = np.frombuffer(frame_data, np.uint8)
             frame = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
             corrected_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            cv2.imwrite('received_frame.tmp', corrected_frame)
-            os.replace("received_frame.tmp", "received_frame.jpg")
             _,buffer=cv2.imencode('.jpg',corrected_frame)
             frame_data = buffer.tobytes()
             global camera_frame
@@ -111,13 +100,11 @@ def CameraFrame():
 
 def save_screenshot():
     """Saves a screenshot of the current camera frame with a timestamp-based filename."""
-    img = cv2.imread("received_frame.jpg")
+    global corrected_frame
+    img = corrected_frame
 
 
     # Extract the JPEG-encoded image data from the camera frame
-    frame_data = camera_frame.split(b'\r\n\r\n', 1)[1].split(b'\r\n', 1)[0]
-    np_array = np.frombuffer(frame_data, np.uint8)
-    image = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
 
     # Generate a filename with the current timestamp
     timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
@@ -125,18 +112,8 @@ def save_screenshot():
 
     # Save the image
     os.chdir('./logs/images')
-    cv2.imwrite(filename, image)
+    cv2.imwrite(filename, img)
     log.info(f"Screenshot saved as {filename}")
     os.chdir('../../')
 
     return "./logs/images/" + filename 
-
-    
-
-######### RECEIVE TELEMETRY #########
-
-def receiveTelemetry():
-    # tel = ground_tel.recv(24)
-    # lat, lon, alt = struct.unpack('>ddd', tel)
-    lat,lon,alt = 0,0,0
-    return lat, lon, alt

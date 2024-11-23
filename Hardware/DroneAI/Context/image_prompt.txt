@@ -16,7 +16,8 @@ As the function mentioned above is async use the following syntax:
 async def ai_function(): #Please do not change the function name
     input_bounding_box = [0,0,1000,1000] # Replace values with the bounding box you predict.
     class_name = "person" # Replace with the class_name of the object you identify.
-    async start_object_tracking(input_bounding_box, uav, class_name) #this is the function you need to call
+    await start_object_tracking(input_bounding_box, uav, class_name) #this is the function you need to call
+    # Do NOT include comments in the code you generate
 ```
 
 Provide only one Python block in the above syntax.
