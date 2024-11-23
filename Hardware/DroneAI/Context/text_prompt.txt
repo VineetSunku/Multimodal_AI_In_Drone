@@ -20,6 +20,9 @@ async adjust_pitch(uav, pit) - Adjusts the pitch of the drone. Pitch accepts a f
 async adjust_roll(uav, rol) - Adjusts the roll of the drone. Roll accepts a float value from -90 to 90.
 async stop_offboard(uav) - Stops the offboard mode. (The above functions automatically start offboard mode when called.)
 
+This type of prompt requests you to stop tracking, in which case you will use this function.
+async stop_tracking() - Call this function when you want to stop the object tracking. It does not expect any arguments. (Start tracking has been defined elsewhere)
+
 You also have access to functions given below that returns the telemetry of the uav. 
 
 async get_coord(uav) - returns latitude, longitude, altitude in a tuple
