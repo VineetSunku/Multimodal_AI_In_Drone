@@ -90,7 +90,8 @@ def receive_frames():
             np_array = np.frombuffer(frame_data, np.uint8)
             frame = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
             corrected_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            cv2.imwrite('received_frame.jpg', corrected_frame)
+            cv2.imwrite('received_frame.tmp', corrected_frame)
+            os.replace("received_frame.tmp", "received_frame.jpg")
             _,buffer=cv2.imencode('.jpg',corrected_frame)
             frame_data = buffer.tobytes()
             global camera_frame
