@@ -208,7 +208,7 @@ async def move_right(uav: System, distance_m):
         log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
         await uav.offboard.start()
         await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
-        await asyncio.sleep(3)
+        await asyncio.sleep(1)
         await stop_offboard(uav)
         log.info("Moved Right by %s meters", distance_m)
     except Exception as e:
@@ -229,7 +229,7 @@ async def move_left(uav: System, distance_m):
         log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
         await uav.offboard.start()
         await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
-        await asyncio.sleep(3)
+        await asyncio.sleep(1)
         await stop_offboard(uav)
         log.info("Moved Left by %s meters", distance_m)
     except Exception as e:
@@ -250,7 +250,7 @@ async def move_forward(uav: System, distance_m):
         log.debug("Attempting to set new NED Co-ordinates: North: %s East: %s Down: %s", north, east, down)
         await uav.offboard.start()
         await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
-        await asyncio.sleep(3)
+        await asyncio.sleep(1)
         await stop_offboard(uav)
         log.info("Moved Forward by %s meters", distance_m)
     except Exception as e:
@@ -271,7 +271,7 @@ async def move_backward(uav: System, distance_m):
         log.debug("Starting OFFBOARD MODE")
         await uav.offboard.start()
         await uav.offboard.set_position_ned(PositionNedYaw(north, east, down, yaw ))
-        await asyncio.sleep(3)
+        await asyncio.sleep(1)
         await stop_offboard(uav)
         log.info("Moved Backward by %s meters", distance_m)
     except Exception as e:

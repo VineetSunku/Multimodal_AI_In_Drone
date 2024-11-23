@@ -14,7 +14,6 @@ async move_down(uav, distance_in_metres) - fly down a distance in units of m.
 
 
 You also have access to some offboard functions:
-async adjust_yaw_ai(uav, ya) - Adjusts the yaw of the uav. yaw accepts a float value from -180 to 180.
 async adjust_throttle(uav, throttle) - Adjusts the throttle of the drone. Throttle accepts a float value 0 to 1 (0.5 to hover). Can be used to move up or down
 async adjust_pitch(uav, pit) - Adjusts the pitch of the drone. Pitch accepts a float value from -90 to 90.
 async adjust_roll(uav, rol) - Adjusts the roll of the drone. Roll accepts a float value from -90 to 90.

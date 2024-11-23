@@ -1,11 +1,11 @@
 import socket
 from threading import Thread
-from picamera2 import Picamera2
 import cv2
 import asyncio
 from DroneFunctions import *
-from DroneFunctions.track_obj import detect_and_track_object, start_object_tracking, stop_tracking
+from DroneFunctions.track_obj import start_object_tracking
 from DroneLogger import log
+from DroneCamera import CameraObject
 ######### UAV CONNECTIONS ######### 
 
 async def connect_to_uav():
@@ -59,6 +59,7 @@ async def receive():
                 exec(gen_code, exec_context)
                 ai_function = exec_context["ai_function"]
                 await ai_function()
+                log.info("Stopped Tracking")
         except Exception as e:
             print("Main Socket Connection Closed", e)
             break
@@ -68,10 +69,13 @@ def videoStream():
     try:
         while True:
             frame = camera.capture_array()
+            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             _, buffer = cv2.imencode('.jpg', frame)
+            __, buffer1 = cv2.imencode('.jpg', frame_rgb)
             frame = buffer.tobytes()
+            frame_rgb = buffer1.tobytes()
             with open("./logs/drone_feed.jpg", "wb") as file:
-                file.write(frame)
+                file.write(frame_rgb)
             ground_video.sendall(len(frame).to_bytes(4, 'big'))
             ground_video.sendall(frame)
     except Exception as e:
@@ -96,9 +100,7 @@ async def main():
     ground_video, addr_video = rpi_video.accept()
     ground_video.send("Video link established".encode())
 
-    camera = Picamera2()
-    camera.configure(camera.create_preview_configuration(main={"format": 'XRGB8888', "size": (640, 480)}))
-    camera.start()
+    camera = CameraObject()
 
     await connect_to_uav()
     t1=Thread(target=videoStream)

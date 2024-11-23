@@ -4,7 +4,8 @@ from ultralytics import YOLO
 from deep_sort_realtime.deepsort_tracker import DeepSort
 import time
 from DroneFunctions import *
-
+from DroneLogger import log
+from DroneCamera import CameraObject
 model = YOLO("yolov10n.pt")
 tracker = DeepSort(max_age=30, n_init=2, nn_budget=100)
 
@@ -16,7 +17,7 @@ DEFAULT_BACKWARD_MOVEMENT= -1
 DEFAULT_FORWARD_MOVEMENT= 1
 FRAME_CENTER_TOLERANCE = 20  # tolerance in pixels to consider as centered
 LOST_OBJECT_TIMEOUT = 4  # time in seconds to trigger drone rotation when object is not detected
-FRAME_PROCESS_INTERVAL = 1  # process frames at 1-second intervals
+FRAME_PROCESS_INTERVAL = 0.5  # process frames at 1-second intervals
 PARENT_CLASS_NAME=""
 LOCKED_TRACK_ID=None
 
@@ -56,13 +57,23 @@ def detect_object_with_max_iou(frame, input_bbox):
     return best_detection
 
 
-def track_specific_object(frame, locked_track_id):
+def track_specific_object(frame, LOCKED_TRACK_ID):
     """Track the specific object based on the locked track ID."""
     results = model(frame)
-    tracks = tracker.update_tracks(results, frame=frame)
+    detections = []
+    for result in results:
+        for box in result.boxes:
+            x1, y1, x2, y2 = map(int, box.xyxy[0])  # Bounding box coordinates
+            confidence = float(box.conf[0])        # Confidence score
+            class_id = int(box.cls[0])             # Class ID
+            class_name = model.names[int(box.cls[0])]  
 
+            if PARENT_CLASS_NAME==class_name:
+                detections.append([[x1, y1, x2, y2], confidence, class_id])
+
+    tracks = tracker.update_tracks(detections, frame=frame)
     for track in tracks:
-        if track.track_id == locked_track_id:
+        if track.track_id == LOCKED_TRACK_ID:
             return track
 
     return None
@@ -95,26 +106,32 @@ async def calculate_movement(frame, track, uav):
     # Horizontal and vertical adjustments (left/right and up/down)
     if abs(offset_x) > FRAME_CENTER_TOLERANCE:
         if offset_x > 0:
+            log.info("Moving Right")
             # await move_right(uav, abs(offset_x) / frame_width)  # Move right proportional to offset
             await move_right(uav, 1)  # Move right proportional to offset
             
         else:
+            log.info("Moving Left")
             # await move_left(uav, abs(offset_x) / frame_width)  # Move left proportional to offset
             await move_left(uav, 1)  # Move left proportional to offset
 
     if abs(offset_y) > FRAME_CENTER_TOLERANCE:
         if offset_y > 0:
+            log.info("Moving Down")
             # await move_down(uav, abs(offset_y) / frame_height)  # Move down proportional to offset
             await move_down(uav, 1)  # Move down proportional to offset
             
         else:
+            log.info("Moving Up")
             # await move_up(uav, abs(offset_y) / frame_height)  # Move up proportional to offset
             await move_up(uav, 1)  # Move up proportional to offset
 
     # Forward/backward adjustment based on safe distance
     if distance_diff > 0:
+        log.info("Moving Forward")
         await move_forward(uav, abs(distance_diff))  # Move forward if too far
     elif distance_diff < 0:
+        log.info("Moving Backward")
         await move_backward(uav, abs(distance_diff))  # Move backward if too close
 
     track_id = track.track_id
@@ -133,27 +150,29 @@ async def start_object_tracking(input_bbox, drone: System, class_Name):
     PARENT_CLASS_NAME = class_Name.lower()
     REFERENCE_OBJECT_SIZE = (input_bbox[2] - input_bbox[0]) * (input_bbox[3] - input_bbox[1])
 
-    frame = cv2.imread("./logs/drone_feed.jpg")
-    ret = frame is not None
-
-    # Find the initial object with maximum IoU
-    best_detection = detect_object_with_max_iou(frame, input_bbox)
-    if best_detection:
-        locked_track_id = tracker.update_tracks([best_detection], frame=frame)[0].track_id
-
-    while FLAG_OBJECT_TRACKING and ret:
-        if not ret:
+    camera = CameraObject()
+    for i in range(5):
+        frame = camera.capture_array()
+        # Find the initial object with maximum IoU
+        best_detection = detect_object_with_max_iou(frame, input_bbox)
+        if best_detection:
+            LOCKED_TRACK_ID = tracker.update_tracks([best_detection], frame=frame)[0].track_id
             break
+    log.info(f"Starting Object Tracking. LOCKED_TRACK_ID: {LOCKED_TRACK_ID}")
+    start_time = time.time()
+    current_time = time.time()
+    while FLAG_OBJECT_TRACKING and LOCKED_TRACK_ID and current_time-start_time<40:
 
+        frame = camera.capture_array()
         current_time = time.time()
         if current_time - last_seen_time < FRAME_PROCESS_INTERVAL:
             continue
 
-        track = track_specific_object(frame, locked_track_id)
+        track = track_specific_object(frame, LOCKED_TRACK_ID)
         if track:
+            log.info("Track received")
             last_seen_time = current_time
             await calculate_movement(frame, track, drone)
-
     cv2.destroyAllWindows()
 
 

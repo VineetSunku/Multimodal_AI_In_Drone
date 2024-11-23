@@ -58,16 +58,6 @@ def generate_response(ques: str, imagePath: str | None = None):
             content = file.read()
         messages = [content, ques]
     response = model.generate_content(messages)
-#     response_text = """```python
-# import asyncio
-# async def gemini_function():
-#     print("hello")
-#     await asyncio.sleep(2)
-#     print("hello")
-# ```
-
-# This code snippet uses the `arm_and_takeoff` function to command the UAV to take off to a height of 2.5 meters.  The `uav` variable presumably represents an object representing your drone instance in the Gazebo simulation.
-# """
     gen_code = extract_python_code(response.text)
     log.debug("received response from Gemini. Sending to RPi")
     with open('./logs/chats.csv','a', newline='') as csvFile:
